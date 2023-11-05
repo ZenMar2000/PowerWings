@@ -61,6 +61,7 @@
     <Compile Include="Assets\Player\PowerInputActions.cs" />
     <Compile Include="Assets\_Scripts\SharedMethods.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerMovementBehaviour.cs" />
+    <Compile Include="Assets\_Scripts\ObjectScreenBoundaries.cs" />
     <Compile Include="Assets\_Scripts\AnimatorStrings.cs" />
   </ItemGroup>
   <ItemGroup>

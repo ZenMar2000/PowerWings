@@ -19,5 +19,11 @@ public static class SharedMethods
     {
         animator.SetBool(stringName, value);
     }
+
+    public enum MovementDirection
+    {
+        HORIZONTAL,
+        VERTICAL
+    }
 }
 
