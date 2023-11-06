@@ -4,9 +4,15 @@ using static SharedMethods;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
-    public float MovementSpeed = 5f;
+    public float MovementSpeed = 15f;
 
-    [SerializeField] private float maxPlayerHeightOffset = 0.5f;
+    //0 = center, 1 = top (all screen), -1 = bottom (no vertical movement)
+    [SerializeField] private float maxReachablePlayerVerticalOffset = 0f;
+    
+    [SerializeField] private Animator shipAnimator;
+    [SerializeField] private Animator RocketBurnerAnimator;
+    [SerializeField] private SpriteRenderer shipSprite;
+
     private Vector2 screenBounds;
     private float objWidth;
     private float objHeight;
@@ -17,20 +23,19 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private PowerInputActions playerInput;
     private InputAction playerMove;
     private InputAction playerFire;
-    private Animator animator;
+
 
     #region Unity functions
     private void Awake()
     {
         Application.targetFrameRate = 120;
-        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         playerInput = new PowerInputActions();
 
         //Camera boundaries
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        objWidth = GetComponent<SpriteRenderer>().bounds.size.x / 2;
-        objHeight = GetComponent<SpriteRenderer>().bounds.size.y / 2;
+        objWidth = shipSprite.bounds.size.x / 2;
+        objHeight = shipSprite.bounds.size.y / 2;
     }
 
     private void Update()
@@ -66,7 +71,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     public void OnMove()
     {
-        SetAnimatorValue(ref animator, AnimatorStrings.HorizontalMovingDirection, moveDirection.x);
+        SetAnimatorValue(ref shipAnimator, AnimatorStrings.HorizontalMovingDirection, moveDirection.x);
         rb.velocity = new Vector2(moveDirection.x * MovementSpeed, moveDirection.y * MovementSpeed);
     }
 
@@ -75,7 +80,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
     {
         Vector2 clampPos = transform.position;
         clampPos.x = Mathf.Clamp(clampPos.x, (screenBounds.x * -1) + objWidth, screenBounds.x - objWidth);
-        clampPos.y = Mathf.Clamp(clampPos.y, (screenBounds.y * -1) + objHeight, ((screenBounds.y) - objHeight) * maxPlayerHeightOffset);
+        clampPos.y = Mathf.Clamp(clampPos.y, (screenBounds.y * -1) + objHeight, ((screenBounds.y) - objHeight) * maxReachablePlayerVerticalOffset);
         transform.position = clampPos;
     }
 

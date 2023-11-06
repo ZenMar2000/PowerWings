@@ -58,10 +58,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Player\PowerInputActions.cs" />
     <Compile Include="Assets\_Scripts\SharedMethods.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerMovementBehaviour.cs" />
     <Compile Include="Assets\_Scripts\ObjectScreenBoundaries.cs" />
+    <Compile Include="Assets\Input\PowerInputActions.cs" />
     <Compile Include="Assets\_Scripts\AnimatorStrings.cs" />
   </ItemGroup>
   <ItemGroup>
