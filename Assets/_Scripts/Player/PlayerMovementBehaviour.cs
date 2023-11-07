@@ -4,26 +4,49 @@ using static SharedMethods;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
+    #region Variables
     public float MovementSpeed = 15f;
 
     //0 = center, 1 = top (all screen), -1 = bottom (no vertical movement)
     [SerializeField] private float maxReachablePlayerVerticalOffset = 0f;
-    
+
     [SerializeField] private Animator shipAnimator;
     [SerializeField] private Animator RocketBurnerAnimator;
+    [SerializeField] private Animator ShieldAnimator;
     [SerializeField] private SpriteRenderer shipSprite;
+    private Rigidbody2D rb;
 
     private Vector2 screenBounds;
+    private Vector2 moveDirection = Vector2.zero;
+
     private float objWidth;
     private float objHeight;
 
-    private Vector2 moveDirection = Vector2.zero;
-    private Rigidbody2D rb;
-
+    //Variables for Input
     private PowerInputActions playerInput;
     private InputAction playerMove;
-    private InputAction playerFire;
+    private InputAction playerParry;
+    private InputAction playerAttack;
+    private InputAction playerDodge;
 
+    #endregion
+
+    #region Properties
+    private bool _isParrying;
+    public bool isParrying
+    {
+        get
+        {
+            return _isParrying;
+        }
+        set
+        {
+            _isParrying = value;
+            SetAnimatorValue(ref ShieldAnimator, AnimatorStrings.IsParrying, value);
+        }
+    }
+
+    #endregion
 
     #region Unity functions
     private void Awake()
@@ -58,24 +81,58 @@ public class PlayerMovementBehaviour : MonoBehaviour
         playerMove = playerInput.Player.Move;
         playerMove.Enable();
 
-        playerFire = playerInput.Player.Fire;
-        playerFire.Enable();
+        playerParry = playerInput.Player.Parry;
+        playerParry.Enable();
+        playerParry.started += OnParryStarted;
+        playerParry.canceled += OnParryEnded;
+
+        playerAttack = playerInput.Player.Attack;
+        playerAttack.Enable();
+        playerAttack.performed += OnAttack;
+
+        playerDodge = playerInput.Player.Dodge;
+        playerDodge.Enable();
+        playerDodge.performed += OnDodge;
     }
 
     private void OnDisable()
     {
         playerMove.Disable();
-        playerFire.Disable();
+        playerParry.Disable();
     }
+    
     #endregion
 
-    public void OnMove()
+    #region PlayerInput subscribed actions
+    private void OnMove()
     {
         SetAnimatorValue(ref shipAnimator, AnimatorStrings.HorizontalMovingDirection, moveDirection.x);
         rb.velocity = new Vector2(moveDirection.x * MovementSpeed, moveDirection.y * MovementSpeed);
     }
 
-    #region Private functions
+    private void OnParryStarted(InputAction.CallbackContext context)
+    {
+        Debug.Log("Parry started!");
+
+    }
+    private void OnParryEnded(InputAction.CallbackContext context)
+    {
+        Debug.Log("Parry ended!");
+    }
+
+    private void OnAttack(InputAction.CallbackContext context)
+    {
+        Debug.Log("Attack released!");
+    }
+
+    private void OnDodge(InputAction.CallbackContext context)
+    {
+        Debug.Log("Dodged!");
+    }
+    
+    #endregion
+
+    #region Utility private functions
     private void ClampPlayerToCamera()
     {
         Vector2 clampPos = transform.position;

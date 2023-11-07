@@ -52,6 +52,7 @@ MonoBehaviour:
   maxReachablePlayerVerticalOffset: 0
   shipAnimator: {fileID: 1958893942166383446}
   RocketBurnerAnimator: {fileID: 2777694883029109646}
+  ShieldAnimator: {fileID: 2319327616860938585}
   shipSprite: {fileID: 436582759078604934}
 --- !u!50 &3148623486037834068
 Rigidbody2D:
@@ -91,6 +92,7 @@ GameObject:
   - component: {fileID: 568589270767431415}
   - component: {fileID: 3642238486187731673}
   - component: {fileID: 1310128740498515826}
+  - component: {fileID: 2319327616860938585}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -200,6 +202,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2319327616860938585
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462284978721964422}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d887f5ed81c356849a0bc5e9fd5b56b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6587137443907194287
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +356,7 @@ Transform:
   m_GameObject: {fileID: 7100254067982148574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.27, z: 0}
+  m_LocalPosition: {x: 0.05, y: -1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -406,9 +429,9 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 5.81}
+  m_Size: {x: 0.512, y: 1.164}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
