@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &958051364632681278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3233059656037704993}
+  - component: {fileID: 7983500835448736170}
+  m_Layer: 0
+  m_Name: ProjectileEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3233059656037704993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958051364632681278}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2561522143491400180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7983500835448736170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958051364632681278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b844d3a27744343956de3cf76c4b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2914541279523472444
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,6 +78,7 @@ Transform:
   - {fileID: 2835255060118325738}
   - {fileID: 568589270767431415}
   - {fileID: 4625254713209647778}
+  - {fileID: 3233059656037704993}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5966400444559999250
@@ -51,8 +96,6 @@ MonoBehaviour:
   MovementSpeed: 15
   maxReachablePlayerVerticalOffset: 0
   shipAnimator: {fileID: 1958893942166383446}
-  RocketBurnerAnimator: {fileID: 2777694883029109646}
-  ShieldAnimator: {fileID: 2319327616860938585}
   shipSprite: {fileID: 436582759078604934}
 --- !u!50 &3148623486037834068
 Rigidbody2D:
@@ -93,6 +136,7 @@ GameObject:
   - component: {fileID: 3642238486187731673}
   - component: {fileID: 1310128740498515826}
   - component: {fileID: 2319327616860938585}
+  - component: {fileID: 5628311221920641701}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -223,6 +267,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5628311221920641701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462284978721964422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7583202c65798a1448973637283eee42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6587137443907194287
 GameObject:
   m_ObjectHideFlags: 0

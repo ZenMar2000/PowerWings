@@ -11,8 +11,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
     [SerializeField] private float maxReachablePlayerVerticalOffset = 0f;
 
     [SerializeField] private Animator shipAnimator;
-    [SerializeField] private Animator RocketBurnerAnimator;
-    [SerializeField] private Animator ShieldAnimator;
     [SerializeField] private SpriteRenderer shipSprite;
     private Rigidbody2D rb;
 
@@ -23,15 +21,24 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private float objHeight;
 
     //Variables for Input
-    private PowerInputActions playerInput;
     private InputAction playerMove;
-    private InputAction playerParry;
-    private InputAction playerAttack;
     private InputAction playerDodge;
 
     #endregion
 
     #region Properties
+    private PowerInputActions _playerInput;
+    public PowerInputActions PlayerInput 
+    { get 
+        { 
+            return _playerInput;
+        } 
+        private set 
+        {
+            _playerInput = value;
+        }
+    }
+
     private bool _isParrying;
     public bool isParrying
     {
@@ -42,7 +49,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
         set
         {
             _isParrying = value;
-            SetAnimatorValue(ref ShieldAnimator, AnimatorStrings.IsParrying, value);
+            //SetAnimatorValue(ref ShieldAnimator, AnimatorStrings.IsParrying, value);
         }
     }
 
@@ -53,7 +60,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
     {
         Application.targetFrameRate = 120;
         rb = GetComponent<Rigidbody2D>();
-        playerInput = new PowerInputActions();
+        PlayerInput = new PowerInputActions();
 
         //Camera boundaries
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
@@ -78,19 +85,11 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
-        playerMove = playerInput.Player.Move;
+        playerMove = PlayerInput.Player.Move;
         playerMove.Enable();
 
-        playerParry = playerInput.Player.Parry;
-        playerParry.Enable();
-        playerParry.started += OnParryStarted;
-        playerParry.canceled += OnParryEnded;
 
-        playerAttack = playerInput.Player.Attack;
-        playerAttack.Enable();
-        playerAttack.performed += OnAttack;
-
-        playerDodge = playerInput.Player.Dodge;
+        playerDodge = PlayerInput.Player.Dodge;
         playerDodge.Enable();
         playerDodge.performed += OnDodge;
     }
@@ -98,9 +97,9 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private void OnDisable()
     {
         playerMove.Disable();
-        playerParry.Disable();
+        playerDodge.Disable();
     }
-    
+
     #endregion
 
     #region PlayerInput subscribed actions
@@ -110,26 +109,11 @@ public class PlayerMovementBehaviour : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * MovementSpeed, moveDirection.y * MovementSpeed);
     }
 
-    private void OnParryStarted(InputAction.CallbackContext context)
-    {
-        Debug.Log("Parry started!");
-
-    }
-    private void OnParryEnded(InputAction.CallbackContext context)
-    {
-        Debug.Log("Parry ended!");
-    }
-
-    private void OnAttack(InputAction.CallbackContext context)
-    {
-        Debug.Log("Attack released!");
-    }
-
     private void OnDodge(InputAction.CallbackContext context)
     {
         Debug.Log("Dodged!");
     }
-    
+
     #endregion
 
     #region Utility private functions
