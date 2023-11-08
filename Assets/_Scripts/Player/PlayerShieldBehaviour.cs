@@ -8,7 +8,9 @@ public class PlayerShieldBehaviour : MonoBehaviour
 {
     private PowerInputActions playerInput;
     private InputAction playerParry;
-    private Animator shieldAnimator;
+    //private Animator shieldAnimator;
+    private SpriteRenderer shieldSpriteRenderer;
+    private CapsuleCollider2D shieldCollider;
 
     #region Properties
     private bool _isParrying = false;
@@ -21,7 +23,9 @@ public class PlayerShieldBehaviour : MonoBehaviour
         private set 
         {
             _isParrying = value;
-            SetAnimatorValue(ref shieldAnimator, AnimatorStrings.IsParrying, value);
+            shieldSpriteRenderer.enabled = value;
+            shieldCollider.enabled = value;
+            //SetAnimatorValue(ref shieldAnimator, AnimatorStrings.IsParrying, value);
         }
     }
 
@@ -30,7 +34,9 @@ public class PlayerShieldBehaviour : MonoBehaviour
     #region Unity functions
     private void Awake()
     {
-        shieldAnimator = GetComponent<Animator>();
+        //shieldAnimator = GetComponent<Animator>();
+        shieldSpriteRenderer = GetComponent<SpriteRenderer>();
+        shieldCollider = GetComponent<CapsuleCollider2D>();
     }
     private void Start()
     {

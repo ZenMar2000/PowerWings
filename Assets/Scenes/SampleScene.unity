@@ -223,6 +223,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1310128740498515826, guid: 63dc357e4a7aadb4092bca464a45f4c4, type: 3}
+      propertyPath: m_Size.x
+      value: 2.144
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310128740498515826, guid: 63dc357e4a7aadb4092bca464a45f4c4, type: 3}
+      propertyPath: m_Size.y
+      value: 1.072
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310128740498515826, guid: 63dc357e4a7aadb4092bca464a45f4c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310128740498515826, guid: 63dc357e4a7aadb4092bca464a45f4c4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2561522143491400180, guid: 63dc357e4a7aadb4092bca464a45f4c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -266,6 +282,10 @@ PrefabInstance:
     - target: {fileID: 2914541279523472444, guid: 63dc357e4a7aadb4092bca464a45f4c4, type: 3}
       propertyPath: m_Name
       value: FullPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462284978721964422, guid: 63dc357e4a7aadb4092bca464a45f4c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
