@@ -109,7 +109,12 @@ namespace ND_VariaBULLET
 
         protected override bool ScriptFire()
         {
-            return ProjectileEmitterBehaviour.ShotNow;
+            if (PlayerProjectileEmitterBehaviour == null)
+            {
+                Debug.LogWarning("ProjectileEmitterBehaviour not set in FireBullet class");
+                return false;
+            }
+            return PlayerProjectileEmitterBehaviour.ShotNow;
         }
 
         protected override bool ButtonPress()

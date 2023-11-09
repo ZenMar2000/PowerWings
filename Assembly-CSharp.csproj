@@ -66,7 +66,6 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLaserBase.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\ShotCollisionDamage.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\BallReloader.cs" />
-    <Compile Include="Assets\_Scripts\Player\ProjectileEmitterBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBaseRotatable.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotReAngle.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\GlobalShotBank.cs" />
@@ -101,6 +100,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBase.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Utility\OnScreenDisplay.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotSpeedWave.cs" />
+    <Compile Include="Assets\_Scripts\Player\PlayerProjectileEmitterBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotNonPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\FlickerBG.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBaseScalable.cs" />

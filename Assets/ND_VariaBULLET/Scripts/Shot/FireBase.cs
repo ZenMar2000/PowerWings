@@ -52,13 +52,10 @@ namespace ND_VariaBULLET
 
         protected AudioSource audiosrc;
 
-        public ProjectileEmitterBehaviour ProjectileEmitterBehaviour;
+        [Tooltip("Custom class, handles player input and behaviour. Only necessary if using Fire Command 'ScriptFire'")]
+        public PlayerProjectileEmitterBehaviour PlayerProjectileEmitterBehaviour;
         public virtual void Start()
         {
-            if (ProjectileEmitterBehaviour == null)
-            {
-                Debug.LogWarning("ProjectileEmitterBehaviour not set in FireBase or one of the child classes");
-            }
             controller = transform.parent.parent.GetComponent<BasePattern>();
 
             fireMethods[0] = ButtonPress;
@@ -83,7 +80,7 @@ namespace ND_VariaBULLET
                 InstantiateShot();
                 if ((int)controller.FireCommand == 4)
                 {
-                    ProjectileEmitterBehaviour.shotShot++;
+                    PlayerProjectileEmitterBehaviour.ShotsEmitted++;
                 }
             }
             

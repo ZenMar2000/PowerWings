@@ -58,7 +58,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
     #region Unity functions
     private void Awake()
     {
-        Application.targetFrameRate = 120;
         rb = GetComponent<Rigidbody2D>();
         PlayerInput = new PowerInputActions();
 

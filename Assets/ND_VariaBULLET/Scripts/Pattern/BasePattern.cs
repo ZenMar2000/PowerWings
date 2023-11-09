@@ -52,6 +52,8 @@ namespace ND_VariaBULLET
         [Tooltip("Sets default emitter type (bullet or laser) when adding mew emitters.")]
         public PrefabType DefaultEmitter;
         protected List<GameObject> Emitters;
+        public int GetEmittersCount => Emitters.Count;
+
         protected List<GameObject> EmittersCached;
         protected List<FireBase> FireScripts;
 
@@ -131,6 +133,16 @@ namespace ND_VariaBULLET
             setOriginPoint();
             setIndicatorDisplay(false);
             checkSortLayerChanged();
+        }
+
+        public void SetAndCloneEmitters(int emitterAmout)
+        {
+            EmitterAmount = emitterAmout;
+            setEmitters();
+            setOriginPoint();
+            setIndicatorDisplay(true);
+            checkSortLayerChanged();
+            cloneFirstEmitter();
         }
 
         private void initSlaveTriggers()
@@ -348,7 +360,7 @@ namespace ND_VariaBULLET
                     targ.makeNodeOnly = src.makeNodeOnly;
                     targ.SpriteColor = src.SpriteColor;
                     targ.LocalPitch = src.LocalPitch;
-                    targ.ProjectileEmitterBehaviour = src.ProjectileEmitterBehaviour;
+                    targ.PlayerProjectileEmitterBehaviour = src.PlayerProjectileEmitterBehaviour;
 
                     if (src.GetType() == typeof(FireBullet)) //extended copying in case of FireBullet type emitter
                     {
