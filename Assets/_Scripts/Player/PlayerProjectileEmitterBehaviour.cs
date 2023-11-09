@@ -4,52 +4,98 @@ using UnityEngine.InputSystem;
 
 public class PlayerProjectileEmitterBehaviour : MonoBehaviour
 {
+    //Consts
+    public readonly int maxEmittersAmountPerWave = 31;
+
+    //Publics
     public bool ShotNow = false;
     public int ShotsEmitted = 0;
+    public SpreadPattern spreadController;
 
-    private bool IsShooting = false;
+    //Privates
     private PowerInputActions playerInput;
     private InputAction playerAttack;
+    //private InputAction playerChangeSpreadAngle;
 
-    private SpreadPattern spreadController;
-    private float tempTimer = 0; //temp
+    private float tempTimer = 0; //temp, used for testing bulletAccumulator logic
+
+    [SerializeField] private float shootingRateCooldown = 0.01f;
+    /// <summary>
+    /// Timer used toghether with shootingRateCooldown for repeating waves
+    /// </summary>
+    private float shootingtTimer = 0;
 
 
-    private int maxEmittersAmountPerWave = 17;
-    private float shotTimer = 0;
+    /// <summary>
+    /// Store all bullets accumulated. Will be subdivided in multiWavesRepeat and singleWaveProjectiles as soon as the player perform an attack.
+    /// </summary>
+    [SerializeField] private long bulletsAccumulator;
+
+    /// <summary>
+    /// Store how many waves with the full CurrentEmittersAmountPerWaves must be performed.
+    /// </summary>
+    [SerializeField] private int multiWavesRepeat = 0;
+
+    /// <summary>
+    /// Used for perform a single wave after all multiWavesRepeat reached 0. Shoots remaining bullets.
+    /// </summary>
+    [SerializeField] private int singleWaveProjectiles = 0;
+
 
     #region Properties
-    [SerializeField] private int multiWavesRepeat = 0;
-    [SerializeField] private int _singleWaveProjectiles = 0;
-    private int singleWaveProjectiles
+    private bool _isShooting = false;
+    public bool IsShooting 
+    {
+        get 
+        {
+            return _isShooting;        
+        } 
+        private set
+        {
+            _isShooting = value;
+        }
+    }
+
+    [SerializeField] private float _damageMultiplier = 1;
+    public float DamageMultiplier
     {
         get
         {
-            return _singleWaveProjectiles;
+            return _damageMultiplier;
+        }
+        private set
+        {
+            _damageMultiplier = value;
+        }
+    }
+
+    [SerializeField] private int _currentEmittersAmountPerWave;
+    public int CurrentEmittersAmountPerWave
+    {
+        get
+        {
+            return _currentEmittersAmountPerWave;
         }
         set
         {
-            if (value > maxEmittersAmountPerWave)
-            {
-                _singleWaveProjectiles = 1;
-                multiWavesRepeat++;
-            }
-            else
-            {
-                _singleWaveProjectiles = value;
-            }
+            _currentEmittersAmountPerWave = value;
+            CalculateShootingRate();
         }
     }
+
     #endregion
 
     #region Unity functions
+    private void Awake()
+    {
+        CurrentEmittersAmountPerWave = 15;
+        bulletsAccumulator = 8;
+    }
     private void Start()
     {
         spreadController = GetComponentInChildren<SpreadPattern>();
-        //spreadController.EmitterAmount = 0;
-        //spreadController.SpreadDegrees = 10;
-
         playerInput = GetComponentInParent<PlayerMovementBehaviour>().PlayerInput;
+
         playerAttack = playerInput.Player.Attack;
         playerAttack.Enable();
         playerAttack.started += OnAttack;
@@ -61,18 +107,18 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         CheckEmittedShots();
         CheckShootingStatus();
 
-        if(IsShooting)
+        if (IsShooting)
         {
-            shotTimer += Time.deltaTime;
+            shootingtTimer += Time.deltaTime;
             tempTimer = 0;
         }
         else
         {
             tempTimer += Time.deltaTime;
-            if(tempTimer > 0.5)
+            if (tempTimer > 1)
             {
                 tempTimer = 0;
-                singleWaveProjectiles++;
+                bulletsAccumulator = bulletsAccumulator == 0 ? 1 : bulletsAccumulator * 2;
             }
         }
     }
@@ -88,9 +134,10 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     #region PlayerInput subscribed actions
     private void OnAttack(InputAction.CallbackContext context)
     {
-        if (!IsShooting)
+        if (CanShoot())
         {
             IsShooting = true;
+            SubdivideBullets();
             HandlesProjectileWavesRelease();
         }
     }
@@ -102,11 +149,11 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     {
         if (!ShotNow)
         {
-            shotTimer = 0;
+            shootingtTimer = 0;
 
             if (multiWavesRepeat > 0)
             {
-                spreadController.SetAndCloneEmitters(maxEmittersAmountPerWave);
+                spreadController.SetAndCloneEmitters(CurrentEmittersAmountPerWave);
                 multiWavesRepeat--;
                 ShotNow = true;
             }
@@ -126,11 +173,10 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
             ShotsEmitted = 0;
         }
 
-        if (shotTimer > 1)
+        if (shootingtTimer > shootingRateCooldown && IsShooting)
         {
             HandlesProjectileWavesRelease();
         }
-
     }
 
     private void CheckShootingStatus()
@@ -138,7 +184,39 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         if (multiWavesRepeat <= 0 && singleWaveProjectiles <= 0)
         {
             IsShooting = false;
+            DamageMultiplier = 1;
         }
+    }
+
+    public bool CanShoot()
+    {
+        if (!IsShooting && bulletsAccumulator > 0) return true;
+        return false;
+    }
+
+    private void SubdivideBullets()
+    {
+        if (bulletsAccumulator > 512)
+        {
+            DamageMultiplier = 2;
+            while (bulletsAccumulator > 512)
+            {
+                bulletsAccumulator -= 512;
+                DamageMultiplier += 0.01f;
+            }
+        }
+        else
+        {
+            DamageMultiplier = 1;
+        }
+        singleWaveProjectiles = (int)(bulletsAccumulator % CurrentEmittersAmountPerWave);
+        multiWavesRepeat = (int)(bulletsAccumulator / CurrentEmittersAmountPerWave);
+        bulletsAccumulator = 0;
+    }
+
+    private void CalculateShootingRate()
+    {
+        shootingRateCooldown = (0.5f * CurrentEmittersAmountPerWave) / maxEmittersAmountPerWave;
     }
     #endregion
 

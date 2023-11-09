@@ -142,7 +142,7 @@ namespace ND_VariaBULLET
             setOriginPoint();
             setIndicatorDisplay(true);
             checkSortLayerChanged();
-            cloneFirstEmitter();
+            if(emitterAmout > 1) cloneFirstEmitter();
         }
 
         private void initSlaveTriggers()

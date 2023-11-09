@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{77D1840C-FF67-D5D7-273D-44415597635B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -79,6 +80,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\AutomateLinear.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBouncyPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\AutomateBase.cs" />
+    <Compile Include="Assets\_Scripts\Player\PlayerBulletSpreadVisualiserBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CoinOnDestroyed.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBullet.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\FullPresetSwitcher.cs" />
