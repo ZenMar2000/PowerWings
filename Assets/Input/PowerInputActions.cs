@@ -71,6 +71,15 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PreciseMovement"",
+                    ""type"": ""Button"",
+                    ""id"": ""c6364e6f-850a-46ca-a522-c5e61e6a6eca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -142,28 +151,6 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1635d3fe-58b6-4ba9-a4e2-f4b964f6b5c8"",
-                    ""path"": ""<XRController>/{Primary2DAxis}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""XR"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3ea4d645-4504-4529-b061-ab81934c3752"",
-                    ""path"": ""<Joystick>/stick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""05f6913d-c316-48b2-a6bb-e225f14c7960"",
                     ""path"": ""<Keyboard>/j"",
                     ""interactions"": """",
@@ -212,7 +199,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""ChangeSpreadAngle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -223,10 +210,54 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/leftCtrl"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""ChangeSpreadAngle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""f9132f65-921d-4f8f-be2c-b936112be552"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeSpreadAngle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""87865fd6-baac-4853-b3bd-9aa162305fb0"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ChangeSpreadAngle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""35255770-fe65-4dd3-bc07-75223c393dc0"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ChangeSpreadAngle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cab5de96-d010-4f29-9bdc-c15ae18819b3"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""PreciseMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -301,6 +332,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Dodge = m_Player.FindAction("Dodge", throwIfNotFound: true);
         m_Player_ChangeSpreadAngle = m_Player.FindAction("ChangeSpreadAngle", throwIfNotFound: true);
+        m_Player_PreciseMovement = m_Player.FindAction("PreciseMovement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -367,6 +399,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Dodge;
     private readonly InputAction m_Player_ChangeSpreadAngle;
+    private readonly InputAction m_Player_PreciseMovement;
     public struct PlayerActions
     {
         private @PowerInputActions m_Wrapper;
@@ -376,6 +409,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Dodge => m_Wrapper.m_Player_Dodge;
         public InputAction @ChangeSpreadAngle => m_Wrapper.m_Player_ChangeSpreadAngle;
+        public InputAction @PreciseMovement => m_Wrapper.m_Player_PreciseMovement;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -400,6 +434,9 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
             @ChangeSpreadAngle.started += instance.OnChangeSpreadAngle;
             @ChangeSpreadAngle.performed += instance.OnChangeSpreadAngle;
             @ChangeSpreadAngle.canceled += instance.OnChangeSpreadAngle;
+            @PreciseMovement.started += instance.OnPreciseMovement;
+            @PreciseMovement.performed += instance.OnPreciseMovement;
+            @PreciseMovement.canceled += instance.OnPreciseMovement;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -419,6 +456,9 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
             @ChangeSpreadAngle.started -= instance.OnChangeSpreadAngle;
             @ChangeSpreadAngle.performed -= instance.OnChangeSpreadAngle;
             @ChangeSpreadAngle.canceled -= instance.OnChangeSpreadAngle;
+            @PreciseMovement.started -= instance.OnPreciseMovement;
+            @PreciseMovement.performed -= instance.OnPreciseMovement;
+            @PreciseMovement.canceled -= instance.OnPreciseMovement;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -488,5 +528,6 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnDodge(InputAction.CallbackContext context);
         void OnChangeSpreadAngle(InputAction.CallbackContext context);
+        void OnPreciseMovement(InputAction.CallbackContext context);
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerBulletSpreadVisualiserBehaviour : MonoBehaviour
 {
+    #region Variables
+    //Guides prefab
     public GameObject LeftGuide;
     private SpriteRenderer LeftRenderer;
     public GameObject RightGuide;
@@ -12,14 +14,14 @@ public class PlayerBulletSpreadVisualiserBehaviour : MonoBehaviour
     public bool AlwaysVisibleSpreadGuides = true;
     public SpreadPattern spreadController;
 
-    private PowerInputActions playerInput;
-    private InputAction playerChangeSpreadAngle;
     private PlayerProjectileEmitterBehaviour playerProjectileEmitterBehaviour;
     private float projectileSpreadAngle;
 
+    //Guides movement variables
     private float autoRepeatRate = 0.01f;
     private float autoRepeatTimer = 0;
 
+    //Guides visibility variables
     private float hideGuidesTimer = 0;
     private float hideGuidesRate = 1f;
     private bool guidesAlreadyHidden = false;
@@ -28,6 +30,7 @@ public class PlayerBulletSpreadVisualiserBehaviour : MonoBehaviour
     /// Value read from playerInput action performed
     /// </summary>
     private float inputValue = 0;
+    #endregion
 
     #region Unity functions
     private void Awake()
@@ -38,17 +41,15 @@ public class PlayerBulletSpreadVisualiserBehaviour : MonoBehaviour
 
     private void Start()
     {
-        playerInput = GetComponentInParent<PlayerMovementBehaviour>().PlayerInput;
+        //playerInput = GetComponentInParent<PlayerMovementBehaviour>().PlayerInput;
         playerProjectileEmitterBehaviour = GetComponentInParent<PlayerProjectileEmitterBehaviour>();
         projectileSpreadAngle = spreadController.SpreadDegrees / 2;
 
         LeftGuide.transform.Rotate(0, 0, projectileSpreadAngle * (playerProjectileEmitterBehaviour.CurrentEmittersAmountPerWave - 1) * -1);
         RightGuide.transform.Rotate(0, 0, projectileSpreadAngle * (playerProjectileEmitterBehaviour.CurrentEmittersAmountPerWave - 1));
 
-        playerChangeSpreadAngle = playerInput.Player.ChangeSpreadAngle;
-        playerChangeSpreadAngle.Enable();
-        playerChangeSpreadAngle.started += OnChangeSpreadAngleStart;
-        playerChangeSpreadAngle.canceled += OnChangeSpreadAngleEnd;
+        InputManager.PlayerChangeSpreadAngle.started += OnChangeSpreadAngleStart;
+        InputManager.PlayerChangeSpreadAngle.canceled += OnChangeSpreadAngleEnd;
     }
 
     void Update()
@@ -70,7 +71,6 @@ public class PlayerBulletSpreadVisualiserBehaviour : MonoBehaviour
     {
         inputValue = 0;
     }
-
 
     #endregion
 

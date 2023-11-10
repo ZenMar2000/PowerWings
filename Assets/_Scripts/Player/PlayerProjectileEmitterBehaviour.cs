@@ -13,10 +13,6 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     public SpreadPattern spreadController;
 
     //Privates
-    private PowerInputActions playerInput;
-    private InputAction playerAttack;
-    //private InputAction playerChangeSpreadAngle;
-
     private float tempTimer = 0; //temp, used for testing bulletAccumulator logic
 
     [SerializeField] private float shootingRateCooldown = 0.01f;
@@ -24,7 +20,6 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     /// Timer used toghether with shootingRateCooldown for repeating waves
     /// </summary>
     private float shootingtTimer = 0;
-
 
     /// <summary>
     /// Store all bullets accumulated. Will be subdivided in multiWavesRepeat and singleWaveProjectiles as soon as the player perform an attack.
@@ -94,11 +89,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     private void Start()
     {
         spreadController = GetComponentInChildren<SpreadPattern>();
-        playerInput = GetComponentInParent<PlayerMovementBehaviour>().PlayerInput;
-
-        playerAttack = playerInput.Player.Attack;
-        playerAttack.Enable();
-        playerAttack.started += OnAttack;
+        InputManager.PlayerAttack.started += OnAttack;
 
     }
 
@@ -122,12 +113,6 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
             }
         }
     }
-
-    private void OnDisable()
-    {
-        playerAttack.Disable();
-    }
-
 
     #endregion
 

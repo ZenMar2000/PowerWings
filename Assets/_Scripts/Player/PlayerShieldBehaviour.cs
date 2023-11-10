@@ -6,8 +6,6 @@ using static SharedMethods;
 
 public class PlayerShieldBehaviour : MonoBehaviour
 {
-    private PowerInputActions playerInput;
-    private InputAction playerParry;
     //private Animator shieldAnimator;
     private SpriteRenderer shieldSpriteRenderer;
     private CapsuleCollider2D shieldCollider;
@@ -40,21 +38,8 @@ public class PlayerShieldBehaviour : MonoBehaviour
     }
     private void Start()
     {
-        playerInput = GetComponentInParent<PlayerMovementBehaviour>().PlayerInput;
-        playerParry = playerInput.Player.Parry;
-        playerParry.Enable();
-        playerParry.started += OnParryStarted;
-        playerParry.canceled += OnParryEnded;
-    }
-
-    private void Update()
-    {
-        
-    }
-
-    private void OnDisable()
-    {
-        playerParry.Disable();
+        InputManager.PlayerParry.started += OnParryStarted;
+        InputManager.PlayerParry.canceled += OnParryEnded;
     }
 
     #endregion

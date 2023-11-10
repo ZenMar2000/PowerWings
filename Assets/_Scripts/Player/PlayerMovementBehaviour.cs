@@ -20,46 +20,12 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private float objWidth;
     private float objHeight;
 
-    //Variables for Input
-    private InputAction playerMove;
-    private InputAction playerDodge;
-
-    #endregion
-
-    #region Properties
-    private PowerInputActions _playerInput;
-    public PowerInputActions PlayerInput 
-    { get 
-        { 
-            return _playerInput;
-        } 
-        private set 
-        {
-            _playerInput = value;
-        }
-    }
-
-    private bool _isParrying;
-    public bool isParrying
-    {
-        get
-        {
-            return _isParrying;
-        }
-        set
-        {
-            _isParrying = value;
-            //SetAnimatorValue(ref ShieldAnimator, AnimatorStrings.IsParrying, value);
-        }
-    }
-
     #endregion
 
     #region Unity functions
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        PlayerInput = new PowerInputActions();
 
         //Camera boundaries
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
@@ -69,7 +35,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     private void Update()
     {
-        moveDirection = playerMove.ReadValue<Vector2>();
+        moveDirection = InputManager.PlayerMove.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()
@@ -84,19 +50,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
-        playerMove = PlayerInput.Player.Move;
-        playerMove.Enable();
-
-
-        playerDodge = PlayerInput.Player.Dodge;
-        playerDodge.Enable();
-        playerDodge.performed += OnDodge;
-    }
-
-    private void OnDisable()
-    {
-        playerMove.Disable();
-        playerDodge.Disable();
+        InputManager.PlayerDodge.performed += OnDodge;
     }
 
     #endregion
