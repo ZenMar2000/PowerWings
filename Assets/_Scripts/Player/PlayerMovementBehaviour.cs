@@ -5,7 +5,9 @@ using static SharedMethods;
 public class PlayerMovementBehaviour : MonoBehaviour
 {
     #region Variables
+    public float CurrentMovementSpeed;
     public float MovementSpeed = 15f;
+    public float PreciseMovementSpeed;
 
     //0 = center, 1 = top (all screen), -1 = bottom (no vertical movement)
     [SerializeField] private float maxReachablePlayerVerticalOffset = 0f;
@@ -31,6 +33,9 @@ public class PlayerMovementBehaviour : MonoBehaviour
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         objWidth = shipSprite.bounds.size.x / 2;
         objHeight = shipSprite.bounds.size.y / 2;
+
+        CurrentMovementSpeed = MovementSpeed;
+        PreciseMovementSpeed = MovementSpeed / 2;
     }
 
     private void Update()
@@ -51,6 +56,8 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private void OnEnable()
     {
         InputManager.PlayerDodge.performed += OnDodge;
+        InputManager.PreciseMovement.started += OnPreciseMovementStart;
+        InputManager.PreciseMovement.canceled += OnPreciseMovementEnd;
     }
 
     #endregion
@@ -59,7 +66,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private void OnMove()
     {
         SetAnimatorValue(ref shipAnimator, AnimatorStrings.HorizontalMovingDirection, moveDirection.x);
-        rb.velocity = new Vector2(moveDirection.x * MovementSpeed, moveDirection.y * MovementSpeed);
+        rb.velocity = new Vector2(moveDirection.x * CurrentMovementSpeed, moveDirection.y * CurrentMovementSpeed);
     }
 
     private void OnDodge(InputAction.CallbackContext context)
@@ -67,6 +74,15 @@ public class PlayerMovementBehaviour : MonoBehaviour
         Debug.Log("Dodged!");
     }
 
+    private void OnPreciseMovementStart(InputAction.CallbackContext context)
+    {
+        CurrentMovementSpeed = PreciseMovementSpeed;
+    }
+
+    private void OnPreciseMovementEnd(InputAction.CallbackContext context)
+    {
+        CurrentMovementSpeed = MovementSpeed;
+    }
     #endregion
 
     #region Utility private functions

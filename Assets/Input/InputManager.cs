@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.InputSystem;
 
 public static class InputManager
@@ -12,6 +9,7 @@ public static class InputManager
     public static InputAction PlayerParry;
     public static InputAction PlayerAttack;
     public static InputAction PlayerChangeSpreadAngle;
+    public static InputAction PreciseMovement;
     static InputManager()
     {
         PlayerInput = new PowerInputActions();
@@ -30,6 +28,9 @@ public static class InputManager
 
         PlayerChangeSpreadAngle = PlayerInput.Player.ChangeSpreadAngle;
         PlayerChangeSpreadAngle.Enable();
+
+        PreciseMovement = PlayerInput.Player.PreciseMovement;
+        PreciseMovement.Enable();
 
     }
 }
