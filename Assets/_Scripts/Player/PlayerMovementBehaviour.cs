@@ -63,6 +63,12 @@ public class PlayerMovementBehaviour : MonoBehaviour
         InputManager.PreciseMovement.canceled += OnPreciseMovementEnd;
     }
 
+    private void OnDestroy()
+    {
+        InputManager.PlayerDodge.performed -= OnDodge;
+        InputManager.PreciseMovement.started -= OnPreciseMovementStart;
+        InputManager.PreciseMovement.canceled -= OnPreciseMovementEnd;
+    }
     #endregion
 
     #region PlayerInput subscribed actions

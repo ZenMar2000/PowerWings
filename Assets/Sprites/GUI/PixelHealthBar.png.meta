@@ -1,0 +1,1649 @@
+fileFormatVersion: 2
+guid: 4c6ddf17a544a954ca30c9345cb24629
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PixelHealthBar_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 216
+        width: 43
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0172bf2959c6ff4b9f5c211aacf0c74
+      internalID: 613707890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 217
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70c7de06ae26964d8590695ed9fb08f
+      internalID: 1612794807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 217
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a66c543e675607498a9ce8cb2541771
+      internalID: -371399976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 217
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bef1a24c581234a94a4972b22ee907
+      internalID: -2049634064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 202
+        width: 42
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4708ff552da6bf4995939a4281712e9
+      internalID: -859827116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_5
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 203
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57752ffe4c8df446930b5de10ff8fe5
+      internalID: 336595827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_6
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 203
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4012e838d1950449bb2702ef293971
+      internalID: -661046892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_7
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 203
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd8b0baade445e45ae2856d183b62a5
+      internalID: 1588235612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_8
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 188
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60684fb264abd0c45b1a305b6a92949a
+      internalID: 356340511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_9
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 189
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4c98e0b5f435c4589dbfdd134762b2
+      internalID: -362788570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_10
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 189
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d90241b1daf8a4c90b52f5445ef714
+      internalID: -1497819891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_11
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 189
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d84bd1493d1b649bab936bed48bb27
+      internalID: 771289428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_12
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 175
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21aac736575e2e449a94ffbdfe407437
+      internalID: 354865181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_13
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 176
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f82ed051e39f34cad37fd314c2849a
+      internalID: 1815336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 176
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634c22db849e6bb42b476e5719cc8fab
+      internalID: 1267629005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_15
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 176
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab475c23e5dfcf4ca3ff18d0693d4fb
+      internalID: 630853139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_16
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 162
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924e6a60cf95d7b4bbbaeb65e4e912ed
+      internalID: -1392741416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_17
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 163
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5c950c41f777340b01b1b716f4ef8a
+      internalID: -989413257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_18
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 163
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f6f0bf61873d34e9b40e934eb789d3
+      internalID: -1519726231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_19
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 163
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1ab3e545519cc4a819ffc8950b5f21
+      internalID: -1802693167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_20
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 149
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce95c4bcbeb783b4882b2e20329b705e
+      internalID: -30842524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_21
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 150
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ae1092314df9d4abb68022c4e47ba5
+      internalID: -2042989398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_22
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 150
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d1d49e45762d64fbc71ad222e827f4
+      internalID: -1666070909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_23
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 150
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b489f6756a518bb43a27f919369ac7e7
+      internalID: -2091343843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_24
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 136
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a895790cb907cd46beeb7b0f6c6a528
+      internalID: -181526886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_25
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 137
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7253ef1425d9844daea4b00349eb8e1
+      internalID: 600032333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_26
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 137
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0344fd02e7a19b4a8bf34367ed5e70f
+      internalID: 394736704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_27
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 137
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5122195c3847c1d46bb3f63bb0ebb212
+      internalID: -82481497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_28
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 123
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7adeb9b5fc6a4d747b8e129a4bf79d2a
+      internalID: 829466051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_29
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 124
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9540a9f579422cb4b99754841dc19ba2
+      internalID: 617235052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_30
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 124
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095536a25ffd3a8488a0dd17a222207f
+      internalID: 1459915007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_31
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 124
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325efb9ef3037a64abbc06d25524f88d
+      internalID: -1508908177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_32
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 110
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19aa917531becc4fb15a6a6d5c9fa5e
+      internalID: -1163484625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_33
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 111
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bcb6616d669054ba21ed41e021a044
+      internalID: 900457461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_34
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 111
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056f8e0cf0b99ac41811a4f6893e0573
+      internalID: 411114994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_35
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 111
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9d4e01b4e1a04468573c9c6fa1e6db
+      internalID: -1769873927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_36
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 97
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8397bb340993c394b9713c3d17c1a95b
+      internalID: 200280422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_37
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 98
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7acb98a9db68b0449d5e1b5c1e1e5ad
+      internalID: 2087890542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_38
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 98
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7444ee484fbc2554db732c26c91ca2c6
+      internalID: -967287014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_39
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 98
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39260462833d841428aa20dc1866e005
+      internalID: -978622580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_40
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 83
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da5eaa7c7da85f40b474fbd298b8521
+      internalID: -1858966618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_41
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 84
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810359dadf86d3e419af86fa26381d96
+      internalID: -1789834318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_42
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 84
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a88b79567e1a74fa4d6e527c9680d1
+      internalID: 387214000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_43
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 84
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ad7874b1e4d05488a705472e627463
+      internalID: -1616458561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_44
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 70
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ff00d568784c448b31e3e36cebd338
+      internalID: -849070772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_45
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 71
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0faed1aae540e4e87f512c511c50bc
+      internalID: -858800956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_46
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 71
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965bc2ef5cef6d84b8aea197afd3f62f
+      internalID: -1878908443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_47
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 71
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47d038037188de40b1e3766f36167ed
+      internalID: 494214274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_48
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 57
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b144b029e0d654b4fa07339ac6ad6710
+      internalID: 47616614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_49
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 58
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1a9c310b9ed06438bfeca77eed0135
+      internalID: 1962601820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_50
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 58
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3f3dae7ef081d48ae46695343f8b97
+      internalID: 1243090914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_51
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 58
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc9e3becccb2e24ea0f3f9e74323cef
+      internalID: 868099896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_52
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 44
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ee400653434334883887d46eff7ec0
+      internalID: -505653297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_53
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 45
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda6e1e8c9101f247ab29aa2c6d8240b
+      internalID: 902913976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_54
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 45
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb222ce0a2cd3a46a0fda6bd5b18628
+      internalID: -1396813641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_55
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 45
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be04e2da10890441855953924854a9d
+      internalID: -132768848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_56
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 31
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe7e994d0e97fd49b189c1d30701e67
+      internalID: 2091839395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_57
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 32
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e657ba29124b674bb2ea0b37e28d40b
+      internalID: -1601196448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_58
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 32
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0e55260add17e45b076b2e7cb303ba
+      internalID: 191621409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_59
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 32
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3327e514348249b4eab118b6f888dd3b
+      internalID: 983299693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_60
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 18
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a1e5d8bba33f34e8894bb7e51cf7ae
+      internalID: -1545602664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_61
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 19
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a26f110f8c4a9840904481c81f9db96
+      internalID: 1032846683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_62
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 19
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b293c76dd84bf0342b6da9e27d2d2318
+      internalID: -911394881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_63
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 19
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af511a9ef7ba31c4d91f9dac76af38ab
+      internalID: -244893053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_64
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 5
+        width: 43
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd3b75e549a07e46ab017bba368cfeb
+      internalID: -66919382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_65
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 6
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea7ca4afb894e44c9fd37203e89046a
+      internalID: 41132421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_66
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 6
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5118c3b9eb8c8d4479a3720b2641110e
+      internalID: -832012666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelHealthBar_67
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 6
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c73b466ae08ee940b64bd5480c36826
+      internalID: -1462971038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PixelHealthBar_0: 613707890
+      PixelHealthBar_1: 1612794807
+      PixelHealthBar_10: -1497819891
+      PixelHealthBar_11: 771289428
+      PixelHealthBar_12: 354865181
+      PixelHealthBar_13: 1815336
+      PixelHealthBar_14: 1267629005
+      PixelHealthBar_15: 630853139
+      PixelHealthBar_16: -1392741416
+      PixelHealthBar_17: -989413257
+      PixelHealthBar_18: -1519726231
+      PixelHealthBar_19: -1802693167
+      PixelHealthBar_2: -371399976
+      PixelHealthBar_20: -30842524
+      PixelHealthBar_21: -2042989398
+      PixelHealthBar_22: -1666070909
+      PixelHealthBar_23: -2091343843
+      PixelHealthBar_24: -181526886
+      PixelHealthBar_25: 600032333
+      PixelHealthBar_26: 394736704
+      PixelHealthBar_27: -82481497
+      PixelHealthBar_28: 829466051
+      PixelHealthBar_29: 617235052
+      PixelHealthBar_3: -2049634064
+      PixelHealthBar_30: 1459915007
+      PixelHealthBar_31: -1508908177
+      PixelHealthBar_32: -1163484625
+      PixelHealthBar_33: 900457461
+      PixelHealthBar_34: 411114994
+      PixelHealthBar_35: -1769873927
+      PixelHealthBar_36: 200280422
+      PixelHealthBar_37: 2087890542
+      PixelHealthBar_38: -967287014
+      PixelHealthBar_39: -978622580
+      PixelHealthBar_4: -859827116
+      PixelHealthBar_40: -1858966618
+      PixelHealthBar_41: -1789834318
+      PixelHealthBar_42: 387214000
+      PixelHealthBar_43: -1616458561
+      PixelHealthBar_44: -849070772
+      PixelHealthBar_45: -858800956
+      PixelHealthBar_46: -1878908443
+      PixelHealthBar_47: 494214274
+      PixelHealthBar_48: 47616614
+      PixelHealthBar_49: 1962601820
+      PixelHealthBar_5: 336595827
+      PixelHealthBar_50: 1243090914
+      PixelHealthBar_51: 868099896
+      PixelHealthBar_52: -505653297
+      PixelHealthBar_53: 902913976
+      PixelHealthBar_54: -1396813641
+      PixelHealthBar_55: -132768848
+      PixelHealthBar_56: 2091839395
+      PixelHealthBar_57: -1601196448
+      PixelHealthBar_58: 191621409
+      PixelHealthBar_59: 983299693
+      PixelHealthBar_6: -661046892
+      PixelHealthBar_60: -1545602664
+      PixelHealthBar_61: 1032846683
+      PixelHealthBar_62: -911394881
+      PixelHealthBar_63: -244893053
+      PixelHealthBar_64: -66919382
+      PixelHealthBar_65: 41132421
+      PixelHealthBar_66: -832012666
+      PixelHealthBar_67: -1462971038
+      PixelHealthBar_7: 1588235612
+      PixelHealthBar_8: 356340511
+      PixelHealthBar_9: -362788570
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -47,6 +47,11 @@ public class PlayerShieldBehaviour : MonoBehaviour
         InputManager.PlayerParry.canceled += OnParryEnded;
     }
 
+    private void OnDestroy()
+    {
+        InputManager.PlayerParry.started -= OnParryStarted;
+        InputManager.PlayerParry.canceled -= OnParryEnded;
+    }
     #endregion
 
     #region PlayerInput subscribed actions

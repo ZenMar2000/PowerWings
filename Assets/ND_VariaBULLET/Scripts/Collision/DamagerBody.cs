@@ -1,7 +1,7 @@
 ﻿#region Script Synopsis
-    //A special case script for applying damage from one body to another during collision.
-    //Attach to body of player or enemy in order to transmit collision damage information during collision.
-    //Learn more about the collision system at: https://neondagger.com/variabullet2d-system-guide/#collision-system
+//A special case script for applying damage from one body to another during collision.
+//Attach to body of player or enemy in order to transmit collision damage information during collision.
+//Learn more about the collision system at: https://neondagger.com/variabullet2d-system-guide/#collision-system
 #endregion
 
 using UnityEngine;
@@ -15,30 +15,31 @@ namespace ND_VariaBULLET
 
         [Space(10)]
 
-        [Tooltip("Set if the script is attached to a player. Handles bonus damage logic.")]
-        public bool IsPlayer = false;
+        //[Tooltip("Set if the script is attached to a player. Handles bonus damage logic.")]
+        //public bool IsPlayer = false;
 
         private PlayerProjectileEmitterBehaviour playerProjectileEmitter;
 
         private void Start()
         {
-            if (IsPlayer)
-            {
-                playerProjectileEmitter = GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
-            }
+            //if (IsPlayer)
+            //{
+            //    playerProjectileEmitter = GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
+            //}
         }
 
-        public float DMG { 
-            get 
+        public float DMG
+        {
+            get
             {
-                if (IsPlayer)
-                {
-                    return playerProjectileEmitter.DamageMultiplier * DamagePerHit;
-                }
-                else 
-                { 
-                    return DamagePerHit; 
-                }
+                //if (IsPlayer)
+                //{
+                //    return playerProjectileEmitter.DamageMultiplier * DamagePerHit;
+                //}
+                //else 
+                //{ 
+            return DamagePerHit;
+                //}
             }
         }
     }

@@ -1,5 +1,5 @@
 ﻿#region Script Synopsis
-    //A non-physics type shot that homes in on a single direct target or the closest member of a group of targets, at "burst" intervals.
+    //A non-physics type shot that homes in on a single direct followTarget or the closest member of a group of targets, at "burst" intervals.
     //Action and description of fields can be found at https://neondagger.com/variabullet2d-in-depth-shot-guide/#default-shot-prefabs
 #endregion
 
@@ -30,7 +30,7 @@ namespace ND_VariaBULLET
 
         [Range(1, 10)]
         [Tooltip("Sets an FPS interval at which point the shot re-checks for the closest target to home in on. [Higher number = more frequent re-check].")]
-        public int RecalculationFPS = 3; //used to recalc closest target every 6-to-60 frames
+        public int RecalculationFPS = 3; //used to recalc closest followTarget every 6-to-60 frames
 
         [Tooltip("Scales the initial propelling burst of force.")]
         public float InitialPush;

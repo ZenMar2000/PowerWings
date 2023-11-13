@@ -13,6 +13,7 @@ namespace ND_VariaBULLET
     {
         [Tooltip("If it's player, change logic for HP")]
         public bool IsPlayer;
+        private PlayerProjectileEmitterBehaviour playerProjectileEmitterBehaviour => GameManager.Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
 
         [Tooltip("Sets the name of the explosion prefab to be instantiated when HP = 0.")]
         public string DeathExplosion;
@@ -35,8 +36,6 @@ namespace ND_VariaBULLET
         public Color DamageColor;
         private Color NormalColor;
         [SerializeField] private SpriteRenderer rend;
-
-        [SerializeField] private PlayerProjectileEmitterBehaviour playerProjectileEmitterBehaviour;
 
         void Start()
         {
@@ -67,7 +66,7 @@ namespace ND_VariaBULLET
         protected void setDamage(float damage)
         {
             if (IsPlayer) SetPlayerDamage();
-            else SetEnemyDamage(damage);
+            else SetEnemyDamage(damage * playerProjectileEmitterBehaviour.DamageMultiplier);
 
             CheckIfDefeated();
         }
@@ -139,7 +138,10 @@ namespace ND_VariaBULLET
                     finalExplode.transform.localScale = new Vector2(finalExplode.transform.localScale.x * FinalExplodeFactor, finalExplode.transform.localScale.y * FinalExplodeFactor);
                 }
 
-                Destroy(transform.parent.gameObject);
+                if(IsPlayer) Destroy(transform.parent.parent.gameObject);
+                else Destroy(transform.parent.gameObject);
+
+
             }
         }
     }

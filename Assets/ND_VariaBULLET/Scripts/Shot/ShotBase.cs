@@ -13,6 +13,10 @@ namespace ND_VariaBULLET
     {
         public bool PoolBank { get; set; }
 
+        public bool IsPlayerShot = false;
+        public PlayerProjectileEmitterBehaviour PlayerProjectileEmitterBehaviour;
+
+
         [HideInInspector]
         public float ShotSpeed;
 
@@ -25,7 +29,7 @@ namespace ND_VariaBULLET
 
         [Tooltip("Sets damage amount produced when this shot collides with an object that has a ShotCollisionDamage script attached.")]
         public float DamagePerHit = 1;
-        public float DMG { get { return DamagePerHit; } }
+        public float DMG { get { return /*IsPlayerShot? DamagePerHit * PlayerProjectileEmitterBehaviour.DamageMultiplier :*/ DamagePerHit; } }
 
         [Tooltip("Sets this shot rotation intitially to that of its emitter.")]
         public bool InheritStartRotation = true;
@@ -59,6 +63,11 @@ namespace ND_VariaBULLET
 
         public virtual void InitialSet()
         {
+            //if (IsPlayerShot)
+            //{
+            //    PlayerProjectileEmitterBehaviour = FindAnyObjectByType<PlayerProjectileEmitterBehaviour>();
+            //}
+
             eventCounter.Reset();
             poolOrDestroyTriggered = false;
 
