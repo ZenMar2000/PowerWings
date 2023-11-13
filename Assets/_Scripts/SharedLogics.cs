@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
-public static class SharedMethods
+public static class SharedLogics
 {
     //SET
     public static void SetAnimatorValue(ref Animator animator, string stringName, float value)
@@ -22,7 +22,7 @@ public static class SharedMethods
         animator.SetBool(stringName, value);
     }
 
-    //SET
+    //GET
     //public static float GetAnimatorFloatValue(ref Animator animator, string stringName)
     //{
     //    return animator.GetFloat(stringName);
@@ -40,7 +40,16 @@ public static class SharedMethods
     public enum MovementDirection
     {
         HORIZONTAL,
-        VERTICAL
+        VERTICAL,
+    }
+
+    public enum LoopType
+    {
+        INVERT_SPEED,
+        CONTINUE,
+        STOP_ALL_MOVEMENTS,
+        STOP_HORIZONTAL_MOVEMENT,
+        STOP_VERTICAL_MOVEMENT,
     }
 }
 

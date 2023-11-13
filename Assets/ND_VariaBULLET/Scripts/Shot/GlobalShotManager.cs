@@ -56,7 +56,7 @@ namespace ND_VariaBULLET
 
         [Range(1, 60)]
         [Tooltip("Sets Target Framerate if EnableTestFrameRate is toggled.")]
-        public int TestFrameRate = 60;
+        public int TestFrameRate = 120;
 
         [Tooltip("Enables VSync.")]
         public bool VSync;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2079895693551641287}
   - component: {fileID: 877912305435945532}
   m_Layer: 0
-  m_Name: MyCustomLinearNonPhysicsBulletPrefab
+  m_Name: PlayerCustomLinearNonPhysicsBulletPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.4
 --- !u!114 &877912305435945532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,8 +147,7 @@ MonoBehaviour:
   sortOrder: 0
   ColliderFlux: 0
   CollisionList:
-  - 
-  - 
+  - Enemy
   Explosion: 
   ParentExplosion: 0
   ExplosionRotation: 0
@@ -159,7 +158,7 @@ MonoBehaviour:
   FrameSkip: 0
   RandomStartFrame: 0
   EnableScaling: 0
-  ScaleSpeed: 12
+  ScaleSpeed: 11
   XFrom: 0.9
   XTo: 1.1
   YFrom: 0.9

@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static SharedMethods;
+using static SharedLogics;
 
 public class PlayerShieldBehaviour : MonoBehaviour
 {
+    public bool CanParry = true;
     //private Animator shieldAnimator;
     private SpriteRenderer shieldSpriteRenderer;
     private CapsuleCollider2D shieldCollider;
+    [SerializeField] private PlayerProjectileEmitterBehaviour playerProjectileEmitter;
 
     #region Properties
     private bool _isParrying = false;
@@ -21,9 +23,12 @@ public class PlayerShieldBehaviour : MonoBehaviour
         private set 
         {
             _isParrying = value;
-            shieldSpriteRenderer.enabled = value;
-            shieldCollider.enabled = value;
-            //SetAnimatorValue(ref shieldAnimator, AnimatorStrings.IsParrying, value);
+            if(shieldSpriteRenderer != null)
+            {
+                shieldSpriteRenderer.enabled = value;
+                shieldCollider.enabled = value;
+                //SetAnimatorValue(ref shieldAnimator, AnimatorStrings.IsParrying, value);
+            }
         }
     }
 
@@ -47,14 +52,23 @@ public class PlayerShieldBehaviour : MonoBehaviour
     #region PlayerInput subscribed actions
     private void OnParryStarted(InputAction.CallbackContext context)
     {
-        IsParrying = true;
+        if (CanParry)
+        {
+            IsParrying = true;
+            shieldCollider.enabled = true;
+        }
     }
 
     private void OnParryEnded(InputAction.CallbackContext context)
     {
-        IsParrying = false;
+        DisableParry();
     }
 
+    public void DisableParry()
+    {
+        shieldCollider.enabled = false;
+        IsParrying = false;
+    }
     #endregion
 
 }

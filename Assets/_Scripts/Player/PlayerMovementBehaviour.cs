@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static SharedMethods;
+using static SharedLogics;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
@@ -9,8 +9,11 @@ public class PlayerMovementBehaviour : MonoBehaviour
     public float MovementSpeed = 15f;
     public float PreciseMovementSpeed;
 
-    //0 = center, 1 = top (all screen), -1 = bottom (no vertical movement)
+    [Space(10)]
+
     [SerializeField] private float maxReachablePlayerVerticalOffset = 0f;
+
+    [Space(10)]
 
     [SerializeField] private Animator shipAnimator;
     [SerializeField] private SpriteRenderer shipSprite;

@@ -12,6 +12,34 @@ namespace ND_VariaBULLET
     {
         [Tooltip("Sets the amount of HP reduction produced by this object when collides with a ShotCollidable object.")]
         public float DamagePerHit;
-        public float DMG { get { return DamagePerHit; } }
+
+        [Space(10)]
+
+        [Tooltip("Set if the script is attached to a player. Handles bonus damage logic.")]
+        public bool IsPlayer = false;
+
+        private PlayerProjectileEmitterBehaviour playerProjectileEmitter;
+
+        private void Start()
+        {
+            if (IsPlayer)
+            {
+                playerProjectileEmitter = GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
+            }
+        }
+
+        public float DMG { 
+            get 
+            {
+                if (IsPlayer)
+                {
+                    return playerProjectileEmitter.DamageMultiplier * DamagePerHit;
+                }
+                else 
+                { 
+                    return DamagePerHit; 
+                }
+            }
+        }
     }
 }

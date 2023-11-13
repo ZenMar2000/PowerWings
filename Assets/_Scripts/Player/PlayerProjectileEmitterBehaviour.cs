@@ -13,8 +13,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     public SpreadPattern spreadController;
 
     //Privates
-    private float tempTimer = 0; //temp, used for testing bulletAccumulator logic
-
+    
     [SerializeField] private float shootingRateCooldown = 0.01f;
     /// <summary>
     /// Timer used toghether with shootingRateCooldown for repeating waves
@@ -22,24 +21,27 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     private float shootingtTimer = 0;
 
     /// <summary>
-    /// Store all bullets accumulated. Will be subdivided in multiWavesRepeat and singleWaveProjectiles as soon as the player perform an attack.
+    /// Store all bullets accumulated. Will be subdivided in MultiWavesRepeat and SingleWaveProjectiles as soon as the player perform an attack.
     /// </summary>
-    [SerializeField] private long bulletsAccumulator;
+    public long BulletsAccumulator;
 
     /// <summary>
     /// Store how many waves with the full CurrentEmittersAmountPerWaves must be performed.
     /// </summary>
-    [SerializeField] private int multiWavesRepeat = 0;
+    public int MultiWavesRepeat = 0;
 
     /// <summary>
-    /// Used for perform a single wave after all multiWavesRepeat reached 0. Shoots remaining bullets.
+    /// Used for perform a single wave after all MultiWavesRepeat reached 0. Shoots remaining bullets.
     /// </summary>
-    [SerializeField] private int singleWaveProjectiles = 0;
+    public int SingleWaveProjectiles = 0;
 
     private int maxStandardProjectileCharge = 512;
     private int maxOverloadProjectileCharge = 1024;
     private int currentMaxProjectileCharge;
 
+    [SerializeField] private PlayerShieldBehaviour playerShieldBehaviour;
+
+    #region Properties
     private bool _isOverloaded = false;
     public bool isOverloaded
     {
@@ -54,7 +56,6 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         }
     }
 
-    #region Properties
     private bool _isShooting = false;
     public bool IsShooting
     {
@@ -65,6 +66,10 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         private set
         {
             _isShooting = value;
+            if (!value)
+            {
+                BulletsAccumulator = 0;
+            }
         }
     }
 
@@ -101,14 +106,14 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     private void Awake()
     {
         CurrentEmittersAmountPerWave = 15;
-        bulletsAccumulator = 8;
+        BulletsAccumulator = 8;
         currentMaxProjectileCharge = maxStandardProjectileCharge;
     }
     private void Start()
     {
         spreadController = GetComponentInChildren<SpreadPattern>();
-        InputManager.PlayerAttack.started += OnAttack;
 
+        InputManager.PlayerAttack.started += OnAttack;
     }
 
     private void Update()
@@ -120,17 +125,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         if (IsShooting)
         {
             shootingtTimer += Time.deltaTime;
-            tempTimer = 0;
         }
-        //else
-        //{
-        //    tempTimer += Time.deltaTime;
-        //    if (tempTimer > 1)
-        //    {
-        //        tempTimer = 0;
-        //        bulletsAccumulator = bulletsAccumulator == 0 ? 1 : bulletsAccumulator * 2;
-        //    }
-        //}
     }
 
     #endregion
@@ -140,6 +135,8 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     {
         if (CanShoot())
         {
+            playerShieldBehaviour.DisableParry();
+            playerShieldBehaviour.CanParry = false;
             ReleaseAttack();
         }
     }
@@ -153,16 +150,16 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         {
             shootingtTimer = 0;
 
-            if (multiWavesRepeat > 0)
+            if (MultiWavesRepeat > 0)
             {
                 spreadController.SetAndCloneEmitters(CurrentEmittersAmountPerWave);
-                multiWavesRepeat--;
+                MultiWavesRepeat--;
                 ShotNow = true;
             }
-            else if (singleWaveProjectiles > 0)
+            else if (SingleWaveProjectiles > 0)
             {
-                spreadController.SetAndCloneEmitters(singleWaveProjectiles);
-                singleWaveProjectiles = 0;
+                spreadController.SetAndCloneEmitters(SingleWaveProjectiles);
+                SingleWaveProjectiles = 0;
                 ShotNow = true;
             }
         }
@@ -183,35 +180,33 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
 
     private void CheckShootingStatus()
     {
-        if (multiWavesRepeat <= 0 && singleWaveProjectiles <= 0)
+        if (MultiWavesRepeat <= 0 && SingleWaveProjectiles <= 0 && IsShooting)
         {
             IsShooting = false;
             DamageMultiplier = 1;
+            playerShieldBehaviour.CanParry = true;
         }
     }
 
     public bool CanShoot()
     {
-        if (!IsShooting && bulletsAccumulator > 0) return true;
+        if (!IsShooting && BulletsAccumulator > 0) return true;
         return false;
     }
 
     private void SubdivideBullets()
     {
-        if (bulletsAccumulator > CurrentEmittersAmountPerWave)
+        if (BulletsAccumulator > CurrentEmittersAmountPerWave)
         {
-            if (bulletsAccumulator > currentMaxProjectileCharge)
+            if (BulletsAccumulator > currentMaxProjectileCharge)
             {
-                bulletsAccumulator = currentMaxProjectileCharge;
+                BulletsAccumulator = currentMaxProjectileCharge;
             }
         }
-        //else
-        //{
-        //    DamageMultiplier = 1;
-        //}
-        singleWaveProjectiles = (int)(bulletsAccumulator % CurrentEmittersAmountPerWave);
-        multiWavesRepeat = (int)(bulletsAccumulator / CurrentEmittersAmountPerWave);
-        bulletsAccumulator = 0;
+       
+        SingleWaveProjectiles = (int)(BulletsAccumulator % CurrentEmittersAmountPerWave);
+        MultiWavesRepeat = (int)(BulletsAccumulator / CurrentEmittersAmountPerWave);
+        //BulletsAccumulator = 0;
     }
 
     private void CalculateShootingRate()
@@ -221,9 +216,9 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
 
     private void CheckIfAccumulatorOverloaded()
     {
-        if (bulletsAccumulator < 0)
+        if (BulletsAccumulator < 0)
         {
-            bulletsAccumulator = long.MaxValue;
+            BulletsAccumulator = long.MaxValue;
             shootingRateCooldown = 0.01f;
 
             isOverloaded = true;
@@ -248,12 +243,12 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
             currentMaxProjectileCharge = maxStandardProjectileCharge;
     }
 
-    private void CalculateDamageMultiplier()
+    public void CalculateDamageMultiplier()
     {
-        if (bulletsAccumulator > currentMaxProjectileCharge)
+        if (BulletsAccumulator > currentMaxProjectileCharge)
         {
             DamageMultiplier = 2;
-            DamageMultiplier += Mathf.Sqrt(Mathf.Log10(bulletsAccumulator / currentMaxProjectileCharge)) / 2;
+            DamageMultiplier += Mathf.Sqrt(Mathf.Log10(BulletsAccumulator / currentMaxProjectileCharge)) / 2;
         }
     }
     #endregion
