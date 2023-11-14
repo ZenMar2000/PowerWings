@@ -23,6 +23,30 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     /// </summary>
     private float shootingtTimer = 0;
 
+    
+    /// <summary>
+    /// Store how many waves with the full CurrentEmittersAmountPerWaves must be performed.
+    /// </summary>
+    public int MultiWavesRepeat = 0;
+
+    /// <summary>
+    /// Used for perform a single wave after all MultiWavesRepeat reached 0. Shoots remaining bullets.
+    /// </summary>
+    public int SingleWaveProjectiles = 0;
+
+    private int maxStandardProjectileCharge = 256;
+    private int maxOverloadProjectileCharge = 512;
+   
+
+    private int subtractiveBulletsAccumulator = 0;
+    [SerializeField] private PlayerShieldBehaviour playerShieldBehaviour;
+
+    #region Properties
+    /// <summary>
+    /// Maximum amount of projectiles actually shot. Excess bullets are converted in damage multiplier bonus.
+    /// </summary>
+    public int CurrentMaxProjectileCharge { get; private set; }
+
     /// <summary>
     /// Store all bullets accumulated. Will be subdivided in MultiWavesRepeat and SingleWaveProjectiles as soon as the player perform an attack.
     /// </summary>
@@ -40,23 +64,6 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Store how many waves with the full CurrentEmittersAmountPerWaves must be performed.
-    /// </summary>
-    public int MultiWavesRepeat = 0;
-
-    /// <summary>
-    /// Used for perform a single wave after all MultiWavesRepeat reached 0. Shoots remaining bullets.
-    /// </summary>
-    public int SingleWaveProjectiles = 0;
-
-    private int maxStandardProjectileCharge = 256;
-    private int maxOverloadProjectileCharge = 512;
-    private int currentMaxProjectileCharge;
-
-    [SerializeField] private PlayerShieldBehaviour playerShieldBehaviour;
-
-    #region Properties
     private bool _isOverloaded = false;
     public bool isOverloaded
     {
@@ -125,7 +132,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         shotSound = GetComponent<AudioSource>();
         CurrentEmittersAmountPerWave = 15;
         BulletsAccumulator = 8;
-        currentMaxProjectileCharge = maxStandardProjectileCharge;
+        CurrentMaxProjectileCharge = maxStandardProjectileCharge;
     }
     private void Start()
     {
@@ -158,8 +165,6 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     {
         if (CanShoot())
         {
-            playerShieldBehaviour.DisableParry();
-            playerShieldBehaviour.CanParry = false;
             ReleaseAttack();
         }
     }
@@ -173,6 +178,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         {
             shootingtTimer = 0;
             HandleShotSound();
+            UpdateBulletAccumulator();
 
             if (MultiWavesRepeat > 0)
             {
@@ -231,15 +237,14 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         long tempBullet = BulletsAccumulator;
         if (tempBullet > CurrentEmittersAmountPerWave)
         {
-            if (tempBullet > currentMaxProjectileCharge)
+            if (tempBullet > CurrentMaxProjectileCharge)
             {
-                tempBullet = currentMaxProjectileCharge;
+                tempBullet = CurrentMaxProjectileCharge;
             }
         }
 
         SingleWaveProjectiles = (int)(tempBullet % CurrentEmittersAmountPerWave);
         MultiWavesRepeat = (int)(tempBullet / CurrentEmittersAmountPerWave);
-        //BulletsAccumulator = 0;
     }
 
     private void CalculateShootingRate()
@@ -264,22 +269,27 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     {
         IsShooting = true;
         playerShieldBehaviour.DisableParry();
+        playerShieldBehaviour.CanParry = false;
+
         CalculateDamageMultiplier();
         SubdivideBullets();
+        
+        CalculateBulletsSubtractionValue();
         HandlesProjectileWavesRelease();
+
     }
 
     private void SetCurrentMaxProjectileCharge()
     {
         if (isOverloaded)
-            currentMaxProjectileCharge = maxOverloadProjectileCharge;
+            CurrentMaxProjectileCharge = maxOverloadProjectileCharge;
         else
-            currentMaxProjectileCharge = maxStandardProjectileCharge;
+            CurrentMaxProjectileCharge = maxStandardProjectileCharge;
     }
 
     public void CalculateDamageMultiplier()
     {
-        if (BulletsAccumulator > currentMaxProjectileCharge)
+        if (BulletsAccumulator > CurrentMaxProjectileCharge)
         {
             DamageMultiplier += DamageMultiplier * 0.02f;
         }
@@ -287,6 +297,21 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         {
             DamageMultiplier = 1;
         }
+    }
+    private void UpdateBulletAccumulator()
+    {
+        if ((BulletsAccumulator - subtractiveBulletsAccumulator) < 0)
+            BulletsAccumulator = 0;
+        else
+            BulletsAccumulator -= subtractiveBulletsAccumulator;
+    }
+
+    private void CalculateBulletsSubtractionValue()
+    {
+        subtractiveBulletsAccumulator = (int)(BulletsAccumulator / (MultiWavesRepeat + 1));
+
+        if (subtractiveBulletsAccumulator==0)
+            subtractiveBulletsAccumulator = 1;
     }
     #endregion
 
