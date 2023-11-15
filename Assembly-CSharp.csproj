@@ -88,8 +88,10 @@
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\ColorLerp.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotEmitPattern.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBase.cs" />
+    <Compile Include="Assets\_Scripts\Enemies\EnemySingleMovementManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotCollFlux.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\DifficultySelect.cs" />
+    <Compile Include="Assets\_Scripts\Enemies\EnemyMovementManager.cs" />
     <Compile Include="Assets\Input\InputManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\GlobalSlowDown.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CantroGunAnim.cs" />
@@ -116,7 +118,6 @@
     <Compile Include="Assets\_Scripts\Player\PlayerShieldBehaviour.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerMovementBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotGravitational.cs" />
-    <Compile Include="Assets\_Scripts\Enemies\EnemySingleMovementBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLaser.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\ObjectPool.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Extras\CustomPath.cs" />

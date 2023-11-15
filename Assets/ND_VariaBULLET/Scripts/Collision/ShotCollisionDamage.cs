@@ -103,6 +103,7 @@ namespace ND_VariaBULLET
             if (playerProjectileEmitterBehaviour.BulletsAccumulator > 0)
             {
                 playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * 0.25);
+                playerProjectileEmitterBehaviour.CalculateDamageMultiplier();
 
                 if (playerProjectileEmitterBehaviour.IsShooting)
                 {
@@ -110,7 +111,6 @@ namespace ND_VariaBULLET
                     playerProjectileEmitterBehaviour.SingleWaveProjectiles = (int)(playerProjectileEmitterBehaviour.SingleWaveProjectiles * 0.25);
                 }
 
-                playerProjectileEmitterBehaviour.CalculateDamageMultiplier();
 
             }
             else

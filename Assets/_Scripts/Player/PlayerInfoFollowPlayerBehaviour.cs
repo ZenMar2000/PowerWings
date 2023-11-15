@@ -6,7 +6,7 @@ public class PlayerInfoFollowPlayerBehaviour : MonoBehaviour
 {
     [SerializeField] PlayerProjectileEmitterBehaviour playerProjectileEmitterBehaviour;
     [Space(10)]
-    [SerializeField] private float lerpDuration = 3;
+    [SerializeField] private float lerpDuration = 0.02f;
     [SerializeField] private Transform followTarget;
     [SerializeField] private TMP_Text StoredBulletsText;
     [SerializeField] private TMP_Text CurrentDamageMultiplierText;

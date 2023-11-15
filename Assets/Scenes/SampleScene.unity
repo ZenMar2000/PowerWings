@@ -186,7 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1599882249124976416, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1599882249124976416, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -231,6 +231,90 @@ PrefabInstance:
     - target: {fileID: 3407885637628825770, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: movementSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: movementDuration
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[0].LoopablePosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[1].LoopablePosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[2].LoopablePosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[0].MovementPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[0].MovementPosition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[1].MovementPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[1].MovementPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[2].MovementPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[2].MovementPosition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[0].MovementPositionOffset.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[0].MovementPositionOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[1].MovementPositionOffset.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[1].MovementPositionOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[2].MovementPositionOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169332021826854116, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: MovementTargets.Array.data[2].MovementPositionOffset.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975655970811752576, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975655970811752576, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: startDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975655970811752576, guid: 5b9c936ceaee63c4eab518f84c4560f4, type: 3}
+      propertyPath: repeatMovementTimer
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -51,5 +51,12 @@ public static class SharedLogics
         STOP_HORIZONTAL_MOVEMENT,
         STOP_VERTICAL_MOVEMENT,
     }
+
+    [System.Serializable]
+    public struct MovementInfo
+    {
+        public Vector3 MovementPositionOffset;
+        public bool LoopablePosition;
+    }
 }
 

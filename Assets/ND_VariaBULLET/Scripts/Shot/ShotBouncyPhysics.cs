@@ -1,6 +1,6 @@
 ﻿#region Script Synopsis
     //A physics type shot that uses a "bouncy" material on the collider to create deflection off of collidable objects.
-    //Doesn't become destroyed through the conventional OnCollisionEnter2D() method.
+    //Doesn'progress become destroyed through the conventional OnCollisionEnter2D() method.
     //Examples: used in "PuzzleShooter" demo.
 #endregion
 
