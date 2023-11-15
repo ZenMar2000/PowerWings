@@ -23,7 +23,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     /// </summary>
     private float shootingtTimer = 0;
 
-    
+
     /// <summary>
     /// Store how many waves with the full CurrentEmittersAmountPerWaves must be performed.
     /// </summary>
@@ -36,7 +36,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
 
     private int maxStandardProjectileCharge = 256;
     private int maxOverloadProjectileCharge = 512;
-   
+
 
     private int subtractiveBulletsAccumulator = 0;
     [SerializeField] private PlayerShieldBehaviour playerShieldBehaviour;
@@ -273,7 +273,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
 
         CalculateDamageMultiplier();
         SubdivideBullets();
-        
+
         CalculateBulletsSubtractionValue();
         HandlesProjectileWavesRelease();
 
@@ -308,9 +308,9 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
 
     private void CalculateBulletsSubtractionValue()
     {
-        subtractiveBulletsAccumulator = (int)(BulletsAccumulator / (MultiWavesRepeat + 1));
+        subtractiveBulletsAccumulator = (int)Mathf.Ceil(BulletsAccumulator / (CurrentEmittersAmountPerWave == 1 ? MultiWavesRepeat : MultiWavesRepeat + 1));
 
-        if (subtractiveBulletsAccumulator==0)
+        if (subtractiveBulletsAccumulator == 0)
             subtractiveBulletsAccumulator = 1;
     }
     #endregion

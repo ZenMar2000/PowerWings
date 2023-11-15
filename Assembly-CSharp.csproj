@@ -88,7 +88,6 @@
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\ColorLerp.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotEmitPattern.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBase.cs" />
-    <Compile Include="Assets\_Scripts\Enemies\EnemySingleMovementManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotCollFlux.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\DifficultySelect.cs" />
     <Compile Include="Assets\_Scripts\Enemies\EnemyMovementManager.cs" />
@@ -892,6 +891,9 @@
     <Reference Include="Unity.InputSystem.ForUI">
       <HintPath>Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Splines.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Splines.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
@@ -918,6 +920,9 @@
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Splines">
+      <HintPath>Library\ScriptAssemblies\Unity.Splines.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
