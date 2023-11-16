@@ -16,6 +16,8 @@ K - Attack and release all bullets
 - Player SpaceShips: https://wobblegut-studios.itch.io/sf01
 - Enemy SpaceShips: https://opengameart.org/content/top-down-shooter-sprites
 - Shield: https://opengameart.org/content/shield-effect
-- Background: -none(for now)
+- Charge bar: https://bdragon1727.itch.io/basic-pixel-health-bar-and-scroll-bar (Base from here. Picked, edited and added animation frames)
+- Background: none for now)
 - Toolkits:
-  - VariaBullets2D: https://assetstore.unity.com/packages/tools/game-toolkits/variabullet2d-projectile-bullet-hell-system-152528
+  - VariaBullets2D: https://assetstore.unity.com/packages/tools/game-toolkits/variabullet2d-projectile-bullet-hell-system-152528 (tweaked, added new logics and changed others)
+  - Splines Unity built in package
