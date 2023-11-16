@@ -1,28 +1,31 @@
-using System.Collections.Generic;
 using UnityEngine;
 using static SharedLogics;
-
 public class EnemyMovementManager : MonoBehaviour
 {
     private Animator animator;
-
-    private float interpolationAmount;
-    private float previousInterpolationAmount;
-
-    private Rigidbody2D rb;
-
-
-    [SerializeField] Vector2 currentSpeed;
-
+    [SerializeField] private float previousXPosition;
+    [SerializeField] private float currentXPosition => transform.position.x;
     private void Awake()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
-        //SetMovementTargetsOffsets();
+        previousXPosition = transform.position.x;
     }
 
     private void Update()
     {
-        currentSpeed = rb.velocity;
+        CheckAndSetAnimatorValue();
+
+    }
+
+    private void CheckAndSetAnimatorValue()
+    {
+        if (currentXPosition != previousXPosition)
+        {
+            SetAnimatorValue(ref animator, AnimatorStrings.HorizontalMovingDirection, (currentXPosition - previousXPosition) * 25f);
+            previousXPosition = currentXPosition;
+        }
+        else
+            SetAnimatorValue(ref animator, AnimatorStrings.HorizontalMovingDirection, 0f);
+
     }
 }

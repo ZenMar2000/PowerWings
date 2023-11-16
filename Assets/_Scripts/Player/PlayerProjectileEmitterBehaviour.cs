@@ -202,6 +202,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
             SoundTimer = 0;
         }
     }
+   
     private void CheckEmittedShots()
     {
         if (ShotsEmitted == spreadController.EmitterAmount)
@@ -298,6 +299,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
             DamageMultiplier = 1;
         }
     }
+   
     private void UpdateBulletAccumulator()
     {
         if ((BulletsAccumulator - subtractiveBulletsAccumulator) < 0)

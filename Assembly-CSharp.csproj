@@ -64,6 +64,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\CollisionFilter.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLaserBase.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\ShotCollisionDamage.cs" />
+    <Compile Include="Assets\_Scripts\Enemies\EnemySingleSpawnBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\BallReloader.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\CoroutineExt.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBaseRotatable.cs" />
@@ -149,6 +150,7 @@
     <Compile Include="Assets\Input\PowerInputActions.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\QuickAnimation.cs" />
     <Compile Include="Assets\_Scripts\SharedLogics.cs" />
+    <Compile Include="Assets\_Scripts\Enemies\SplineAnimationBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBurstPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotExploding.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CharacterControllerMain.cs" />
