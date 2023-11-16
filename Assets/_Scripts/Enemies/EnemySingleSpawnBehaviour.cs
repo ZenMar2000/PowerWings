@@ -12,12 +12,12 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
 
     private SplineContainer container;
     private SplineAnimate splineAnimate;
-    private SplineAnimationBehaviour splineBehaviour;
+    private EnemySplineAnimationBehaviour splineBehaviour;
     private void Awake()
     {
         GameObject spline = Instantiate(SplinePathPrefab, spawnPosition, Quaternion.identity, transform);
         container = GetComponentInChildren<SplineContainer>();
-        splineBehaviour = spline.GetComponent<SplineAnimationBehaviour>();
+        splineBehaviour = spline.GetComponent<EnemySplineAnimationBehaviour>();
 
         GameObject ship = Instantiate(EnemyShipPrefab,spawnPosition, Quaternion.identity, transform);
         splineAnimate = ship.GetComponentInChildren<SplineAnimate>();

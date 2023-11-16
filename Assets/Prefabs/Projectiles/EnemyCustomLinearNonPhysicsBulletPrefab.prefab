@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d11570412a12104ab464e211d5c74ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsPlayerShot: 0
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   ShotSpeed: 0
   IgnoreGlobalSpeedScale: 0
   ParentToEmitter: 0
@@ -163,9 +165,9 @@ MonoBehaviour:
   XTo: 1.1
   YFrom: 0.9
   YTo: 1.1
-  RandomStartRotation: 0
-  rotationSpeed: 0
-  rotationSpeedRange: 0
+  RandomStartRotation: 1
+  rotationSpeed: 9.5
+  rotationSpeedRange: 2.23
   RotationDirection: 2
   DissipateDelay: 0
   DissipateSpeed: 0

@@ -38,7 +38,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     private int maxOverloadProjectileCharge = 512;
 
 
-    private int subtractiveBulletsAccumulator = 0;
+    private long subtractiveBulletsAccumulator = 0;
     [SerializeField] private PlayerShieldBehaviour playerShieldBehaviour;
 
     #region Properties
@@ -259,13 +259,13 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         {
             BulletsAccumulator = long.MaxValue;
             shootingRateCooldown = 0.01f;
-            DamageMultiplier = 5;
+            DamageMultiplier = 3;
             isOverloaded = true;
             ReleaseAttack();
             isOverloaded = false;
         }
     }
-
+     
     private void ReleaseAttack()
     {
         IsShooting = true;
@@ -310,7 +310,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
 
     private void CalculateBulletsSubtractionValue()
     {
-        subtractiveBulletsAccumulator = (int)Mathf.Ceil(BulletsAccumulator / (CurrentEmittersAmountPerWave == 1 ? MultiWavesRepeat : MultiWavesRepeat + 1));
+        subtractiveBulletsAccumulator = (long)Mathf.Ceil(BulletsAccumulator / (CurrentEmittersAmountPerWave == 1 ? MultiWavesRepeat : MultiWavesRepeat + 1));
 
         if (subtractiveBulletsAccumulator == 0)
             subtractiveBulletsAccumulator = 1;

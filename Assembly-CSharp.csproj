@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\BasePattern.cs" />
+    <Compile Include="Assets\_Scripts\Enemies\EnemySplineAnimationBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Extras\TurretFollower.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\TerrainBuilder.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\CollisionFilter.cs" />
@@ -150,7 +151,6 @@
     <Compile Include="Assets\Input\PowerInputActions.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\QuickAnimation.cs" />
     <Compile Include="Assets\_Scripts\SharedLogics.cs" />
-    <Compile Include="Assets\_Scripts\Enemies\SplineAnimationBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBurstPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotExploding.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CharacterControllerMain.cs" />
