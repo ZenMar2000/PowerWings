@@ -13,7 +13,7 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     private SplineContainer container;
     private SplineAnimate splineAnimate;
     private EnemySplineAnimationBehaviour splineBehaviour;
-    private void Awake()
+    private void Start()
     {
         GameObject spline = Instantiate(SplinePathPrefab, spawnPosition, Quaternion.identity, transform);
         container = GetComponentInChildren<SplineContainer>();

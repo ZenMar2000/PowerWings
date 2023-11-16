@@ -75,6 +75,7 @@
     <Compile Include="Assets\_Scripts\Player\ChargeLevelBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CharacterControllerInertial.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\TurretController.cs" />
+    <Compile Include="Assets\_Scripts\Enemies\EnemyEmitterPatternBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\OnScreenDisplay.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBullet.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLinearNonPhysics.cs" />
