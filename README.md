@@ -4,6 +4,8 @@ The theme is ~ SCALE ~<br>
 
 It's a 2d bullet hell game, where for each absorbed enemy bullet, your own bullets reserve gets multiplied x2 each time (hence the first Scale mechanic).
 Enemies and bosses also scale with Threat levels, becoming more powerful as the game progress.<br><br>
+Watch out! Your stored bullets are also your health! If you get hit you will lose some of them. But if you have 0 when hit, it's game over!
+<br><br>
 
 ~~ CONTROLS ~~<br>
 WASD - move<br>
