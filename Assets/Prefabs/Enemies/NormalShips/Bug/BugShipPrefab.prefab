@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4190041043739344563}
   - component: {fileID: 6189000357579227369}
   - component: {fileID: 4169332021826854116}
-  - component: {fileID: 9085245917745203020}
   m_Layer: 9
   m_Name: BugShipPrefab
   m_TagString: Untagged
@@ -100,21 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousXPosition: 0
---- !u!114 &9085245917745203020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490953567770774657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f5c3217870b6db49bb7f6e660ce773f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sinPeriod: 5
-  timerDuration: 5
-  progress: 0
 --- !u!1 &2334261531415712688
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +243,7 @@ MonoBehaviour:
   SpriteOverride: {fileID: 21300000, guid: e42ea7eab39fd5f4f9369caa43c74899, type: 3}
   ParentToEmitter: 0
   IgnoreGlobalRateScale: 0
-  ShotRate: 10
+  ShotRate: 12
   PauseRate: 100
   PauseLength: 1
   ShotOverlap: 1
@@ -455,6 +439,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2247280188079651298}
   - component: {fileID: 2207304541829203044}
+  - component: {fileID: 3018542237761070362}
+  - component: {fileID: 8495134427890048333}
+  - component: {fileID: 1987028299405677113}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -517,6 +504,50 @@ MonoBehaviour:
   SpreadXAxis: 0
   patternSelect: 1
   Preset: 0
+--- !u!114 &3018542237761070362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6038362897984381898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a281f14904db642abbc46f959efac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 0.1
+  maxValue: 3
+  isLoopable: 1
+  _progress: 0
+--- !u!114 &8495134427890048333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6038362897984381898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5c3217870b6db49bb7f6e660ce773f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oscillator: {fileID: 3018542237761070362}
+--- !u!114 &1987028299405677113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6038362897984381898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072ab8d04d4379c49bc1b2092ac05bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireLenght: 2
+  pauseBurstLenght: 1
+  delayedStartFire: 0
 --- !u!1 &6202080401673099722
 GameObject:
   m_ObjectHideFlags: 0

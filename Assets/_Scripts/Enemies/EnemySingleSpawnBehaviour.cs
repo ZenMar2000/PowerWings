@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -15,16 +12,23 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     private EnemySplineAnimationBehaviour splineBehaviour;
     private void Start()
     {
-        GameObject spline = Instantiate(SplinePathPrefab, spawnPosition, Quaternion.identity, transform);
-        container = GetComponentInChildren<SplineContainer>();
-        splineBehaviour = spline.GetComponent<EnemySplineAnimationBehaviour>();
+        if (SplinePathPrefab != null)
+        {
+            GameObject spline = Instantiate(SplinePathPrefab, spawnPosition, Quaternion.identity, transform);
+            container = GetComponentInChildren<SplineContainer>();
+            splineBehaviour = spline.GetComponent<EnemySplineAnimationBehaviour>();
 
-        GameObject ship = Instantiate(EnemyShipPrefab,spawnPosition, Quaternion.identity, transform);
-        splineAnimate = ship.GetComponentInChildren<SplineAnimate>();
+            GameObject ship = Instantiate(EnemyShipPrefab, spawnPosition, Quaternion.identity, transform);
+            splineAnimate = ship.GetComponentInChildren<SplineAnimate>();
 
-        splineAnimate.Duration = splineBehaviour.MovementSpeed;
-        splineAnimate.Easing = splineBehaviour.EasingMode;
-        splineAnimate.Loop = splineBehaviour.LoopMode;
-        splineAnimate.Container = container;
+            splineAnimate.Duration = splineBehaviour.MovementSpeed;
+            splineAnimate.Easing = splineBehaviour.EasingMode;
+            splineAnimate.Loop = splineBehaviour.LoopMode;
+            splineAnimate.Container = container;
+        }
+        else
+        {
+            GameObject ship = Instantiate(EnemyShipPrefab, spawnPosition, Quaternion.identity, transform);
+        }
     }
 }

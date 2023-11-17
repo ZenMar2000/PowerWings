@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\BasePattern.cs" />
+    <Compile Include="Assets\_Scripts\Misc\SharedLogics.cs" />
     <Compile Include="Assets\_Scripts\Enemies\EnemySplineAnimationBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Extras\TurretFollower.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\TerrainBuilder.cs" />
@@ -72,10 +73,10 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotReAngle.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\GlobalShotBank.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CantroGunBlastAnim.cs" />
+    <Compile Include="Assets\_Scripts\Enemies\EnemyFireRateBehaviour.cs" />
     <Compile Include="Assets\_Scripts\Player\ChargeLevelBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CharacterControllerInertial.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\TurretController.cs" />
-    <Compile Include="Assets\_Scripts\Enemies\EnemyEmitterPatternBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\OnScreenDisplay.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBullet.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLinearNonPhysics.cs" />
@@ -85,9 +86,11 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\AutomateBase.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerBulletSpreadVisualiserBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\ShotCollisionDamageShield.cs" />
+    <Compile Include="Assets\_Scripts\Misc\ObjectScreenBoundaries.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CoinOnDestroyed.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBullet.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\FullPresetSwitcher.cs" />
+    <Compile Include="Assets\_Scripts\Misc\AnimatorStrings.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\ColorLerp.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotEmitPattern.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBase.cs" />
@@ -105,6 +108,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBaseAnimatable.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\BoundToScreen.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\BlastShip.cs" />
+    <Compile Include="Assets\_Scripts\Enemies\EnemyEmittersPatternBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotHoming.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Extras\SinePath.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBase.cs" />
@@ -133,13 +137,13 @@
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CantroRunAnim.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\DamagerBody.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\SpreadPattern.cs" />
-    <Compile Include="Assets\_Scripts\ObjectScreenBoundaries.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireExpanding.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\BasicPresetState.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\FocusShotSwitcher.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\HomingCalc.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBaseColorizable.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\PointerController.cs" />
+    <Compile Include="Assets\_Scripts\Misc\Oscillator.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\GoofLogic.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLinearPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLaserPacket.cs" />
@@ -151,11 +155,9 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotAccelerating.cs" />
     <Compile Include="Assets\Input\PowerInputActions.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\QuickAnimation.cs" />
-    <Compile Include="Assets\_Scripts\SharedLogics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBurstPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotExploding.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CharacterControllerMain.cs" />
-    <Compile Include="Assets\_Scripts\AnimatorStrings.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\BlastAnimBase.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\IDamager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\ShotCollidable.cs" />
