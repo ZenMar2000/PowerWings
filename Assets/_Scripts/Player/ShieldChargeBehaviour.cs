@@ -4,15 +4,46 @@ using UnityEngine;
 
 public class ShieldChargeBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private SpriteRenderer fullChargedBar;
+    [SerializeField] private SpriteRenderer overChargedBar;
+    [SerializeField] private PlayerShieldBehaviour playerShieldBehaviour;
+
+    private Vector3 originalScale;
+    private float oldShieldCharge = 0;
+
+    private void Awake()
     {
-        
+        originalScale = fullChargedBar.transform.localScale;
+        oldShieldCharge = playerShieldBehaviour.ShieldCharge;
+    }
+    private void Update()
+    {
+        SetOverchargeBarVisibility();
+        SetChargedBarScales();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetOverchargeBarVisibility()
     {
-        
+        if (!playerShieldBehaviour.ShieldDepleted && overChargedBar.enabled == true)
+        {
+            overChargedBar.enabled = false;
+            return;
+        }
+        if (playerShieldBehaviour.ShieldDepleted && overChargedBar.enabled == false)
+        {
+            overChargedBar.enabled = true;
+            return;
+
+        }
+    }
+
+    private void SetChargedBarScales()
+    {
+        if (oldShieldCharge != playerShieldBehaviour.ShieldCharge)
+        {
+            fullChargedBar.transform.localScale = new Vector3(originalScale.x * playerShieldBehaviour.ShieldCharge, fullChargedBar.transform.localScale.y, fullChargedBar.transform.localScale.z);
+            overChargedBar.transform.localScale = fullChargedBar.transform.localScale;
+            oldShieldCharge = playerShieldBehaviour.ShieldCharge;
+        }
     }
 }

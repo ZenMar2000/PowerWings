@@ -53,6 +53,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3304343973697714637, guid: b6ceb08d2b911ae41a4946f8283ec02a, type: 3}
+      propertyPath: playerShieldBehaviour
+      value: 
+      objectReference: {fileID: 2724062354372238055}
     - target: {fileID: 5772966393794555396, guid: b6ceb08d2b911ae41a4946f8283ec02a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -144,6 +148,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0b844d3a27744343956de3cf76c4b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2724062354372238055 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5628311221920641701, guid: df10df86d96353a4abb141a75e3b551d, type: 3}
+  m_PrefabInstance: {fileID: 7770424024822425666}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7583202c65798a1448973637283eee42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &5213564912494283190 stripped
