@@ -1,11 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Oscillator : MonoBehaviour
 {
     [Tooltip("Frequency of the Sine oscillation")]
-    [SerializeField] private float frequency = 0.1f;
+    [SerializeField] private float _frequency = 0.1f;
+    public float Frequency {  
+        get 
+        { 
+            return _frequency; 
+        } 
+        set 
+        {  
+            _frequency = value;
+            period = (Mathf.PI * 2) / value;
+        } 
+    }
 
     [Tooltip("Max value reached during the oscillation")]
     [SerializeField] private float maxValue = 3f;
@@ -14,6 +23,11 @@ public class Oscillator : MonoBehaviour
     [Tooltip("Set if Progress should be repeated as loop or only one time")]
     [SerializeField] private bool isLoopable = true;
     private bool loopCompleted = false;
+
+    [Tooltip("Set the starting position of the oscillation")]
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float startingPeriodOffset = 0;
 
     [Space(10)]
     [Tooltip("Current value of the oscillation")]
@@ -36,7 +50,8 @@ public class Oscillator : MonoBehaviour
 
     private void Awake()
     {
-        period = (Mathf.PI * 2) / frequency;
+        period = (Mathf.PI * 2) / Frequency;
+        timer = period * startingPeriodOffset;
     }
 
     private void FixedUpdate()
@@ -48,7 +63,7 @@ public class Oscillator : MonoBehaviour
     {
         if (timer < period && loopCompleted == false)
         {
-            progress = maxValue * (Mathf.Sin(timer * frequency));
+            progress = maxValue * (Mathf.Sin(timer * Frequency));
             timer += Time.deltaTime;
         }
         else

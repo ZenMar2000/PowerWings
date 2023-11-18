@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1599882249124976416}
+  - component: {fileID: 4169332021826854116}
   - component: {fileID: 4190041043739344563}
   - component: {fileID: 6189000357579227369}
-  - component: {fileID: 4169332021826854116}
   m_Layer: 9
   m_Name: BugShipPrefab
   m_TagString: Untagged
@@ -36,6 +36,20 @@ Transform:
   - {fileID: 1306812809774741694}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4169332021826854116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490953567770774657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a9c67047a8a0c4f90c752e9bb48cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateTowardPlayer: 1
+  player: {fileID: 0}
 --- !u!50 &4190041043739344563
 Rigidbody2D:
   serializedVersion: 4
@@ -80,25 +94,12 @@ MonoBehaviour:
   m_LoopMode: 1
   m_Method: 1
   m_Duration: 1
-  m_MaxSpeed: 8
+  m_MaxSpeed: 6
   m_EasingMode: 0
   m_AlignmentMode: 0
   m_ObjectForwardAxis: 4
   m_ObjectUpAxis: 2
   m_StartOffset: 0
---- !u!114 &4169332021826854116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490953567770774657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a9c67047a8a0c4f90c752e9bb48cb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousXPosition: 0
 --- !u!1 &2334261531415712688
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +233,7 @@ MonoBehaviour:
   LocalPitch: 0
   customIndicator: {fileID: 0}
   Shot: {fileID: 1000010161334016, guid: 6ceec300808987147a520c929f10a129, type: 3}
-  ShotSpeed: 7
+  ShotSpeed: 10
   LocalOffset: 0
   controller: {fileID: 0}
   OnStoppedFiring:
@@ -243,7 +244,7 @@ MonoBehaviour:
   SpriteOverride: {fileID: 21300000, guid: e42ea7eab39fd5f4f9369caa43c74899, type: 3}
   ParentToEmitter: 0
   IgnoreGlobalRateScale: 0
-  ShotRate: 12
+  ShotRate: 9
   PauseRate: 100
   PauseLength: 1
   ShotOverlap: 1
@@ -345,9 +346,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 950124507
+  m_SortingLayer: 4
+  m_SortingOrder: 20000
   m_Sprite: {fileID: 21300000, guid: 7bc30999d2e440c44bee5add6c2bec9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -391,18 +392,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 1.92}
+    oldSize: {x: 2.9767442, y: 2.2325583}
     newSize: {x: 3.2, y: 2.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.26, y: 1.5}
+  m_Size: {x: 2.5, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &3021637370888790084
 MonoBehaviour:
@@ -439,9 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2247280188079651298}
   - component: {fileID: 2207304541829203044}
-  - component: {fileID: 3018542237761070362}
-  - component: {fileID: 8495134427890048333}
-  - component: {fileID: 1987028299405677113}
+  - component: {fileID: 3162127821508020952}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -457,7 +456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6038362897984381898}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.19080037, w: -0.9816289}
+  m_LocalRotation: {x: 0, y: 0, z: -0.48480237, w: 0.8746237}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -494,46 +493,17 @@ MonoBehaviour:
   ParentRotation: -90
   Pitch: 0
   UniDirectionPitch: 0
-  SpreadDegrees: 22
+  SpreadDegrees: -302
   SpreadRadius: 0
   AutoCompRadius: 0
   AutoRadiusToSprite: 0
-  CenterRotation: 338.001
+  CenterRotation: 662.001
   autoCenter: 1
   SpreadYAxis: 0
   SpreadXAxis: 0
   patternSelect: 1
   Preset: 0
---- !u!114 &3018542237761070362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6038362897984381898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98a281f14904db642abbc46f959efac6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frequency: 0.1
-  maxValue: 3
-  isLoopable: 1
-  _progress: 0
---- !u!114 &8495134427890048333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6038362897984381898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f5c3217870b6db49bb7f6e660ce773f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oscillator: {fileID: 3018542237761070362}
---- !u!114 &1987028299405677113
+--- !u!114 &3162127821508020952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -545,8 +515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072ab8d04d4379c49bc1b2092ac05bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireLenght: 2
-  pauseBurstLenght: 1
+  fireLenght: 1
+  pauseBurstLenght: 1.5
   delayedStartFire: 0
 --- !u!1 &6202080401673099722
 GameObject:
@@ -572,7 +542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6202080401673099722}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.19080901, w: 0.9816272}
+  m_LocalRotation: {x: 0, y: 0, z: -0.48480955, w: -0.8746198}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

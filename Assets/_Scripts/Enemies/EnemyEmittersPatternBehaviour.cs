@@ -19,7 +19,6 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
     private void Awake()
     {
         spreadPattern = GetComponent<SpreadPattern>();
-
         if (oscillator == null)
             oscillator = GetComponent<Oscillator>();
     }

@@ -124,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914541279523472444, guid: df10df86d96353a4abb141a75e3b551d, type: 3}
       propertyPath: m_Name
-      value: PlayerNoGui
+      value: PlayerShip
       objectReference: {fileID: 0}
     - target: {fileID: 7983500835448736170, guid: df10df86d96353a4abb141a75e3b551d, type: 3}
       propertyPath: textMeshPro

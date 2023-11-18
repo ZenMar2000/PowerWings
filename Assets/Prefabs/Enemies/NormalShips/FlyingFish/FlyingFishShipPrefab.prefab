@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousXPosition: 0
+  rotateTowardPlayer: 0
+  player: {fileID: 0}
 --- !u!50 &4190041043739344563
 Rigidbody2D:
   serializedVersion: 4
@@ -529,9 +531,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 950124507
+  m_SortingLayer: 4
+  m_SortingOrder: 20000
   m_Sprite: {fileID: 21300000, guid: 7c406492b9268424596baa2df5b4d5b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -607,7 +609,7 @@ MonoBehaviour:
   ParentExplosion: 1
   IsPlayer: 0
   DeathExplosion: ExplosionBomb
-  HP: 100
+  HP: 150
   FinalExplodeFactor: 2
   DamageFlicker: 1
   FlickerDuration: 6
@@ -840,6 +842,7 @@ MonoBehaviour:
   frequency: 1.5
   maxValue: 10
   isLoopable: 1
+  startingPeriodOffset: 0
   _progress: 0
 --- !u!114 &9164085723448756699
 MonoBehaviour:

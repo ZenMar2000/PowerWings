@@ -37,9 +37,9 @@ public class EnemyFireRateBehaviour : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-
         SpreadPattern = GetComponent<SpreadPattern>();
         _firePaused = true;
+        SpreadPattern.TriggerAutoFire = false;
     }
 
     void Update()
