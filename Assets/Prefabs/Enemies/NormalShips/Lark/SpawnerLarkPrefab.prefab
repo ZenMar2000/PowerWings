@@ -46,5 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyShipPrefab: {fileID: 1490953567770774657, guid: 1b5c4034931ec7f438f2e62d411f64d8, type: 3}
   SplinePathPrefab: {fileID: 0}
-  overrideMovementSpeed: -1
-  spawnPosition: {x: 0, y: 10, z: 0}
+  overrideMovementSpeed: 0

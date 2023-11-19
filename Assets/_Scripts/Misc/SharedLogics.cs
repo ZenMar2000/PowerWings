@@ -61,6 +61,26 @@ public static class SharedLogics
         ROTATION,
     }
 
+    [Serializable]
+    public struct EnemySpawnContainer
+    {
+        [Tooltip("Enemy ship spawner gameobject")]
+        public GameObject EnemyShipSpawner;
+        
+        [Tooltip("Spline path game object")]
+        public GameObject SplinePathPrefab;
+
+        [Tooltip("Spawn enemy ship with a delay")]
+        public float SpawnDelay;
+        
+        [Tooltip("Override the movement speed. 0 = no override wil occur")]
+        public float MovementSpeedOverride;
+
+        [Tooltip("Spawn position of the enemy ship")]
+        public Vector3 SpawnPositionOffset;  
+        public bool IsSpawned;
+    }
+
     //public static List<VariableInfo> GetPublicVariables(object obj)
     //{
     //    List<VariableInfo> publicVariables = new List<VariableInfo>();

@@ -78,12 +78,12 @@
     <Compile Include="Assets\_Scripts\Player\ChargeLevelBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CharacterControllerInertial.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\TurretController.cs" />
+    <Compile Include="Assets\_Scripts\Enemies\EnemyGroupHandler.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\OnScreenDisplay.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBullet.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLinearNonPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\AutomateLinear.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBouncyPhysics.cs" />
-    <Compile Include="Assets\_Scripts\Player\Managers\StartGameManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\AutomateBase.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerBulletSpreadVisualiserBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\ShotCollisionDamageShield.cs" />
@@ -95,6 +95,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\ColorLerp.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotEmitPattern.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBase.cs" />
+    <Compile Include="Assets\_Scripts\Managers\StartGameManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotCollFlux.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\DifficultySelect.cs" />
     <Compile Include="Assets\_Scripts\Enemies\EnemyMovementManager.cs" />
@@ -102,7 +103,6 @@
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\GlobalSlowDown.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CantroGunAnim.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\Utility.cs" />
-    <Compile Include="Assets\_Scripts\Player\Managers\GameManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBoomerang.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\GlobalShotManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\Timer.cs" />
@@ -118,6 +118,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotNonPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\FlickerBG.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\BasicAnimation.cs" />
+    <Compile Include="Assets\_Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\ForceGlobalShotManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBaseScalable.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\ShotCollision.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Extras\CustomPath.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\BulletTimeMeter.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\AutomateStepped.cs" />
+    <Compile Include="Assets\_Scripts\Managers\EnemyGroupSpawnManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotHomingInertial.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotParticleExplodeOnHit.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLaserMask.cs" />

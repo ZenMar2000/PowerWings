@@ -12,31 +12,30 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     [Tooltip("Override movement speed set in splineBehaviour")]
     public float overrideMovementSpeed = -1;
 
-    [Tooltip("Spawn position of the enemy ship")]
-    public Vector3 spawnPosition;
-
     private SplineContainer container;
     private SplineAnimate splineAnimate;
     private EnemySplineAnimationBehaviour splineBehaviour;
     private void Start()
     {
+        //Vector3 spawnPosition = new Vector3(transform.position.x + spawnPositionOffset.x, transform.position.y + spawnPositionOffset.y, transform.position.z + spawnPositionOffset.z);
+        
         if (SplinePathPrefab != null)
         {
-            GameObject spline = Instantiate(SplinePathPrefab, spawnPosition, Quaternion.identity, transform);
+            GameObject spline = Instantiate(SplinePathPrefab, transform.position, Quaternion.identity, transform);
             container = GetComponentInChildren<SplineContainer>();
             splineBehaviour = spline.GetComponent<EnemySplineAnimationBehaviour>();
 
-            GameObject ship = Instantiate(EnemyShipPrefab, spawnPosition, Quaternion.identity, transform);
+            GameObject ship = Instantiate(EnemyShipPrefab, transform.position, Quaternion.identity, transform);
             splineAnimate = ship.GetComponentInChildren<SplineAnimate>();
 
-            splineAnimate.MaxSpeed = overrideMovementSpeed != -1 ? splineBehaviour.MovementSpeed : overrideMovementSpeed;
+            splineAnimate.MaxSpeed = overrideMovementSpeed == 0 ? splineBehaviour.MovementSpeed : overrideMovementSpeed;
             splineAnimate.Easing = splineBehaviour.EasingMode;
             splineAnimate.Loop = splineBehaviour.LoopMode;
             splineAnimate.Container = container;
         }
         else
         {
-            GameObject ship = Instantiate(EnemyShipPrefab, spawnPosition, Quaternion.identity, transform);
+            GameObject ship = Instantiate(EnemyShipPrefab, transform.position, Quaternion.identity, transform);
         }
     }
 }
