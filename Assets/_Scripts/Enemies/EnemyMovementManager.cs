@@ -2,6 +2,7 @@ using UnityEngine;
 using static SharedLogics;
 public class EnemyMovementManager : MonoBehaviour
 {
+    //public EnemyGroupHandler GroupHandler;
     [SerializeField] private bool rotateTowardPlayer = false;
     [SerializeField] private Transform player;
     
@@ -24,6 +25,11 @@ public class EnemyMovementManager : MonoBehaviour
     private void FixedUpdate()
     {
         CheckAndRotateTowardPlayer();
+    }
+
+    private void OnDestroy()
+    {
+        Destroy(transform.parent.gameObject);
     }
 
     private void CheckAndSetAnimatorValue()

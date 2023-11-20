@@ -12,13 +12,15 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     [Tooltip("Override movement speed set in splineBehaviour")]
     public float overrideMovementSpeed = -1;
 
+    public EnemyGroupHandler GroupHandler;
+
     private SplineContainer container;
     private SplineAnimate splineAnimate;
     private EnemySplineAnimationBehaviour splineBehaviour;
     private void Start()
     {
         //Vector3 spawnPosition = new Vector3(transform.position.x + spawnPositionOffset.x, transform.position.y + spawnPositionOffset.y, transform.position.z + spawnPositionOffset.z);
-        
+
         if (SplinePathPrefab != null)
         {
             GameObject spline = Instantiate(SplinePathPrefab, transform.position, Quaternion.identity, transform);
@@ -32,10 +34,18 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
             splineAnimate.Easing = splineBehaviour.EasingMode;
             splineAnimate.Loop = splineBehaviour.LoopMode;
             splineAnimate.Container = container;
+
         }
         else
         {
             GameObject ship = Instantiate(EnemyShipPrefab, transform.position, Quaternion.identity, transform);
+            splineAnimate = ship.GetComponentInChildren<SplineAnimate>();
+            Destroy(splineAnimate);
         }
+    }
+
+    private void OnDestroy()
+    {
+        GroupHandler.EnemiesAlive--;
     }
 }

@@ -5,61 +5,57 @@ using static SharedLogics;
 public class EnemyGroupHandler : MonoBehaviour
 {
     public Vector3 GroupInstantiationBasePosition = new(0, 10, 0);
-    private float spawnRepeatTimer = 0;
 
     public List<EnemySpawnContainer> SpawnContainers;
-    public int EnemiesAlive => SpawnContainers.Count;
-    private int originalEnemiesCout;
-    private int instantiatedEnemies;
+    [SerializeField] private int _enemiesAlive;
+    public int EnemiesAlive { get { return _enemiesAlive; } set { _enemiesAlive = value; } }
+
+    private int originalEnemiesCount;
+    private int instantiatedEnemies = 0;
 
     private float spawnTimer = 0;
     private Vector3 currentSpawnPosition = Vector3.zero;
     private void Awake()
     {
-        EnemySingleSpawnBehaviour singleSpawn;
-
-        originalEnemiesCout = SpawnContainers.Count;
-        foreach (EnemySpawnContainer container in SpawnContainers)
-        {
-            singleSpawn = container.EnemyShipSpawner.GetComponent<EnemySingleSpawnBehaviour>();
-            singleSpawn.SplinePathPrefab = container.SplinePathPrefab;
-            singleSpawn.overrideMovementSpeed = container.MovementSpeedOverride;
-        }
+        originalEnemiesCount = SpawnContainers.Count;
     }
 
     // Update is called once per frame
     void Update()
     {
         InstantiateGroup();
-        if(instantiatedEnemies <= originalEnemiesCout)
+        if (instantiatedEnemies < originalEnemiesCount)
         {
             spawnTimer += Time.deltaTime;
         }
 
-        if(EnemiesAlive <= 0)
+        if (EnemiesAlive <= 0)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
     private void InstantiateGroup()
     {
-        if (instantiatedEnemies < originalEnemiesCout - 1)
+        if (instantiatedEnemies < originalEnemiesCount)
         {
             for (int i = 0; i < SpawnContainers.Count; i++)
             {
                 if (!SpawnContainers[i].IsSpawned && spawnTimer >= SpawnContainers[i].SpawnDelay)
                 {
-                    currentSpawnPosition = new Vector3(transform.position.x + SpawnContainers[i].SpawnPositionOffset.x,
-                        transform.position.y + SpawnContainers[i].SpawnPositionOffset.y,
-                        transform.position.z + SpawnContainers[i].SpawnPositionOffset.z);
+                    currentSpawnPosition = new Vector3(GroupInstantiationBasePosition.x + SpawnContainers[i].SpawnPositionOffset.x,
+                        GroupInstantiationBasePosition.y + SpawnContainers[i].SpawnPositionOffset.y,
+                        GroupInstantiationBasePosition.z + SpawnContainers[i].SpawnPositionOffset.z);
 
-                    Instantiate(SpawnContainers[i].EnemyShipSpawner, currentSpawnPosition, Quaternion.identity);
-                    
+                    GameObject instantiatedShip = Instantiate(SpawnContainers[i].EnemyShipSpawner, currentSpawnPosition, Quaternion.identity);
+                    EnemySingleSpawnBehaviour shipBehaviour = instantiatedShip.GetComponent<EnemySingleSpawnBehaviour>();
+
+                    shipBehaviour.GroupHandler = this;
+                    shipBehaviour.SplinePathPrefab = SpawnContainers[i].SplinePathPrefab;
                     EnemySpawnContainer newContainer = SpawnContainers[i];
                     newContainer.IsSpawned = true;
                     SpawnContainers[i] = newContainer;
-                    
+
                     instantiatedEnemies++;
                 }
             }
