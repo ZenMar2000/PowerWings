@@ -13,7 +13,7 @@ namespace ND_VariaBULLET
     {
         [Tooltip("If it's player, change logic for HP")]
         public bool IsPlayer;
-        private PlayerProjectileEmitterBehaviour playerProjectileEmitterBehaviour => GameManager.Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
+        private PlayerProjectileEmitterBehaviour playerProjectileEmitterBehaviour;
 
         [Tooltip("Sets the name of the explosion prefab to be instantiated when HP = 0.")]
         public string DeathExplosion;
@@ -39,7 +39,7 @@ namespace ND_VariaBULLET
 
         void Start()
         {
-            //rend = GetComponent<SpriteRenderer>();
+            playerProjectileEmitterBehaviour = GameInfo.Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
             NormalColor = rend.color;
         }
 

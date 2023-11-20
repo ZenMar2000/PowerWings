@@ -23,7 +23,7 @@ public class ChargeLevelBehaviour : MonoBehaviour
 
     private void Start()
     {
-        playerProjectileEmitterBehaviour = GameManager.Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
+        playerProjectileEmitterBehaviour = GameInfo.Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
         UpdateSegments();
     }
 

@@ -54,10 +54,13 @@ namespace ND_VariaBULLET
 
         protected void AbsorbBullet()
         {
-            if (PlayerProjectileEmitterBehaviour.BulletsAccumulator == 0) 
-                PlayerProjectileEmitterBehaviour.BulletsAccumulator = 1;
-            else
-                PlayerProjectileEmitterBehaviour.BulletsAccumulator *= 2;
+            if (PlayerProjectileEmitterBehaviour.BulletsAccumulator >= 0)
+            {
+                if (PlayerProjectileEmitterBehaviour.BulletsAccumulator == 0)
+                    PlayerProjectileEmitterBehaviour.BulletsAccumulator = 1;
+                else
+                    PlayerProjectileEmitterBehaviour.BulletsAccumulator *= 2;
+            }
 
             PlayerProjectileEmitterBehaviour.CalculateDamageMultiplier();
         }

@@ -202,7 +202,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
             SoundTimer = 0;
         }
     }
-   
+
     private void CheckEmittedShots()
     {
         if (ShotsEmitted == spreadController.EmitterAmount)
@@ -224,6 +224,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
             IsShooting = false;
             DamageMultiplier = 1;
             playerShieldBehaviour.CanParry = true;
+            isOverloaded = false;
         }
     }
 
@@ -257,22 +258,24 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     {
         if (BulletsAccumulator < 0)
         {
-            BulletsAccumulator = long.MaxValue;
             shootingRateCooldown = 0.01f;
-            DamageMultiplier = 3;
             isOverloaded = true;
+            BulletsAccumulator = long.MaxValue;
             ReleaseAttack();
-            isOverloaded = false;
         }
     }
-     
+
     private void ReleaseAttack()
     {
         IsShooting = true;
         playerShieldBehaviour.DisableParry();
         playerShieldBehaviour.CanParry = false;
 
-        CalculateDamageMultiplier();
+        if (isOverloaded)
+            DamageMultiplier = 3;
+        else
+            CalculateDamageMultiplier();
+        
         SubdivideBullets();
 
         CalculateBulletsSubtractionValue();
@@ -299,7 +302,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
             DamageMultiplier = 1;
         }
     }
-   
+
     private void UpdateBulletAccumulator()
     {
         if ((BulletsAccumulator - subtractiveBulletsAccumulator) < 0)

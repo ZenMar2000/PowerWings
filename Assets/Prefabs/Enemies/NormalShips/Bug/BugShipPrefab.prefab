@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4169332021826854116}
   - component: {fileID: 4190041043739344563}
   - component: {fileID: 6189000357579227369}
+  - component: {fileID: 4131722594469562893}
   m_Layer: 9
   m_Name: BugShipPrefab
   m_TagString: Untagged
@@ -100,6 +101,20 @@ MonoBehaviour:
   m_ObjectForwardAxis: 4
   m_ObjectUpAxis: 2
   m_StartOffset: 0
+--- !u!114 &4131722594469562893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490953567770774657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfca78dbae080c344bf1f9741a4a8cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threatGainOnDefeat: 5
+  isBoss: 0
 --- !u!1 &2334261531415712688
 GameObject:
   m_ObjectHideFlags: 0

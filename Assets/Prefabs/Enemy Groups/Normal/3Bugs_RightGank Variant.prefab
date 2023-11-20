@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1767570328914644459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: GroupInstantiationBasePosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: GroupInstantiationBasePosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[1].SpawnDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[2].SpawnDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].SpawnDelay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[0].EnemyShipSpawner
+      value: 
+      objectReference: {fileID: 186939983160460033, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[0].SplinePathPrefab
+      value: 
+      objectReference: {fileID: 5975705400347340190, guid: 34c90e757a274444496a7f064dc726b4, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[1].EnemyShipSpawner
+      value: 
+      objectReference: {fileID: 186939983160460033, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[1].SplinePathPrefab
+      value: 
+      objectReference: {fileID: 5975705400347340190, guid: 34c90e757a274444496a7f064dc726b4, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[2].EnemyShipSpawner
+      value: 
+      objectReference: {fileID: 186939983160460033, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[2].SplinePathPrefab
+      value: 
+      objectReference: {fileID: 5975705400347340190, guid: 34c90e757a274444496a7f064dc726b4, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].EnemyShipSpawner
+      value: 
+      objectReference: {fileID: 186939983160460033, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].SplinePathPrefab
+      value: 
+      objectReference: {fileID: 7029895146265513085, guid: 387523feb3a59ea4f85b41aeac6b23de, type: 3}
+    - target: {fileID: 8766041326112975749, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_Name
+      value: 3Bugs_RightGank Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}

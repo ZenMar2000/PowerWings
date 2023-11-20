@@ -7,37 +7,47 @@ public class EnemyGroupHandler : MonoBehaviour
     public Vector3 GroupInstantiationBasePosition = new(0, 10, 0);
 
     public List<EnemySpawnContainer> SpawnContainers;
-    [SerializeField] private int _enemiesAlive;
-    public int EnemiesAlive { get { return _enemiesAlive; } set { _enemiesAlive = value; } }
-
-    private int originalEnemiesCount;
-    private int instantiatedEnemies = 0;
 
     private float spawnTimer = 0;
     private Vector3 currentSpawnPosition = Vector3.zero;
+
+    #region Properties
+    [SerializeField] private int _enemiesAlive;
+    public int EnemiesAlive { get { return _enemiesAlive; } set { _enemiesAlive = value; } }
+
+
+    private int _originalEnemiesCount;
+    public int OriginalEnemiesCount { get { return _originalEnemiesCount; } private set { _originalEnemiesCount = value; } }
+
+    private int _instantiatedEnemies = 0;
+    public int InstantiatedEnemies { get { return _instantiatedEnemies; } private set { _instantiatedEnemies = value; } }
+    #endregion
+
+    public EnemyGroupSpawnManager GroupManager;
     private void Awake()
     {
-        originalEnemiesCount = SpawnContainers.Count;
+        OriginalEnemiesCount = SpawnContainers.Count;
     }
 
     // Update is called once per frame
     void Update()
     {
         InstantiateGroup();
-        if (instantiatedEnemies < originalEnemiesCount)
+        if (InstantiatedEnemies < OriginalEnemiesCount)
         {
             spawnTimer += Time.deltaTime;
         }
 
         if (EnemiesAlive <= 0)
         {
+            GroupManager.spawnedGroups.Remove(this);
             Destroy(gameObject);
         }
     }
 
     private void InstantiateGroup()
     {
-        if (instantiatedEnemies < originalEnemiesCount)
+        if (InstantiatedEnemies < OriginalEnemiesCount)
         {
             for (int i = 0; i < SpawnContainers.Count; i++)
             {
@@ -52,14 +62,15 @@ public class EnemyGroupHandler : MonoBehaviour
 
                     shipBehaviour.GroupHandler = this;
                     shipBehaviour.SplinePathPrefab = SpawnContainers[i].SplinePathPrefab;
+                    shipBehaviour.SplineAnimationStartOffset = SpawnContainers[i].SplineAnimationStartOffset;
                     EnemySpawnContainer newContainer = SpawnContainers[i];
                     newContainer.IsSpawned = true;
                     SpawnContainers[i] = newContainer;
 
-                    instantiatedEnemies++;
+                    EnemiesAlive++;
+                    InstantiatedEnemies++;
                 }
             }
         }
     }
-
 }

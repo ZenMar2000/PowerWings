@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4486885625635039461}
   - component: {fileID: 2648377072327191342}
   m_Layer: 0
-  m_Name: LeftSideGank
+  m_Name: SideGank_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

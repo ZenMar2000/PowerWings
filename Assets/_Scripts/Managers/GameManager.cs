@@ -1,21 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public static class GameManager //: MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    private static GameObject _player;
-    public static GameObject Player
+    [SerializeField] private GameObject PlayerShipPrefab;
+    [SerializeField] private int ThreatAccumulator;
+    // Start is called before the first frame update
+    private void Awake()
     {
-        get
-        {
-            return _player;
-        }
-        private set
-        {
-            _player = value;
-        }
+        GameInfo.Start(PlayerShipPrefab);
     }
-    public static void Start(GameObject playerShipPrefab)
+    private void Update()
     {
-        Player = UnityEngine.Object.Instantiate(playerShipPrefab, new Vector3(0, -10, 0), Quaternion.identity);
+        ThreatAccumulator = GameInfo.ThreatAccumulator;
     }
 }
