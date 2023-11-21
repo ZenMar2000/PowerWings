@@ -6,10 +6,10 @@ public static class GameInfo //: MonoBehaviour
 
     public static int ThreatLevel = 1;
 
-    public static bool BossSpawnRequested = false;
+    public static bool BossSpawnRequested = true;
 
     #region Properties
-    private static int _threatAccumulator = 99;
+    private static int _threatAccumulator = 100;
     public static int ThreatAccumulator
     {
         get { return _threatAccumulator; }

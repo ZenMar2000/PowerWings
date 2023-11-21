@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerShipPrefab: {fileID: 8359142684290368744, guid: 2b46300b9ea7ff547b9807b40262e6b1, type: 3}
+  ThreatAccumulator: 0
 --- !u!114 &4745525371874961797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,4 +59,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9a37a12d88e9d4c88b9b8a18be9139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawns: []
+  NormalSpawns:
+  - {fileID: 3151571276978532493, guid: 79e9c072e8bd2be4f899a63421a45c9f, type: 3}
+  - {fileID: 2029768133253419626, guid: ba005d8a7b7a53c4bb3cf07b610a4f93, type: 3}
+  - {fileID: 1411001320163264196, guid: e9f6021664a6d7740ab17b966c31aa6a, type: 3}
+  - {fileID: 9144339408448976925, guid: 03158d2a481e48a46bb1435ff9932e6b, type: 3}
+  - {fileID: 7803930007596446720, guid: d808706454df94b498543e82249eb707, type: 3}
+  - {fileID: 7127959345670439861, guid: 8a8fd399384faaa47b0775f138361aae, type: 3}
+  - {fileID: 8871305391091739533, guid: 7dcfdfd771f238640b148f15d50f9f83, type: 3}
+  - {fileID: 8458512956748256048, guid: c86507c8ce4576642aca699ffe5d9efa, type: 3}
+  - {fileID: 5198285516900064097, guid: 96a399216041b9a4f9efa5bbce626500, type: 3}
+  - {fileID: 5761762642495293912, guid: 04877bbf9387497488f3369a6d867de5, type: 3}
+  BossSpawns:
+  - {fileID: 4274935203257407785, guid: e5d5d6885fc6bb94bacb961cb9a8f1f3, type: 3}
+  spawnedGroups: []
+  spawnTimer: 0

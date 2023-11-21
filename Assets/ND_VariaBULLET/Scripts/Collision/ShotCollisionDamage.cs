@@ -63,6 +63,16 @@ namespace ND_VariaBULLET
             }
         }
 
+        public void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (CollisionFilter.collisionAccepted(collision.gameObject.layer, CollisionList) && !CalcObject.IsOutBounds(collision.transform.position))
+            {
+                setDamage(collision.gameObject.GetComponent<IDamager>().DMG);
+                CollisionFilter.setExplosion(BulletExplosion, ParentExplosion, this.transform, collision.transform.position, 0, this);
+                Destroy(collision.gameObject);
+            }
+        }
+
         protected void setDamage(float damage)
         {
             if (IsPlayer) SetPlayerDamage();
@@ -99,7 +109,7 @@ namespace ND_VariaBULLET
         }
         private void SetPlayerDamage()
         {
-           
+
             if (playerProjectileEmitterBehaviour.BulletsAccumulator > 0)
             {
                 playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * 0.25);
@@ -138,7 +148,7 @@ namespace ND_VariaBULLET
                     finalExplode.transform.localScale = new Vector2(finalExplode.transform.localScale.x * FinalExplodeFactor, finalExplode.transform.localScale.y * FinalExplodeFactor);
                 }
 
-                if(IsPlayer) Destroy(transform.parent.parent.gameObject);
+                if (IsPlayer) Destroy(transform.parent.parent.gameObject);
                 else Destroy(transform.parent.gameObject);
 
 

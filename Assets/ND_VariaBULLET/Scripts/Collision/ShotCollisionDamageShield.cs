@@ -41,7 +41,17 @@ namespace ND_VariaBULLET
                 yield return setFlicker();
             }
         }
+        public void OnTriggerEnter2D(Collider2D collision)
+        {
 
+            if (CollisionFilter.collisionAccepted(collision.gameObject.layer, CollisionList) && !CalcObject.IsOutBounds(collision.transform.position))
+            {
+                AbsorbBullet();
+
+                CollisionFilter.setExplosion(BulletExplosion, ParentExplosion, this.transform, new Vector2(collision.transform.position.x, collision.transform.position.y - 0.3f), 0, this);
+                Destroy(collision.gameObject);
+            }
+        }
         public new IEnumerator OnCollisionEnter2D(Collision2D collision)
         {
             if (CollisionFilter.collisionAccepted(collision.gameObject.layer, CollisionList) && !CalcObject.IsOutBounds(collision.contacts[0].point))

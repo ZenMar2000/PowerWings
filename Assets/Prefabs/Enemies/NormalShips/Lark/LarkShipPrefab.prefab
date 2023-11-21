@@ -451,6 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   threatGainOnDefeat: 15
   isBoss: 0
+  shotCollisionDamage: {fileID: 0}
 --- !u!1 &1561474009253709568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,7 +1856,7 @@ MonoBehaviour:
   DeathExplosion: ExplosionBomb
   HP: 175
   FinalExplodeFactor: 2
-  DamageFlicker: 1
+  DamageFlicker: 0
   FlickerDuration: 6
   DamageColor: {r: 1, g: 1, b: 1, a: 0.6862745}
   rend: {fileID: 8573429168020708921}

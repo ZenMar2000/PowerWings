@@ -94,6 +94,7 @@ public class EnemyGroupSpawnManager : MonoBehaviour
         {//If boss is required to spawn from GameInfo and it's not spawned yet, spawn it.
             bossSpawned = true;
             spawnedGroups.Add(Instantiate(BossSpawns[(GameInfo.ThreatLevel - 1) % (BossSpawns.Count)], transform));
+            spawnedGroups.Last().GroupManager = this;
 
             if (GameInfo.ThreatLevel == 1)
             {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static SharedLogics;
@@ -57,7 +58,7 @@ public class EnemyGroupHandler : MonoBehaviour
                         GroupInstantiationBasePosition.y + SpawnContainers[i].SpawnPositionOffset.y,
                         GroupInstantiationBasePosition.z + SpawnContainers[i].SpawnPositionOffset.z);
 
-                    GameObject instantiatedShip = Instantiate(SpawnContainers[i].EnemyShipSpawner, currentSpawnPosition, Quaternion.identity);
+                    GameObject instantiatedShip = Instantiate(SpawnContainers[i].EnemyShipSpawner, currentSpawnPosition, Quaternion.identity, transform);
                     EnemySingleSpawnBehaviour shipBehaviour = instantiatedShip.GetComponent<EnemySingleSpawnBehaviour>();
 
                     shipBehaviour.GroupHandler = this;

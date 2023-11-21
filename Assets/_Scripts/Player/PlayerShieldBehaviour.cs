@@ -7,7 +7,7 @@ public class PlayerShieldBehaviour : MonoBehaviour
 
     //private Animator shieldAnimator;
     private SpriteRenderer shieldSpriteRenderer;
-    private CapsuleCollider2D shieldCollider;
+    private PolygonCollider2D shieldCollider;
 
     [SerializeField] private float shieldDischargeValue = 0.03f;
     [SerializeField] private float shieldRechargeValue = 0.01f;
@@ -66,7 +66,7 @@ public class PlayerShieldBehaviour : MonoBehaviour
     {
         //shieldAnimator = GetComponent<Animator>();
         shieldSpriteRenderer = GetComponent<SpriteRenderer>();
-        shieldCollider = GetComponent<CapsuleCollider2D>();
+        shieldCollider = GetComponent<PolygonCollider2D>();
     }
     private void Start()
     {
