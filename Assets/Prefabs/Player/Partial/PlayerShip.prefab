@@ -1292,8 +1292,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 568589270767431415}
-  - component: {fileID: 1310128740498515826}
   - component: {fileID: 2319327616860938585}
+  - component: {fileID: 1310128740498515826}
   - component: {fileID: 5628311221920641701}
   - component: {fileID: 6008752354057208738}
   - component: {fileID: 3230805306191282517}
@@ -1319,6 +1319,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2561522143491400180}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2319327616860938585
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462284978721964422}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d887f5ed81c356849a0bc5e9fd5b56b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1310128740498515826
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1371,27 +1392,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2319327616860938585
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6462284978721964422}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d887f5ed81c356849a0bc5e9fd5b56b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &5628311221920641701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,7 +1477,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.087307, y: -0.5401363}
+    - - {x: 1.0780927, y: -0.53668094}
+      - {x: 1.0629333, y: -0.39838153}
       - {x: 1.016788, y: -0.11132938}
       - {x: 0.91523343, y: 0.09712082}
       - {x: 0.7399759, y: 0.297943}
@@ -1488,7 +1489,8 @@ PolygonCollider2D:
       - {x: -0.66678476, y: 0.34846687}
       - {x: -0.8038242, y: 0.22458863}
       - {x: -0.98457766, y: -0.025874317}
-      - {x: -1.0998152, y: -0.538289}
+      - {x: -1.0526682, y: -0.30262327}
+      - {x: -1.073324, y: -0.53713715}
   m_UseDelaunayMesh: 0
 --- !u!1 &6587137443907194287
 GameObject:

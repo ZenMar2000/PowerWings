@@ -48,7 +48,7 @@ namespace ND_VariaBULLET
             {
                 AbsorbBullet();
 
-                CollisionFilter.setExplosion(BulletExplosion, ParentExplosion, this.transform, new Vector2(collision.transform.position.x, collision.transform.position.y - 0.3f), 0, this);
+                CollisionFilter.setExplosion(BulletExplosion, ParentExplosion, this.transform, new Vector2(collision.transform.position.x, collision.transform.position.y - 0.5f), 0, this);
                 Destroy(collision.gameObject);
             }
         }
