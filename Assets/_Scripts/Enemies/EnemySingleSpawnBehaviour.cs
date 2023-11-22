@@ -40,6 +40,7 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
             splineAnimate.Loop = splineBehaviour.LoopMode;
             splineAnimate.Container = container;
             splineAnimate.StartOffset = SplineAnimationStartOffset;
+            splineAnimate.enabled = true;
 
         }
         else
