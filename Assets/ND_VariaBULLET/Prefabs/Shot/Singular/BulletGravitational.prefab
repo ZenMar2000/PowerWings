@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4000012671562612}
   - component: {fileID: 212000014068384738}
   - component: {fileID: 50000013117301146}
-  - component: {fileID: 58000010244838854}
   - component: {fileID: 114000010652194356}
+  - component: {fileID: 58000010244838854}
   m_Layer: 0
   m_Name: BulletGravitational
   m_TagString: Untagged
@@ -99,9 +99,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
-  m_LinearDrag: 0.02
-  m_AngularDrag: 0.08
+  m_Mass: 0.3
+  m_LinearDrag: 3
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -114,6 +114,72 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114000010652194356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012045452894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381e6302c294f9144b1437b8143091ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayerShot: 0
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
+  ShotSpeed: 0
+  IgnoreGlobalSpeedScale: 0
+  ParentToEmitter: 0
+  DamagePerHit: 1
+  InheritStartRotation: 1
+  scaledSpeed: 0
+  Trajectory: {x: 0, y: 0}
+  Emitter: {fileID: 0}
+  ExitPoint: 0
+  FiringScript: {fileID: 0}
+  sortLayer: 
+  sortOrder: 0
+  ColliderFlux: 0
+  CollisionList: []
+  Explosion: 
+  ParentExplosion: 0
+  ExplosionRotation: 0
+  lastPosition: {x: 0, y: 0}
+  newPosition: {x: 0, y: 0}
+  Direction: {x: 0, y: 0}
+  Frames:
+  - {fileID: 21300000, guid: 706ab8d3d8cc17d44bfdb031598852e4, type: 3}
+  - {fileID: 21300000, guid: acc3bfe49d71cd4439c58c01686ee604, type: 3}
+  - {fileID: 21300000, guid: f22676be9ba0c6b42b0e7421e4f409f7, type: 3}
+  - {fileID: 21300000, guid: 2112c0e00d0efbd4ab42adf97517dcaa, type: 3}
+  - {fileID: 21300000, guid: 8b16becd673292f438e67cb15cb81d86, type: 3}
+  - {fileID: 21300000, guid: 13de23ccb8fee984eac7fe9c8f29d144, type: 3}
+  - {fileID: 21300000, guid: 4c18e0e34d17de544a3f9cffdd589255, type: 3}
+  - {fileID: 21300000, guid: 0590c852268018749ab53ec5846c72f1, type: 3}
+  - {fileID: 21300000, guid: 5274e2a66fb07144f82bf387f646810c, type: 3}
+  FrameSkip: 0
+  RandomStartFrame: 1
+  EnableScaling: 0
+  ScaleSpeed: 12
+  XFrom: 0.9
+  XTo: 1.1
+  YFrom: 0.9
+  YTo: 1.1
+  RandomStartRotation: 0
+  rotationSpeed: 0
+  rotationSpeedRange: 0
+  RotationDirection: 3
+  DissipateDelay: 0
+  DissipateSpeed: 0
+  ColorShift: []
+  colorShiftSpeed: 0
+  steppedShift: 0
+  randomStartColor: 0
+  Opacity: 1
+  GravityScale: 4.5
+  CenterMassPivot: 1
+  PivotRotationSpeed: 20
 --- !u!58 &58000010244838854
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -146,61 +212,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.6, y: 0}
+  m_Offset: {x: 0.2, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
---- !u!114 &114000010652194356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012045452894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 381e6302c294f9144b1437b8143091ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShotSpeed: 0
-  IgnoreGlobalSpeedScale: 0
-  ParentToEmitter: 0
-  DamagePerHit: 1
-  InheritStartRotation: 1
-  scaledSpeed: 0
-  Trajectory: {x: 0, y: 0}
-  Emitter: {fileID: 0}
-  ExitPoint: 0
-  FiringScript: {fileID: 0}
-  sortLayer: 
-  sortOrder: 0
-  ColliderFlux: 0
-  CollisionList: []
-  Explosion: 
-  ParentExplosion: 0
-  ExplosionRotation: 0
-  lastPosition: {x: 0, y: 0}
-  newPosition: {x: 0, y: 0}
-  Direction: {x: 0, y: 0}
-  Frames: []
-  FrameSkip: 0
-  RandomStartFrame: 0
-  EnableScaling: 0
-  ScaleSpeed: 12
-  XFrom: 0.9
-  XTo: 1.1
-  YFrom: 0.9
-  YTo: 1.1
-  RandomStartRotation: 0
-  rotationSpeed: 0
-  rotationSpeedRange: 0
-  RotationDirection: 3
-  DissipateDelay: 0
-  DissipateSpeed: 0
-  ColorShift: []
-  colorShiftSpeed: 0
-  steppedShift: 0
-  randomStartColor: 0
-  Opacity: 1
-  GravityScale: 4.5
-  CenterMassPivot: 1
-  PivotRotationSpeed: 20
+  m_Radius: 0.5

@@ -39,7 +39,10 @@ namespace ND_VariaBULLET
 
         void Start()
         {
-            playerProjectileEmitterBehaviour = GameInfo.Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
+            if(GameInfo.EmitterBehaviour!= null)
+            {
+                playerProjectileEmitterBehaviour = GameInfo.EmitterBehaviour;
+            }
             NormalColor = rend.color;
         }
 

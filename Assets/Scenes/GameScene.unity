@@ -245,10 +245,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2275859165548766703, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: ThreatAccumulator
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4456909663171870186, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
       propertyPath: m_Name
       value: GameManager

@@ -24,12 +24,13 @@ namespace ND_VariaBULLET
         [SerializeField] private SpriteRenderer rend;
 
         [Tooltip("Used for update the BulletAccumulator every time a bullet get parried")]
-        [SerializeField] private PlayerProjectileEmitterBehaviour PlayerProjectileEmitterBehaviour;
+        private PlayerProjectileEmitterBehaviour PlayerProjectileEmitterBehaviour;
 
         void Start()
         {
             rend = GetComponent<SpriteRenderer>();
             NormalColor = rend.color;
+            PlayerProjectileEmitterBehaviour = GameInfo.EmitterBehaviour;
         }
 
         public new IEnumerator OnLaserCollision(CollisionArgs sender)
