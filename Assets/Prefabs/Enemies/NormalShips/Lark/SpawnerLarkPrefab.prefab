@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3994115051017107982}
   - component: {fileID: 7212098480121758227}
+  - component: {fileID: 6573107826519922606}
   m_Layer: 0
   m_Name: SpawnerLarkPrefab
   m_TagString: Untagged
@@ -47,3 +48,23 @@ MonoBehaviour:
   EnemyShipPrefab: {fileID: 1490953567770774657, guid: 1b5c4034931ec7f438f2e62d411f64d8, type: 3}
   SplinePathPrefab: {fileID: 0}
   overrideMovementSpeed: 0
+  SplineAnimationStartOffset: 0
+  SplineObjectMovement: {fileID: 6573107826519922606}
+  GroupHandler: {fileID: 0}
+--- !u!114 &6573107826519922606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186939983160460033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a281f14904db642abbc46f959efac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 0.1
+  maxValue: 3
+  isLoopable: 0
+  startingPeriodOffset: 0.5
+  _progress: 0

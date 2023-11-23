@@ -53,9 +53,25 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: GroupInstantiationBasePosition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[0].HasEnterMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[1].HasEnterMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].EnemyShipSpawner
       value: 
       objectReference: {fileID: 186939983160460033, guid: d52927e51ec7291419f1eae358f33cd0, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[0].EnterOffsetValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].SplinePathPrefab
       value: 
@@ -65,9 +81,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 186939983160460033, guid: d52927e51ec7291419f1eae358f33cd0, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[1].EnterOffsetValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[1].SplinePathPrefab
       value: 
       objectReference: {fileID: 632646002493917244, guid: 84cd53fd974e8be4fab5385fcc3c5c9d, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[0].EnterMovementSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[1].EnterMovementSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].MovementSpeedOverride
       value: 2
@@ -86,7 +114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8766041326112975749, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: m_Name
-      value: DoubleLark Variant
+      value: 2Lark_Middle Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

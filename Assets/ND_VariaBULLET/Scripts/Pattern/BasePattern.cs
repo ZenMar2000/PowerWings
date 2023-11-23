@@ -224,7 +224,7 @@ namespace ND_VariaBULLET
 
                 if (EmitterAmount > totalEmitters)
                 {                                        
-                    foreach (GameObject emitterStored in EmittersCached.ToArray()) //ToArray fix to ensure collection items aren'progress removed as it's being iterated over.
+                    foreach (GameObject emitterStored in EmittersCached.ToArray()) //ToArray fix to ensure collection items aren'Progress removed as it's being iterated over.
                         manageCache("Emitter(Clone)", true, emitterStored, Emitters, EmittersCached);
 
                     for (int i = 0; i < difference; i++)

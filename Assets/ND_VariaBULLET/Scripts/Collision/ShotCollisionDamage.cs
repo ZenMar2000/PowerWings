@@ -120,8 +120,8 @@ namespace ND_VariaBULLET
 
                 if (playerProjectileEmitterBehaviour.IsShooting)
                 {
-                    playerProjectileEmitterBehaviour.MultiWavesRepeat = (int)(playerProjectileEmitterBehaviour.MultiWavesRepeat * 0.25);
-                    playerProjectileEmitterBehaviour.SingleWaveProjectiles = (int)(playerProjectileEmitterBehaviour.SingleWaveProjectiles * 0.25);
+                    playerProjectileEmitterBehaviour.MultiWavesRepeat = (int)(playerProjectileEmitterBehaviour.MultiWavesRepeat * 0.75);
+                    playerProjectileEmitterBehaviour.SingleWaveProjectiles = (int)(playerProjectileEmitterBehaviour.SingleWaveProjectiles * 0.75);
                 }
 
 

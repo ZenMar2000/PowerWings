@@ -33,19 +33,19 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
         switch (oscillatingParameter)
         {
             case OscillatingEmitterParameter.PITCH:
-                spreadPattern.Pitch = oscillator.progress + RangeOffset;
+                spreadPattern.Pitch = oscillator.Progress + RangeOffset;
                 break;
 
             case OscillatingEmitterParameter.SPREAD_DEGREES:
-                spreadPattern.SpreadDegrees = oscillator.progress + RangeOffset;
+                spreadPattern.SpreadDegrees = oscillator.Progress + RangeOffset;
                 break;
 
             case OscillatingEmitterParameter.SPREAD_RADIUS:
-                spreadPattern.SpreadRadius = oscillator.progress + RangeOffset;
+                spreadPattern.SpreadRadius = oscillator.Progress + RangeOffset;
                 break;
 
             case OscillatingEmitterParameter.ROTATION:
-                spreadPattern.ParentRotation = oscillator.progress + RangeOffset;
+                spreadPattern.ParentRotation = oscillator.Progress + RangeOffset;
                 break;
         }
     }

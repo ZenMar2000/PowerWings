@@ -24,6 +24,7 @@ public class EnemyGroupHandler : MonoBehaviour
     public int InstantiatedEnemies { get { return _instantiatedEnemies; } private set { _instantiatedEnemies = value; } }
     #endregion
 
+    [HideInInspector]
     public EnemyGroupSpawnManager GroupManager;
     private void Awake()
     {
@@ -58,12 +59,17 @@ public class EnemyGroupHandler : MonoBehaviour
                         GroupInstantiationBasePosition.y + SpawnContainers[i].SpawnPositionOffset.y,
                         GroupInstantiationBasePosition.z + SpawnContainers[i].SpawnPositionOffset.z);
 
-                    GameObject instantiatedShip = Instantiate(SpawnContainers[i].EnemyShipSpawner, currentSpawnPosition, Quaternion.identity, transform);
-                    EnemySingleSpawnBehaviour shipBehaviour = instantiatedShip.GetComponent<EnemySingleSpawnBehaviour>();
+                    GameObject instantiatedShipSpawner = Instantiate(SpawnContainers[i].EnemyShipSpawner, currentSpawnPosition, Quaternion.identity, transform);
+                    EnemySingleSpawnBehaviour shipBehaviour = instantiatedShipSpawner.GetComponent<EnemySingleSpawnBehaviour>();
+
+                    shipBehaviour.HasEnterMove = SpawnContainers[i].HasEnterMove;
+                    shipBehaviour.SplineMovementSpeed = SpawnContainers[i].EnterMovementSpeed;
+                    shipBehaviour.OnEnterSplineOffsetValue = SpawnContainers[i].EnterOffsetValue;
 
                     shipBehaviour.GroupHandler = this;
                     shipBehaviour.SplinePathPrefab = SpawnContainers[i].SplinePathPrefab;
                     shipBehaviour.SplineAnimationStartOffset = SpawnContainers[i].SplineAnimationStartOffset;
+
                     EnemySpawnContainer newContainer = SpawnContainers[i];
                     newContainer.IsSpawned = true;
                     SpawnContainers[i] = newContainer;

@@ -148,16 +148,7 @@ MonoBehaviour:
   lastPosition: {x: 0, y: 0}
   newPosition: {x: 0, y: 0}
   Direction: {x: 0, y: 0}
-  Frames:
-  - {fileID: 21300000, guid: 706ab8d3d8cc17d44bfdb031598852e4, type: 3}
-  - {fileID: 21300000, guid: acc3bfe49d71cd4439c58c01686ee604, type: 3}
-  - {fileID: 21300000, guid: f22676be9ba0c6b42b0e7421e4f409f7, type: 3}
-  - {fileID: 21300000, guid: 2112c0e00d0efbd4ab42adf97517dcaa, type: 3}
-  - {fileID: 21300000, guid: 8b16becd673292f438e67cb15cb81d86, type: 3}
-  - {fileID: 21300000, guid: 13de23ccb8fee984eac7fe9c8f29d144, type: 3}
-  - {fileID: 21300000, guid: 4c18e0e34d17de544a3f9cffdd589255, type: 3}
-  - {fileID: 21300000, guid: 0590c852268018749ab53ec5846c72f1, type: 3}
-  - {fileID: 21300000, guid: 5274e2a66fb07144f82bf387f646810c, type: 3}
+  Frames: []
   FrameSkip: 0
   RandomStartFrame: 1
   EnableScaling: 0
