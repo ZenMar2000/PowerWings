@@ -123,63 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &2060112532
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 186939983160460033, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_Name
-      value: SpawnerBugShipPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994115051017107982, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 57777ba9d575125428587ad60b25bb0b, type: 3}
 --- !u!1001 &173786407736009227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -312,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
       propertyPath: Spawns.Array.size
@@ -322,58 +265,6 @@ PrefabInstance:
       propertyPath: Spawns.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: BossSpawns.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: BossSpawns.Array.data[0]
-      value: 
-      objectReference: {fileID: 4274935203257407785, guid: e5d5d6885fc6bb94bacb961cb9a8f1f3, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[0]
-      value: 
-      objectReference: {fileID: 3151571276978532493, guid: 79e9c072e8bd2be4f899a63421a45c9f, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[1]
-      value: 
-      objectReference: {fileID: 2029768133253419626, guid: ba005d8a7b7a53c4bb3cf07b610a4f93, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[2]
-      value: 
-      objectReference: {fileID: 1411001320163264196, guid: e9f6021664a6d7740ab17b966c31aa6a, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[3]
-      value: 
-      objectReference: {fileID: 9144339408448976925, guid: 03158d2a481e48a46bb1435ff9932e6b, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[4]
-      value: 
-      objectReference: {fileID: 7803930007596446720, guid: d808706454df94b498543e82249eb707, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[5]
-      value: 
-      objectReference: {fileID: 7127959345670439861, guid: 8a8fd399384faaa47b0775f138361aae, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[6]
-      value: 
-      objectReference: {fileID: 8871305391091739533, guid: 7dcfdfd771f238640b148f15d50f9f83, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[7]
-      value: 
-      objectReference: {fileID: 8458512956748256048, guid: c86507c8ce4576642aca699ffe5d9efa, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[8]
-      value: 
-      objectReference: {fileID: 5198285516900064097, guid: 96a399216041b9a4f9efa5bbce626500, type: 3}
-    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
-      propertyPath: NormalSpawns.Array.data[9]
-      value: 
-      objectReference: {fileID: 5761762642495293912, guid: 04877bbf9387497488f3369a6d867de5, type: 3}
     - target: {fileID: 7081995488523687935, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -426,4 +317,3 @@ SceneRoots:
   - {fileID: 8277810034559058216}
   - {fileID: 6302583269208335339}
   - {fileID: 173786407736009227}
-  - {fileID: 2060112532}

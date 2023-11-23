@@ -74,7 +74,7 @@ public static class SharedLogics
         [Tooltip("Y offset from the original spawn point")]
         [ShowIf("HasEnterMove", true, true)] public float EnterOffsetValue;
 
-        [Space(10)]
+        [HideInInspector]
         public bool IsSpawned;
     }
 

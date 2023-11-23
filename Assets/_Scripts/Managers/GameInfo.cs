@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public static class GameInfo //: MonoBehaviour
@@ -56,9 +57,10 @@ public static class GameInfo //: MonoBehaviour
         EmitterBehaviour = Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
     }
 
-    public static void IncreaseThreat(int value)
+    public static void IncreaseThreat(int value, bool scoreAwarded = true)
     {
-        PlayerScore += value * float.Parse("1," + (ThreatLevel - 1));
+        if(scoreAwarded)
+            PlayerScore += value * float.Parse("1," + (ThreatLevel - 1));
 
         if (!BossSpawnRequested)
         {

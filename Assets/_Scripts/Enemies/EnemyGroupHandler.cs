@@ -40,9 +40,11 @@ public class EnemyGroupHandler : MonoBehaviour
             spawnTimer += Time.deltaTime;
         }
 
-        if (EnemiesAlive <= 0)
+        if (EnemiesAlive <= 0 && InstantiatedEnemies >= OriginalEnemiesCount)
         {
-            GroupManager.spawnedGroups.Remove(this);
+            if(GroupManager != null)
+                GroupManager.spawnedGroups.Remove(this);
+
             Destroy(gameObject);
         }
     }
@@ -69,6 +71,7 @@ public class EnemyGroupHandler : MonoBehaviour
                     shipBehaviour.GroupHandler = this;
                     shipBehaviour.SplinePathPrefab = SpawnContainers[i].SplinePathPrefab;
                     shipBehaviour.SplineAnimationStartOffset = SpawnContainers[i].SplineAnimationStartOffset;
+                    shipBehaviour.overrideMovementSpeed = SpawnContainers[i].MovementSpeedOverride;
 
                     EnemySpawnContainer newContainer = SpawnContainers[i];
                     newContainer.IsSpawned = true;

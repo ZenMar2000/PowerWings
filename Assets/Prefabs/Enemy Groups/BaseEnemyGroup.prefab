@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf82908119f58540b212c5740b405e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GroupInstantiationBasePosition: {x: 0, y: 10, z: 0}
+  GroupInstantiationBasePosition: {x: 0, y: 20, z: 0}
   SpawnContainers: []
+  _enemiesAlive: 0
+  GroupManager: {fileID: 0}

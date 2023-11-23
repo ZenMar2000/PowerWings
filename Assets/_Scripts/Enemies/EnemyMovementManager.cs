@@ -4,7 +4,7 @@ public class EnemyMovementManager : MonoBehaviour
 {
     //public EnemyGroupHandler GroupHandler;
     [SerializeField] private bool rotateTowardPlayer = false;
-    [SerializeField] private Transform player;
+    private Transform player;
     
     private Animator animator;
     private float currentXPosition => transform.position.x;

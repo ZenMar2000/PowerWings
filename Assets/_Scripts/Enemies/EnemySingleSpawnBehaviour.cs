@@ -6,16 +6,20 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     [Tooltip("The enemy ship that will be instantiated")]
     [SerializeField] private GameObject EnemyShipPrefab;
 
+    [HideInInspector]
     [Tooltip("Spline that will be used as path for the enemy ship")]
     public GameObject SplinePathPrefab;
-
+    
+    [HideInInspector]
     [Tooltip("Override movement speed set in splineBehaviour")]
     public float overrideMovementSpeed = -1;
 
+    [HideInInspector]
     [Tooltip("Set the position along the spline where it will start")]
     [Range(0, 1)]
     public float SplineAnimationStartOffset = 0;
 
+    [HideInInspector]
     [Tooltip("If true, create an oscillator, used for spawning the ship off screen and moving them inside the camera view range")]
     public bool HasEnterMove = false;
 
