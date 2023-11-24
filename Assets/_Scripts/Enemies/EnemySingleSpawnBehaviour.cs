@@ -24,10 +24,10 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     public bool HasEnterMove = false;
 
     [Tooltip("Speed at which the whole spline is moved. Smaller is slower, higher is faster")]
-    [ShowIf("HasEnterMove", true, true)] public float SplineMovementSpeed;
+   /* [ShowIf("HasEnterMove", true, true)]*/ public float SplineMovementSpeed;
 
     [Tooltip("Y offset from the original spawn point")]
-    [ShowIf("HasEnterMove", true, true)] public float OnEnterSplineOffsetValue;
+    /*[ShowIf("HasEnterMove", true, true)]*/ public float OnEnterSplineOffsetValue;
 
     private Oscillator SplineOscillatorMovement;
 
