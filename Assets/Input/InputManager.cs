@@ -5,11 +5,12 @@ public static class InputManager
     public static PowerInputActions PlayerInput;
 
     public static InputAction PlayerMove;
-    public static InputAction PlayerDodge;
+    //public static InputAction PlayerDodge;
     public static InputAction PlayerParry;
     public static InputAction PlayerAttack;
     public static InputAction PlayerChangeSpreadAngle;
     public static InputAction PreciseMovement;
+    public static InputAction HideHelp;
     static InputManager()
     {
         PlayerInput = new PowerInputActions();
@@ -17,8 +18,8 @@ public static class InputManager
         PlayerMove = PlayerInput.Player.Move;
         PlayerMove.Enable();
 
-        PlayerDodge = PlayerInput.Player.Dodge;
-        PlayerDodge.Enable();
+        //PlayerDodge = PlayerInput.Player.Dodge;
+        //PlayerDodge.Enable();
 
         PlayerParry = PlayerInput.Player.Parry;
         PlayerParry.Enable();
@@ -31,6 +32,9 @@ public static class InputManager
 
         PreciseMovement = PlayerInput.Player.PreciseMovement;
         PreciseMovement.Enable();
+
+        HideHelp = PlayerInput.Player.HideHelp;
+        HideHelp.Enable();
 
     }
 }

@@ -85,6 +85,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBullet.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLinearNonPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\AutomateLinear.cs" />
+    <Compile Include="Assets\_Scripts\Misc\InGameGUI Behaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBouncyPhysics.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\AutomateBase.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerBulletSpreadVisualiserBehaviour.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\ColorLerp.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotEmitPattern.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBase.cs" />
+    <Compile Include="Assets\_Scripts\Misc\HelpScreenBehaviour.cs" />
     <Compile Include="Assets\_Scripts\Managers\GameInfo.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotCollFlux.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\DifficultySelect.cs" />

@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Dodge",
+                    "name": "HideHelp",
                     "type": "Button",
                     "id": "57ef3151-dd0b-4c38-a402-b593c4705d78",
                     "expectedControlType": "Button",
@@ -152,11 +152,11 @@
                 {
                     "name": "",
                     "id": "d52b2aec-d00f-4ad7-85d2-b4af91692d1b",
-                    "path": "<Keyboard>/l",
+                    "path": "<Keyboard>/f1",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Dodge",
+                    "action": "HideHelp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

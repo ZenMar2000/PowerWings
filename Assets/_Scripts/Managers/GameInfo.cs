@@ -51,9 +51,9 @@ public static class GameInfo //: MonoBehaviour
     }
     #endregion
 
-    public static void Start(GameObject playerShipPrefab)
+    public static void Start(GameObject playerShipPrefab, GameManager gameManager)
     {
-        Player = Object.Instantiate(playerShipPrefab, new Vector3(0, -10, 0), Quaternion.identity);
+        Player = Object.Instantiate(playerShipPrefab, new Vector3(0, -10, 0), Quaternion.identity, gameManager.transform);
         EmitterBehaviour = Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
     }
 

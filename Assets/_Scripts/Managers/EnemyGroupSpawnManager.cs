@@ -1,3 +1,4 @@
+using ND_VariaBULLET;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -93,6 +94,7 @@ public class EnemyGroupSpawnManager : MonoBehaviour
         if (GameInfo.BossSpawnRequested && !bossSpawned)
         {//If boss is required to spawn from GameInfo and it's not spawned yet, spawn it.
             bossSpawned = true;
+            DestroyAllEnemiesAlive();
             spawnedGroups.Add(Instantiate(BossSpawns[(GameInfo.ThreatLevel - 1) % (BossSpawns.Count)], transform));
             spawnedGroups.Last().GroupManager = this;
 
@@ -132,5 +134,17 @@ public class EnemyGroupSpawnManager : MonoBehaviour
         while (recentlySpawnedGroups.Contains(randomIndex));
 
         return randomIndex;
+    }
+
+    private void DestroyAllEnemiesAlive()
+    {
+        foreach(EnemyGroupHandler spawnedGroup in spawnedGroups)
+        {
+            EnemyThreatBehaviour[] enemyShips = spawnedGroup.GetComponentsInChildren<EnemyThreatBehaviour>();
+            foreach(EnemyThreatBehaviour singleEnemyShip in enemyShips)
+            {
+                singleEnemyShip.ForceDestroy(false);
+            }
+        }
     }
 }

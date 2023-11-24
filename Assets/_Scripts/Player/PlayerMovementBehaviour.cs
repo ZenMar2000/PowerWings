@@ -58,14 +58,14 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
-        InputManager.PlayerDodge.performed += OnDodge;
+        //InputManager.PlayerDodge.performed += OnDodge;
         InputManager.PreciseMovement.started += OnPreciseMovementStart;
         InputManager.PreciseMovement.canceled += OnPreciseMovementEnd;
     }
 
     private void OnDestroy()
     {
-        InputManager.PlayerDodge.performed -= OnDodge;
+        //InputManager.PlayerDodge.performed -= OnDodge;
         InputManager.PreciseMovement.started -= OnPreciseMovementStart;
         InputManager.PreciseMovement.canceled -= OnPreciseMovementEnd;
     }

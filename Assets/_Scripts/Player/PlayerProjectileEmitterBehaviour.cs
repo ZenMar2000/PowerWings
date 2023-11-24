@@ -272,10 +272,15 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         playerShieldBehaviour.CanParry = false;
 
         if (isOverloaded)
+        {
             DamageMultiplier = 3;
+        }
         else
+        {
             CalculateDamageMultiplier();
-        
+            CalculateShootingRate();
+        }
+
         SubdivideBullets();
 
         CalculateBulletsSubtractionValue();

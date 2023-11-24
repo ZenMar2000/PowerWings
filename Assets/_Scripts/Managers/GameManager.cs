@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        GameInfo.Start(PlayerShipPrefab);
+        GameInfo.Start(PlayerShipPrefab, this);
     }
     private void Update()
     {

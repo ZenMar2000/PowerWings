@@ -55,7 +55,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Dodge"",
+                    ""name"": ""HideHelp"",
                     ""type"": ""Button"",
                     ""id"": ""57ef3151-dd0b-4c38-a402-b593c4705d78"",
                     ""expectedControlType"": ""Button"",
@@ -174,11 +174,11 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d52b2aec-d00f-4ad7-85d2-b4af91692d1b"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/f1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Dodge"",
+                    ""action"": ""HideHelp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -330,7 +330,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Parry = m_Player.FindAction("Parry", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
-        m_Player_Dodge = m_Player.FindAction("Dodge", throwIfNotFound: true);
+        m_Player_HideHelp = m_Player.FindAction("HideHelp", throwIfNotFound: true);
         m_Player_ChangeSpreadAngle = m_Player.FindAction("ChangeSpreadAngle", throwIfNotFound: true);
         m_Player_PreciseMovement = m_Player.FindAction("PreciseMovement", throwIfNotFound: true);
     }
@@ -397,7 +397,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Parry;
     private readonly InputAction m_Player_Attack;
-    private readonly InputAction m_Player_Dodge;
+    private readonly InputAction m_Player_HideHelp;
     private readonly InputAction m_Player_ChangeSpreadAngle;
     private readonly InputAction m_Player_PreciseMovement;
     public struct PlayerActions
@@ -407,7 +407,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Parry => m_Wrapper.m_Player_Parry;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
-        public InputAction @Dodge => m_Wrapper.m_Player_Dodge;
+        public InputAction @HideHelp => m_Wrapper.m_Player_HideHelp;
         public InputAction @ChangeSpreadAngle => m_Wrapper.m_Player_ChangeSpreadAngle;
         public InputAction @PreciseMovement => m_Wrapper.m_Player_PreciseMovement;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -428,9 +428,9 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
-            @Dodge.started += instance.OnDodge;
-            @Dodge.performed += instance.OnDodge;
-            @Dodge.canceled += instance.OnDodge;
+            @HideHelp.started += instance.OnHideHelp;
+            @HideHelp.performed += instance.OnHideHelp;
+            @HideHelp.canceled += instance.OnHideHelp;
             @ChangeSpreadAngle.started += instance.OnChangeSpreadAngle;
             @ChangeSpreadAngle.performed += instance.OnChangeSpreadAngle;
             @ChangeSpreadAngle.canceled += instance.OnChangeSpreadAngle;
@@ -450,9 +450,9 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
-            @Dodge.started -= instance.OnDodge;
-            @Dodge.performed -= instance.OnDodge;
-            @Dodge.canceled -= instance.OnDodge;
+            @HideHelp.started -= instance.OnHideHelp;
+            @HideHelp.performed -= instance.OnHideHelp;
+            @HideHelp.canceled -= instance.OnHideHelp;
             @ChangeSpreadAngle.started -= instance.OnChangeSpreadAngle;
             @ChangeSpreadAngle.performed -= instance.OnChangeSpreadAngle;
             @ChangeSpreadAngle.canceled -= instance.OnChangeSpreadAngle;
@@ -526,7 +526,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnParry(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
-        void OnDodge(InputAction.CallbackContext context);
+        void OnHideHelp(InputAction.CallbackContext context);
         void OnChangeSpreadAngle(InputAction.CallbackContext context);
         void OnPreciseMovement(InputAction.CallbackContext context);
     }

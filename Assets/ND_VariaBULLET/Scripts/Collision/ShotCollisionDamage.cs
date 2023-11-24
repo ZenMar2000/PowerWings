@@ -115,16 +115,18 @@ namespace ND_VariaBULLET
 
             if (playerProjectileEmitterBehaviour.BulletsAccumulator > 0)
             {
-                playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * 0.25);
-                playerProjectileEmitterBehaviour.CalculateDamageMultiplier();
 
                 if (playerProjectileEmitterBehaviour.IsShooting)
                 {
                     playerProjectileEmitterBehaviour.MultiWavesRepeat = (int)(playerProjectileEmitterBehaviour.MultiWavesRepeat * 0.75);
                     playerProjectileEmitterBehaviour.SingleWaveProjectiles = (int)(playerProjectileEmitterBehaviour.SingleWaveProjectiles * 0.75);
+                    playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * 0.75);
                 }
-
-
+                else
+                {
+                    playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * 0.25);
+                    playerProjectileEmitterBehaviour.CalculateDamageMultiplier();
+                }
             }
             else
             {
@@ -137,9 +139,9 @@ namespace ND_VariaBULLET
             HP -= damage;
         }
 
-        private void CheckIfDefeated()
+        public void CheckIfDefeated()
         {
-            if (HP < 0)
+            if (HP <= 0)
             {
                 if (DeathExplosion != "")
                 {
