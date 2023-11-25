@@ -234,7 +234,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   threatGainOnDefeat: 7
   isBoss: 0
-  shotCollisionDamage: {fileID: 0}
 --- !u!1 &2334261531415712688
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +399,7 @@ GameObject:
   - component: {fileID: 8573429168020708921}
   - component: {fileID: 7348292141610817679}
   - component: {fileID: 3021637370888790084}
+  - component: {fileID: 2052816138084105857}
   m_Layer: 9
   m_Name: Ship
   m_TagString: Untagged
@@ -510,7 +510,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2048
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -554,6 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionList:
   - ND_PlayerBullet
+  - Player
   LaserExplosion: 
   BulletExplosion: ExplosionBombSmall
   ParentExplosion: 1
@@ -565,6 +566,19 @@ MonoBehaviour:
   FlickerDuration: 6
   DamageColor: {r: 1, g: 1, b: 1, a: 0.6862745}
   rend: {fileID: 8573429168020708921}
+--- !u!114 &2052816138084105857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5106468248914374031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb7a6e093409504e8e91d7db0dbf906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamagePerHit: 0
 --- !u!1 &6038362897984381898
 GameObject:
   m_ObjectHideFlags: 0

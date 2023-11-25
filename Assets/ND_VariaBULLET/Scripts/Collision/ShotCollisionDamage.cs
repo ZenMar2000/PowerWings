@@ -70,15 +70,30 @@ namespace ND_VariaBULLET
         {
             if (CollisionFilter.collisionAccepted(collision.gameObject.layer, CollisionList) && !CalcObject.IsOutBounds(collision.transform.position))
             {
-                setDamage(collision.gameObject.GetComponent<IDamager>().DMG);
-                CollisionFilter.setExplosion(BulletExplosion, ParentExplosion, this.transform, collision.transform.position, 0, this);
-                Destroy(collision.gameObject);
+                if (collision.gameObject.GetComponent<DamagerBody>() != null)
+                {
+                    DamagerBody body = collision.gameObject.GetComponent<DamagerBody>();
+                    if (!body.IsPlayer)
+                    {
+                        setDamage(HP + 1);
+                    }
+                    else
+                    {
+                        setDamage(body.DamagePerHit, true);
+                    }
+                }
+                else
+                {
+                    setDamage(collision.gameObject.GetComponent<IDamager>().DMG);
+                    CollisionFilter.setExplosion(BulletExplosion, ParentExplosion, this.transform, collision.transform.position, 0, this);
+                    Destroy(collision.gameObject);
+                }
             }
         }
 
-        protected void setDamage(float damage)
+        protected void setDamage(float damage, bool isContactWithEnemy = false)
         {
-            if (IsPlayer) SetPlayerDamage();
+            if (IsPlayer) SetPlayerDamage(isContactWithEnemy);
             else SetEnemyDamage(damage * playerProjectileEmitterBehaviour.DamageMultiplier);
 
             CheckIfDefeated();
@@ -110,21 +125,41 @@ namespace ND_VariaBULLET
                 rend.color = NormalColor;
             }
         }
-        private void SetPlayerDamage()
+        private void SetPlayerDamage(bool isContactWithEnemy)
         {
 
             if (playerProjectileEmitterBehaviour.BulletsAccumulator > 0)
             {
+                float reductionPercent;
 
                 if (playerProjectileEmitterBehaviour.IsShooting)
                 {
-                    playerProjectileEmitterBehaviour.MultiWavesRepeat = (int)(playerProjectileEmitterBehaviour.MultiWavesRepeat * 0.75);
-                    playerProjectileEmitterBehaviour.SingleWaveProjectiles = (int)(playerProjectileEmitterBehaviour.SingleWaveProjectiles * 0.75);
-                    playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * 0.75);
+                    if (!isContactWithEnemy)
+                    {
+                        reductionPercent = 0.75f;
+                    }
+                    else 
+                    {
+                        reductionPercent = 0.5f;
+                    }
+
+                    playerProjectileEmitterBehaviour.MultiWavesRepeat = (int)(playerProjectileEmitterBehaviour.MultiWavesRepeat * reductionPercent);
+                    playerProjectileEmitterBehaviour.SingleWaveProjectiles = (int)(playerProjectileEmitterBehaviour.SingleWaveProjectiles * reductionPercent);
+                    playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * reductionPercent);
+
                 }
                 else
                 {
-                    playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * 0.25);
+                    if (!isContactWithEnemy)
+                    {
+                        reductionPercent = 0.25f;
+                    }
+                    else
+                    {
+                        reductionPercent = 0.125f;
+                    }
+
+                    playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * reductionPercent);
                     if (playerProjectileEmitterBehaviour.BulletsAccumulator >= GameInfo.WarningValue)
                     {
                         playerProjectileEmitterBehaviour.CalculateDamageMultiplier();

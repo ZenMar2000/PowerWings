@@ -146,7 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   threatGainOnDefeat: 10
   isBoss: 0
-  shotCollisionDamage: {fileID: 0}
 --- !u!1 &1544724762575893390
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,7 +661,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2560
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -706,6 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionList:
   - ND_PlayerBullet
+  - Player
   LaserExplosion: 
   BulletExplosion: ExplosionBombSmall
   ParentExplosion: 1

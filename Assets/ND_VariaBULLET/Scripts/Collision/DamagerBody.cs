@@ -12,7 +12,7 @@ namespace ND_VariaBULLET
     {
         [Tooltip("Sets the amount of HP reduction produced by this object when collides with a ShotCollidable object.")]
         public float DamagePerHit;
-
+        public bool IsPlayer = false;
         [Space(10)]
 
         //[Tooltip("Set if the script is attached to a player. Handles bonus damage logic.")]

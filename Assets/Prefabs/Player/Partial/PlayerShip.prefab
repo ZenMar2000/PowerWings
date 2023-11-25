@@ -1432,7 +1432,6 @@ MonoBehaviour:
   FlickerDuration: 6
   DamageColor: {r: 0, g: 0, b: 0, a: 0}
   rend: {fileID: 0}
-  PlayerProjectileEmitterBehaviour: {fileID: 7983500835448736170}
 --- !u!60 &3230805306191282517
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1505,6 +1504,8 @@ GameObject:
   - component: {fileID: 436582759078604934}
   - component: {fileID: 3613853669456898934}
   - component: {fileID: 2599115770026658968}
+  - component: {fileID: 1733253721388572723}
+  - component: {fileID: 4207273100807259980}
   m_Layer: 8
   m_Name: Ship
   m_TagString: Untagged
@@ -1614,6 +1615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionList:
   - ND_EnemyBullet
+  - Enemy
   LaserExplosion: 
   BulletExplosion: ExplosionEnemyLongSmall
   ParentExplosion: 1
@@ -1640,7 +1642,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1280
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1660,6 +1662,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &1733253721388572723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6587137443907194287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e97aec624ce103448474b9011962041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerEmitter: {fileID: 0}
+--- !u!114 &4207273100807259980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6587137443907194287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb7a6e093409504e8e91d7db0dbf906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamagePerHit: 1e+12
 --- !u!1 &7100254067982148574
 GameObject:
   m_ObjectHideFlags: 0
