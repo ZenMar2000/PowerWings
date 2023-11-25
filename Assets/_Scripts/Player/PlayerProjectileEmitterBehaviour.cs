@@ -273,7 +273,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
 
         if (isOverloaded)
         {
-            DamageMultiplier = 3;
+            DamageMultiplier *= 1.25f;
         }
         else
         {

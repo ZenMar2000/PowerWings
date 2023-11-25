@@ -39,7 +39,7 @@ namespace ND_VariaBULLET
 
         void Start()
         {
-            if(GameInfo.EmitterBehaviour!= null)
+            if (GameInfo.EmitterBehaviour != null)
             {
                 playerProjectileEmitterBehaviour = GameInfo.EmitterBehaviour;
             }
@@ -125,7 +125,10 @@ namespace ND_VariaBULLET
                 else
                 {
                     playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * 0.25);
-                    playerProjectileEmitterBehaviour.CalculateDamageMultiplier();
+                    if (playerProjectileEmitterBehaviour.BulletsAccumulator >= GameInfo.WarningValue)
+                    {
+                        playerProjectileEmitterBehaviour.CalculateDamageMultiplier();
+                    }
                 }
             }
             else

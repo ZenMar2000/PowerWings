@@ -68,6 +68,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
         //InputManager.PlayerDodge.performed -= OnDodge;
         InputManager.PreciseMovement.started -= OnPreciseMovementStart;
         InputManager.PreciseMovement.canceled -= OnPreciseMovementEnd;
+        GameInfo.IsPlayerAlive = false;
     }
     #endregion
 
@@ -78,10 +79,10 @@ public class PlayerMovementBehaviour : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * CurrentMovementSpeed, moveDirection.y * CurrentMovementSpeed);
     }
 
-    private void OnDodge(InputAction.CallbackContext context)
-    {
-        Debug.Log("Dodged!");
-    }
+    //private void OnDodge(InputAction.CallbackContext context)
+    //{
+    //    Debug.Log("Dodged!");
+    //}
 
     private void OnPreciseMovementStart(InputAction.CallbackContext context)
     {

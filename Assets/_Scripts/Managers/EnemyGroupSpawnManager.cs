@@ -1,4 +1,3 @@
-using ND_VariaBULLET;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -18,7 +17,9 @@ public class EnemyGroupSpawnManager : MonoBehaviour
     private int groupRepeatPrevention;
     private List<int> recentlySpawnedGroups = new List<int>();
 
-    void Start()
+    private bool enemyReinforcementCalled = false;
+
+    private void Start()
     {
         groupRepeatPrevention = NormalSpawns.Count() / 3;
     }
@@ -26,13 +27,14 @@ public class EnemyGroupSpawnManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        CheckIfBossRequested();
         CheckGroupStatus();
         RespawnRoutine();
     }
 
     private void RespawnRoutine()
     {
+        CheckIfBossRequested();
+
         if (spawnedGroups.Count == 0 || spawnTimer >= maxTimerBeforeRespawn)
         {
             if (spawnedGroups.Count < GameInfo.ThreatLevel + 2)
@@ -43,9 +45,10 @@ public class EnemyGroupSpawnManager : MonoBehaviour
         }
         else
         {
-            if (spawnedGroups.Count < GameInfo.ThreatLevel && !bossSpawned)
+            if (spawnedGroups.Count < GameInfo.ThreatLevel && !bossSpawned && enemyReinforcementCalled == false)
             {
-                spawnTimer = maxTimerBeforeRespawn;
+                spawnTimer = maxTimerBeforeRespawn - 3;
+                enemyReinforcementCalled = true;
             }
             spawnTimer += Time.deltaTime;
         }
@@ -54,6 +57,8 @@ public class EnemyGroupSpawnManager : MonoBehaviour
     private void SpawnRandomGroup()
     {
         int spawnGroupAtIndex = RandomnessCheck();
+        enemyReinforcementCalled = false;
+
         if (recentlySpawnedGroups.Count > groupRepeatPrevention)
         {
             recentlySpawnedGroups.RemoveAt(0);
@@ -62,10 +67,13 @@ public class EnemyGroupSpawnManager : MonoBehaviour
 
         spawnedGroups.Add(Instantiate(NormalSpawns[spawnGroupAtIndex], transform));
         spawnedGroups.Last().GroupManager = this;
+
     }
 
     private void CheckGroupStatus()
     {
+        CheckIfBossRequested();
+
         if (!bossSpawned)
         {
             int groupStatus = spawnedGroups.Count;
@@ -138,10 +146,10 @@ public class EnemyGroupSpawnManager : MonoBehaviour
 
     private void DestroyAllEnemiesAlive()
     {
-        foreach(EnemyGroupHandler spawnedGroup in spawnedGroups)
+        foreach (EnemyGroupHandler spawnedGroup in spawnedGroups)
         {
             EnemyThreatBehaviour[] enemyShips = spawnedGroup.GetComponentsInChildren<EnemyThreatBehaviour>();
-            foreach(EnemyThreatBehaviour singleEnemyShip in enemyShips)
+            foreach (EnemyThreatBehaviour singleEnemyShip in enemyShips)
             {
                 singleEnemyShip.ForceDestroy(false);
             }

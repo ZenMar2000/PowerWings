@@ -3,6 +3,12 @@ using UnityEngine;
 
 public static class GameInfo //: MonoBehaviour
 {
+    public static readonly long WarningValue = 4503599627370496;
+
+    public static bool IsPlayerAlive = true;
+
+    public static bool HelpScreenVisible = true;
+
     public static float ThreatLevelUpThreshold = 100;
 
     public static int ThreatLevel = 1;
@@ -60,7 +66,7 @@ public static class GameInfo //: MonoBehaviour
     public static void IncreaseThreat(int value, bool scoreAwarded = true)
     {
         if(scoreAwarded)
-            PlayerScore += value * float.Parse("1," + (ThreatLevel - 1));
+            PlayerScore += value * ThreatLevel;
 
         if (!BossSpawnRequested)
         {
@@ -77,5 +83,15 @@ public static class GameInfo //: MonoBehaviour
                 ThreatAccumulator += value;
             }
         }
+    }
+
+    public static void ResetValues()
+    {
+        ThreatLevelUpThreshold = 100;
+        ThreatLevel = 1;
+        BossSpawnRequested = false;
+        ThreatAccumulator = 0;
+        PlayerScore = 0;
+        IsPlayerAlive = true;
     }
 }

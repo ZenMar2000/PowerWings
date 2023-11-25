@@ -21,5 +21,6 @@ public class HelpScreenBehaviour : MonoBehaviour
     private void ShowHideHelp(InputAction.CallbackContext context)
     {
        gameObject.SetActive(!gameObject.activeSelf);
+       GameInfo.HelpScreenVisible = gameObject.activeSelf;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInfoFollowPlayerBehaviour : MonoBehaviour
 {
-    [SerializeField] PlayerProjectileEmitterBehaviour playerProjectileEmitterBehaviour;
+    public PlayerProjectileEmitterBehaviour playerProjectileEmitterBehaviour;
     [Space(10)]
     [SerializeField] private float lerpDuration = 0.02f;
     [SerializeField] private Transform followTarget;
