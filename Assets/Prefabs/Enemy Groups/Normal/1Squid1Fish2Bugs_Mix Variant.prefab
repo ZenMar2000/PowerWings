@@ -232,9 +232,21 @@ PrefabInstance:
       propertyPath: SpawnContainers.Array.data[5].SpawnPositionOffset.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[0].StartWithRandomSplinePosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[1].StartWithRandomSplinePosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[2].StartWithRandomSplinePosition
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8766041326112975749, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: m_Name
-      value: 1Squid1Lark4Bugs_Mix Variant
+      value: 1Squid1Fish2Bugs_Mix Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

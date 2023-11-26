@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14588570189269679}
   - component: {fileID: 8626435152969864164}
+  - component: {fileID: 7647410625220633757}
   m_Layer: 0
   m_Name: CenterDrop_Right
   m_TagString: Untagged
@@ -298,8 +299,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.1630145
         T: 0.03448276
       - Distance: 0.32871014
@@ -361,8 +362,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.23720936
         T: 0.03448276
       - Distance: 0.4832844
@@ -424,8 +425,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.2615865
         T: 0.03448276
       - Distance: 0.5414406
@@ -487,8 +488,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.049221948
         T: 0.03448276
       - Distance: 0.09841263
@@ -550,8 +551,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.13446681
         T: 0.03448276
       - Distance: 0.2993344
@@ -613,8 +614,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.112983294
         T: 0.03448276
       - Distance: 0.22274408
@@ -676,8 +677,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.30147958
         T: 0.03448276
       - Distance: 0.6485701
@@ -739,8 +740,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.16011982
         T: 0.03448276
       - Distance: 0.31732905
@@ -802,8 +803,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.058116596
         T: 0.03448276
       - Distance: 0.11659392
@@ -865,8 +866,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.033774383
         T: 0.03448276
       - Distance: 0.06768935
@@ -928,8 +929,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.042735808
         T: 0.03448276
       - Distance: 0.08662622
@@ -991,8 +992,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.062323526
         T: 0.03448276
       - Distance: 0.12467216
@@ -1054,8 +1055,8 @@ MonoBehaviour:
     - Mode: 0
       Tension: 0.5
       m_DistanceToInterpolation:
-      - Distance: 0
-        T: 0
+      - Distance: -1
+        T: -1
       - Distance: 0.09586446
         T: 0.03448276
       - Distance: 0.19252965
@@ -1125,3 +1126,18 @@ MonoBehaviour:
       m_Data: []
   m_Knots:
     m_KnotsLink: []
+--- !u!114 &7647410625220633757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7495696271922542755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ec55644cd880948938df6cdc4db098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoopMode: 1
+  EasingMode: 0
+  MovementSpeed: 10

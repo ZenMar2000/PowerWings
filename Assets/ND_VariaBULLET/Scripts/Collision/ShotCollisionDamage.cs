@@ -174,6 +174,7 @@ namespace ND_VariaBULLET
 
         private void SetEnemyDamage(float damage)
         {
+            GameInfo.AddScore(1 + playerProjectileEmitterBehaviour.DamageMultiplier * 0.25f);
             HP -= damage;
         }
 

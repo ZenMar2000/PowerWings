@@ -65,8 +65,8 @@ public static class GameInfo //: MonoBehaviour
 
     public static void IncreaseThreat(int value, bool scoreAwarded = true)
     {
-        if(scoreAwarded)
-            PlayerScore += value * ThreatLevel;
+        if (scoreAwarded)
+            AddScore(value);
 
         if (!BossSpawnRequested)
         {
@@ -93,5 +93,18 @@ public static class GameInfo //: MonoBehaviour
         ThreatAccumulator = 0;
         PlayerScore = 0;
         IsPlayerAlive = true;
+    }
+
+    public static void AddScore(float scoreToAdd, bool isBullet = false)
+    {
+        if(isBullet)
+        {
+            PlayerScore += scoreToAdd;
+        }
+        else
+        {
+            PlayerScore += scoreToAdd * ThreatLevel;
+        }
+
     }
 }

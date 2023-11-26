@@ -70,7 +70,10 @@ public class EnemyGroupHandler : MonoBehaviour
 
                     shipBehaviour.GroupHandler = this;
                     shipBehaviour.SplinePathPrefab = SpawnContainers[i].SplinePathPrefab;
+
                     shipBehaviour.SplineAnimationStartOffset = SpawnContainers[i].SplineAnimationStartOffset;
+                    shipBehaviour.StartWithRandomSplinePosition= SpawnContainers[i].StartWithRandomSplinePosition;
+
                     shipBehaviour.overrideMovementSpeed = SpawnContainers[i].MovementSpeedOverride;
 
                     EnemySpawnContainer newContainer = SpawnContainers[i];

@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: SpawnContainers.Array.data[0].MovementSpeedOverride
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[0].StartWithRandomSplinePosition
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8766041326112975749, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: m_Name
       value: DragonFlyGroup Variant

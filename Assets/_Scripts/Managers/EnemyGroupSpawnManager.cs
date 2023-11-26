@@ -72,8 +72,6 @@ public class EnemyGroupSpawnManager : MonoBehaviour
 
     private void CheckGroupStatus()
     {
-        CheckIfBossRequested();
-
         if (!bossSpawned)
         {
             int groupStatus = spawnedGroups.Count;
@@ -144,7 +142,7 @@ public class EnemyGroupSpawnManager : MonoBehaviour
         return randomIndex;
     }
 
-    private void DestroyAllEnemiesAlive()
+    public void DestroyAllEnemiesAlive()
     {
         foreach (EnemyGroupHandler spawnedGroup in spawnedGroups)
         {
@@ -152,6 +150,11 @@ public class EnemyGroupSpawnManager : MonoBehaviour
             foreach (EnemyThreatBehaviour singleEnemyShip in enemyShips)
             {
                 singleEnemyShip.ForceDestroy(false);
+            }
+
+            if(spawnedGroup != null)
+            {
+                Destroy(spawnedGroup.gameObject);
             }
         }
     }

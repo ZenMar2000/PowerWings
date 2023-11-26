@@ -13,19 +13,27 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
 
     [Tooltip("Specify which variable from SpreadPattern should oscillate")]
     [SerializeField] private OscillatingEmitterParameter oscillatingParameter;
+
+    [Tooltip("If true, emitters will rotate toward player")]
+    [SerializeField] private bool turnTowardPlayer = false;
+
     private SpreadPattern spreadPattern;
-    private float selectedParameter;
+    private Transform playerPosition;
 
     private void Awake()
     {
         spreadPattern = GetComponent<SpreadPattern>();
         if (oscillator == null)
             oscillator = GetComponent<Oscillator>();
+
+        playerPosition = GameInfo.Player.GetComponentInChildren<PlayerMovementBehaviour>().transform;
+
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         SetOscillatingParameter();
+        AimAtPlayer();
     }
 
     private void SetOscillatingParameter()
@@ -45,14 +53,23 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
                 break;
 
             case OscillatingEmitterParameter.ROTATION:
-                spreadPattern.ParentRotation = oscillator.Progress + RangeOffset;
+                spreadPattern.ParentRotation = oscillator.Progress + RangeOffset + (turnTowardPlayer == false ? 0 : GetPlayerAngle());
                 break;
         }
     }
 
-    //private void SetReference(ref float original)
-    //{
-    //    selectedParameter = original;
-    //}
+    private void AimAtPlayer()
+    {
+        if (turnTowardPlayer && oscillatingParameter != OscillatingEmitterParameter.ROTATION)
+        {
+            spreadPattern.ParentRotation = GetPlayerAngle();
+        }
+    }
+
+    private float GetPlayerAngle()
+    {
+        Vector2 targetDir = playerPosition.position - transform.position;
+        return Vector2.Angle(Vector2.right, targetDir) * -1;
+    }
 }
 

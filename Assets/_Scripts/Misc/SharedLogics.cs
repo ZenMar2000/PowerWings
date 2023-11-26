@@ -60,6 +60,9 @@ public static class SharedLogics
         [Tooltip("Set the position along the spline where it will start")]
         [Range(0, 1)]
         public float SplineAnimationStartOffset;
+
+        [Tooltip("Set true to start on a random position along the spline. Override SplineAnimationStartOffset")]
+        public bool StartWithRandomSplinePosition;
         
         [Space(10)]
         [Tooltip("Spawn position of the enemy ship")]

@@ -9,10 +9,14 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     [HideInInspector]
     [Tooltip("Spline that will be used as path for the enemy ship")]
     public GameObject SplinePathPrefab;
-    
+
     [HideInInspector]
     [Tooltip("Override movement speed set in splineBehaviour")]
     public float overrideMovementSpeed = -1;
+
+    [HideInInspector]
+    [Tooltip("Set true to start on a random position along the spline")]
+    public bool StartWithRandomSplinePosition = false;
 
     [HideInInspector]
     [Tooltip("Set the position along the spline where it will start")]
@@ -24,10 +28,12 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     public bool HasEnterMove = false;
 
     [Tooltip("Speed at which the whole spline is moved. Smaller is slower, higher is faster")]
-   /* [ShowIf("HasEnterMove", true, true)]*/ public float SplineMovementSpeed;
+    /* [ShowIf("HasEnterMove", true, true)]*/
+    public float SplineMovementSpeed;
 
     [Tooltip("Y offset from the original spawn point")]
-    /*[ShowIf("HasEnterMove", true, true)]*/ public float OnEnterSplineOffsetValue;
+    /*[ShowIf("HasEnterMove", true, true)]*/
+    public float OnEnterSplineOffsetValue;
 
     private Oscillator SplineOscillatorMovement;
 
@@ -53,7 +59,7 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
             SplineOscillatorMovement.IsLoopable = false;
         }
 
-        if (SplinePathPrefab != null)
+        if (SplinePathPrefab != null && EnemyShipPrefab != null)
         {
             spline = Instantiate(SplinePathPrefab, transform.position, Quaternion.identity, transform);
             container = GetComponentInChildren<SplineContainer>();
@@ -66,12 +72,12 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
             splineAnimate.Easing = splineBehaviour.EasingMode;
             splineAnimate.Loop = splineBehaviour.LoopMode;
             splineAnimate.Container = container;
-            splineAnimate.StartOffset = SplineAnimationStartOffset;
+            splineAnimate.StartOffset = StartWithRandomSplinePosition == false ? SplineAnimationStartOffset : Random.Range(0f, 1f);
             splineAnimate.enabled = true;
 
-           
+
         }
-        else
+        else if (EnemyShipPrefab != null)
         {
             ship = Instantiate(EnemyShipPrefab, transform.position, Quaternion.identity, transform);
             splineAnimate = ship.GetComponentInChildren<SplineAnimate>();
