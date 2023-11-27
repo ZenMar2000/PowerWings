@@ -14,7 +14,9 @@ public class EnemyMovementManager : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         previousXPosition = transform.position.x;
-        player = GameInfo.Player.GetComponentInChildren<PlayerMovementBehaviour>().transform;
+
+        if (GameInfo.PlayerEmitterBehaviour != null)
+            player = GameInfo.Player.GetComponentInChildren<PlayerMovementBehaviour>().transform;
     }
 
     private void Update()

@@ -30,7 +30,7 @@ namespace ND_VariaBULLET
         {
             rend = GetComponent<SpriteRenderer>();
             NormalColor = rend.color;
-            PlayerProjectileEmitterBehaviour = GameInfo.EmitterBehaviour;
+            PlayerProjectileEmitterBehaviour = GameInfo.PlayerEmitterBehaviour;
         }
 
         public new IEnumerator OnLaserCollision(CollisionArgs sender)

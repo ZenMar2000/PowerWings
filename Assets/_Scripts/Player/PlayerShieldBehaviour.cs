@@ -8,10 +8,12 @@ public class PlayerShieldBehaviour : MonoBehaviour
     //private Animator shieldAnimator;
     private SpriteRenderer shieldSpriteRenderer;
     private PolygonCollider2D shieldCollider;
+    private bool reenableShieldASAP = false;
+    private PlayerProjectileEmitterBehaviour playerProjectileEmitter;
 
     [SerializeField] private float shieldDischargeValue = 0.03f;
     [SerializeField] private float shieldRechargeValue = 0.01f;
-    [SerializeField] private PlayerProjectileEmitterBehaviour playerProjectileEmitter;
+    [SerializeField] private PlayerFullShieldBehaviour fullShieldBehaviour;
 
     #region Properties
     [SerializeField] private float _shieldCharge = 1f;
@@ -39,7 +41,7 @@ public class PlayerShieldBehaviour : MonoBehaviour
             _shieldDepleted = value;
         }
     }
-    
+
     [SerializeField] private bool _isParrying = false;
     public bool IsParrying
     {
@@ -67,6 +69,7 @@ public class PlayerShieldBehaviour : MonoBehaviour
         //shieldAnimator = GetComponent<Animator>();
         shieldSpriteRenderer = GetComponent<SpriteRenderer>();
         shieldCollider = GetComponent<PolygonCollider2D>();
+        playerProjectileEmitter = GameInfo.PlayerEmitterBehaviour;
     }
     private void Start()
     {
@@ -76,8 +79,11 @@ public class PlayerShieldBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(CheckParryAvailability() && IsParrying)
+        if (CheckParryAvailability() && IsParrying)
             ShieldCharge -= shieldDischargeValue;
+
+        if (reenableShieldASAP)
+            Parry();
 
         ShieldRecovery();
     }
@@ -92,7 +98,13 @@ public class PlayerShieldBehaviour : MonoBehaviour
     #region PlayerInput subscribed actions
     private void OnParryStarted(InputAction.CallbackContext context)
     {
-        if (CheckParryAvailability())
+        reenableShieldASAP = true;
+        Parry();
+    }
+
+    private void Parry()
+    {
+        if (CheckParryAvailability() && !fullShieldBehaviour.FullShieldEnabled)
         {
             IsParrying = true;
             shieldCollider.enabled = true;
@@ -106,6 +118,7 @@ public class PlayerShieldBehaviour : MonoBehaviour
 
     public void DisableParry(bool shieldDepleted = false)
     {
+        reenableShieldASAP = false;
         if (IsParrying)
         {
             shieldCollider.enabled = false;
@@ -116,7 +129,7 @@ public class PlayerShieldBehaviour : MonoBehaviour
 
     public bool CheckParryAvailability()
     {
-        if(ShieldCharge <= 0 && ShieldDepleted == false)
+        if (ShieldCharge <= 0 && ShieldDepleted == false)
         {
             ShieldCharge = 0;
             ShieldDepleted = true;
@@ -138,7 +151,7 @@ public class PlayerShieldBehaviour : MonoBehaviour
             {
                 ShieldCharge += shieldRechargeValue;
             }
-            else if(ShieldCharge >= 1f && ShieldDepleted == true)
+            else if (ShieldCharge >= 1f && ShieldDepleted == true)
             {
                 ShieldDepleted = false;
             }

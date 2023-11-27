@@ -143,6 +143,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotParticleExplodeOnHit.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotLaserMask.cs" />
     <Compile Include="Assets\_Scripts\Menus\ButtonHandler.cs" />
+    <Compile Include="Assets\_Scripts\Player\PlayerFullShieldBehaviour.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerInfoFollowPlayerBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\BlastMissile.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CantroRunAnim.cs" />

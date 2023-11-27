@@ -23,16 +23,16 @@ public static class GameInfo //: MonoBehaviour
         private set { _threatAccumulator = value; }
     }
 
-    private static PlayerProjectileEmitterBehaviour _emitterBehaviour;
-    public static PlayerProjectileEmitterBehaviour EmitterBehaviour
+    private static PlayerProjectileEmitterBehaviour _playerEmitterBehaviour;
+    public static PlayerProjectileEmitterBehaviour PlayerEmitterBehaviour
     {
         get
         {
-            return _emitterBehaviour;
+            return _playerEmitterBehaviour;
         }
         private set
         {
-            _emitterBehaviour = value;
+            _playerEmitterBehaviour = value;
         }
     }
 
@@ -60,7 +60,7 @@ public static class GameInfo //: MonoBehaviour
     public static void Start(GameObject playerShipPrefab, GameManager gameManager)
     {
         Player = Object.Instantiate(playerShipPrefab, new Vector3(0, -10, 0), Quaternion.identity, gameManager.transform);
-        EmitterBehaviour = Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
+        PlayerEmitterBehaviour = Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
     }
 
     public static void IncreaseThreat(int value, bool scoreAwarded = true)

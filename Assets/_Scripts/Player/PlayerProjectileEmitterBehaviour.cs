@@ -40,6 +40,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
 
     private long subtractiveBulletsAccumulator = 0;
     [SerializeField] private PlayerShieldBehaviour playerShieldBehaviour;
+    [SerializeField] private PlayerFullShieldBehaviour playerFullShieldBehaviour;
 
     #region Properties
     /// <summary>
@@ -221,6 +222,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     {
         if (MultiWavesRepeat <= 0 && SingleWaveProjectiles <= 0 && IsShooting)
         {
+            playerFullShieldBehaviour.StartInvulnerability();
             IsShooting = false;
             DamageMultiplier = 1;
             playerShieldBehaviour.CanParry = true;

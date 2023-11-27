@@ -41,6 +41,12 @@ public static class SharedLogics
         ROTATION,
     }
 
+    public enum RotationDirection
+    {
+        CLOCKWISE,
+        COUNTER_CLOCKWISE,
+    }
+
     [Serializable]
     public struct EnemySpawnContainer
     {
@@ -69,13 +75,19 @@ public static class SharedLogics
         public Vector3 SpawnPositionOffset;
         
         [Space(10)]
-        [Tooltip("If true, the whole Spline will move a single time, from the spawn point to the offset specified.")]
+        [Tooltip("If true, the whole Spline will move a single time, from the spawn point to the offset specified")]
         public bool HasEnterMove;
         [Tooltip("Speed at which the whole spline is moved. Smaller is slower, higher is faster")]
         /*[ShowIf("HasEnterMove", true, true)]*/ public float EnterMovementSpeed;
 
         [Tooltip("Y offset from the original spawn point")]
         /*[ShowIf("HasEnterMove", true, true)]*/ public float EnterOffsetValue;
+
+        [Space(10)]
+        [Tooltip("Spline of this ship will follow the transform of another ship. Override HasEnterMove until the target dies, then it will trigger HasEnterMove if true")]
+        public bool SplineFollowTarget;
+        [Tooltip("Set the List index of the target to follow. NOTICE It will check the currently spawn ships, not the EnemySpawnContainer position")]
+        public int FollowTargetIndex;
 
         [HideInInspector]
         public bool IsSpawned;

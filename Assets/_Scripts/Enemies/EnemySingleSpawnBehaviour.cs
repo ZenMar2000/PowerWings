@@ -47,6 +47,8 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     private GameObject spline;
     private GameObject ship;
     private Vector3 startingPosition;
+
+    private Transform followedTarget;
     private void Start()
     {
         startingPosition = transform.position;
@@ -64,6 +66,7 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
             spline = Instantiate(SplinePathPrefab, transform.position, Quaternion.identity, transform);
             container = GetComponentInChildren<SplineContainer>();
             splineBehaviour = spline.GetComponent<EnemySplineAnimationBehaviour>();
+
 
             ship = Instantiate(EnemyShipPrefab, transform.position, Quaternion.identity, transform);
             splineAnimate = ship.GetComponentInChildren<SplineAnimate>();
@@ -87,6 +90,14 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (followedTarget != null)
+            FollowTarget();
+        else
+            EnterMove();
+    }
+
+    private void EnterMove()
+    {
         if (HasEnterMove)
         {
             if (spline != null)
@@ -104,9 +115,21 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
         }
     }
 
+    private void FollowTarget()
+    {
+        if(followedTarget != null)
+        {
+            spline.transform.position = followedTarget.transform.position;
+        }
+    }
     private void OnDestroy()
     {
         if (GroupHandler != null)
             GroupHandler.EnemiesAlive--;
+    }
+
+    public void SetTargetToFollow(Transform target)
+    {
+        followedTarget = target;
     }
 }

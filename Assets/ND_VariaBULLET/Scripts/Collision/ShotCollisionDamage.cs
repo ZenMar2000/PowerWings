@@ -39,9 +39,9 @@ namespace ND_VariaBULLET
 
         void Start()
         {
-            if (GameInfo.EmitterBehaviour != null)
+            if (GameInfo.PlayerEmitterBehaviour != null)
             {
-                playerProjectileEmitterBehaviour = GameInfo.EmitterBehaviour;
+                playerProjectileEmitterBehaviour = GameInfo.PlayerEmitterBehaviour;
             }
             NormalColor = rend.color;
         }

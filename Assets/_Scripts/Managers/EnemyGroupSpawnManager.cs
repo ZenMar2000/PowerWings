@@ -68,6 +68,13 @@ public class EnemyGroupSpawnManager : MonoBehaviour
         spawnedGroups.Add(Instantiate(NormalSpawns[spawnGroupAtIndex], transform));
         spawnedGroups.Last().GroupManager = this;
 
+        CheckIfFollowTarget();
+
+    }
+    
+    private void CheckIfFollowTarget()
+    {
+
     }
 
     private void CheckGroupStatus()

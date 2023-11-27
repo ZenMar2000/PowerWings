@@ -17,6 +17,11 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
     [Tooltip("If true, emitters will rotate toward player")]
     [SerializeField] private bool turnTowardPlayer = false;
 
+    [Space(10)]
+    [Tooltip("If true, emitter will keep rotating around. Overrides oscillatingParameter and turnTowardPlayer")]
+    [SerializeField] private bool continuousRotation = false;
+    [SerializeField] private float rotationAmount = 0;
+
     private SpreadPattern spreadPattern;
     private Transform playerPosition;
 
@@ -26,12 +31,14 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
         if (oscillator == null)
             oscillator = GetComponent<Oscillator>();
 
-        playerPosition = GameInfo.Player.GetComponentInChildren<PlayerMovementBehaviour>().transform;
+        if (GameInfo.PlayerEmitterBehaviour != null)
+            playerPosition = GameInfo.Player.GetComponentInChildren<PlayerMovementBehaviour>().transform;
 
     }
 
     private void FixedUpdate()
     {
+        SetContinuousRotation();
         SetOscillatingParameter();
         AimAtPlayer();
     }
@@ -53,7 +60,8 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
                 break;
 
             case OscillatingEmitterParameter.ROTATION:
-                spreadPattern.ParentRotation = oscillator.Progress + RangeOffset + (turnTowardPlayer == false ? 0 : GetPlayerAngle());
+                if(!continuousRotation)
+                    spreadPattern.ParentRotation = oscillator.Progress + RangeOffset + (turnTowardPlayer == false ? 0 : GetPlayerAngle());
                 break;
         }
     }
@@ -68,7 +76,8 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
 
     private float GetPlayerAngle()
     {
-        if(playerPosition != null)
+
+        if (playerPosition != null)
         {
             Vector2 targetDir = playerPosition.position - transform.position;
             return Vector2.Angle(Vector2.right, targetDir) * -1;
@@ -76,6 +85,17 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
         else
         {
             return -90;
+        }
+    }
+
+    private void SetContinuousRotation()
+    {
+        if (continuousRotation)
+        {
+            if (spreadPattern.ParentRotation >= 360 || spreadPattern.ParentRotation  <= -360)
+                spreadPattern.ParentRotation = rotationAmount;
+            else
+                spreadPattern.ParentRotation += rotationAmount;
         }
     }
 }
