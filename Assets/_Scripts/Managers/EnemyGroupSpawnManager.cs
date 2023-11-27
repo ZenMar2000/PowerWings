@@ -99,8 +99,8 @@ public class EnemyGroupSpawnManager : MonoBehaviour
     {
         if (GameInfo.BossSpawnRequested && !bossSpawned)
         {//If boss is required to spawn from GameInfo and it's not spawned yet, spawn it.
-            bossSpawned = true;
             DestroyAllEnemiesAlive();
+            bossSpawned = true;
             spawnedGroups.Add(Instantiate(BossSpawns[(GameInfo.ThreatLevel - 1) % (BossSpawns.Count)], transform));
             spawnedGroups.Last().GroupManager = this;
 
@@ -132,12 +132,15 @@ public class EnemyGroupSpawnManager : MonoBehaviour
     }
     private int RandomnessCheck()
     {
+        int counter = 0;
+        int maxloops = NormalSpawns.Count * 3;
         int randomIndex;
         do
         {
             randomIndex = Random.Range(0, NormalSpawns.Count);
+            counter++;
         }
-        while (recentlySpawnedGroups.Contains(randomIndex));
+        while (recentlySpawnedGroups.Contains(randomIndex) || counter <= maxloops);
 
         return randomIndex;
     }
@@ -157,5 +160,6 @@ public class EnemyGroupSpawnManager : MonoBehaviour
                 Destroy(spawnedGroup.gameObject);
             }
         }
+        spawnedGroups = new List<EnemyGroupHandler>();
     }
 }

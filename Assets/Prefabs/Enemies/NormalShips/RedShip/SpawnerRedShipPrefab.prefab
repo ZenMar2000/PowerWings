@@ -47,6 +47,7 @@ MonoBehaviour:
   EnemyShipPrefab: {fileID: 1490953567770774657, guid: e329edac07f454a41ae4f98ae72639f5, type: 3}
   SplinePathPrefab: {fileID: 0}
   overrideMovementSpeed: 0
+  StartWithRandomSplinePosition: 0
   SplineAnimationStartOffset: 0
   HasEnterMove: 0
   SplineMovementSpeed: 0

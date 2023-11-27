@@ -68,8 +68,15 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
 
     private float GetPlayerAngle()
     {
-        Vector2 targetDir = playerPosition.position - transform.position;
-        return Vector2.Angle(Vector2.right, targetDir) * -1;
+        if(playerPosition != null)
+        {
+            Vector2 targetDir = playerPosition.position - transform.position;
+            return Vector2.Angle(Vector2.right, targetDir) * -1;
+        }
+        else
+        {
+            return -90;
+        }
     }
 }
 

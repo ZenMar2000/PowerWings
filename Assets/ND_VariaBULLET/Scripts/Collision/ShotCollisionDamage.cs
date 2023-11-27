@@ -73,7 +73,7 @@ namespace ND_VariaBULLET
                 if (collision.gameObject.GetComponent<DamagerBody>() != null)
                 {
                     DamagerBody body = collision.gameObject.GetComponent<DamagerBody>();
-                    if (!body.IsPlayer)
+                    if (!IsPlayer)
                     {
                         setDamage(HP + 1);
                     }
@@ -160,7 +160,8 @@ namespace ND_VariaBULLET
                     }
 
                     playerProjectileEmitterBehaviour.BulletsAccumulator = (long)(playerProjectileEmitterBehaviour.BulletsAccumulator * reductionPercent);
-                    if (playerProjectileEmitterBehaviour.BulletsAccumulator >= GameInfo.WarningValue)
+
+                    if (playerProjectileEmitterBehaviour.BulletsAccumulator >= GameInfo.WarningValue || playerProjectileEmitterBehaviour.BulletsAccumulator <= playerProjectileEmitterBehaviour.maxStandardProjectileCharge)
                     {
                         playerProjectileEmitterBehaviour.CalculateDamageMultiplier();
                     }
@@ -174,7 +175,7 @@ namespace ND_VariaBULLET
 
         private void SetEnemyDamage(float damage)
         {
-            GameInfo.AddScore(1 + playerProjectileEmitterBehaviour.DamageMultiplier * 0.25f);
+            GameInfo.AddScore(0.75f + playerProjectileEmitterBehaviour.DamageMultiplier * 0.25f);
             HP -= damage;
         }
 

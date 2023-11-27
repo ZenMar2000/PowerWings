@@ -34,8 +34,8 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     /// </summary>
     public int SingleWaveProjectiles = 0;
 
-    private int maxStandardProjectileCharge = 256;
-    private int maxOverloadProjectileCharge = 512;
+    public readonly int maxStandardProjectileCharge = 256;
+    public readonly int maxOverloadProjectileCharge = 512;
 
 
     private long subtractiveBulletsAccumulator = 0;

@@ -1703,6 +1703,7 @@ GameObject:
   - component: {fileID: 8573429168020708921}
   - component: {fileID: 9170072389144757482}
   - component: {fileID: 3021637370888790084}
+  - component: {fileID: 6059808670068496162}
   m_Layer: 9
   m_Name: Ship
   m_TagString: Untagged
@@ -1859,6 +1860,20 @@ MonoBehaviour:
   FlickerDuration: 6
   DamageColor: {r: 1, g: 1, b: 1, a: 0.6862745}
   rend: {fileID: 8573429168020708921}
+--- !u!114 &6059808670068496162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5106468248914374031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb7a6e093409504e8e91d7db0dbf906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamagePerHit: 0
+  IsPlayer: 0
 --- !u!1 &5244200343827100005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,6 +2197,7 @@ MonoBehaviour:
   oscillator: {fileID: 8704920191600597347}
   RangeOffset: -90
   oscillatingParameter: 3
+  turnTowardPlayer: 0
 --- !u!1 &6059052010955519443
 GameObject:
   m_ObjectHideFlags: 0
