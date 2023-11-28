@@ -71,9 +71,9 @@ namespace ND_VariaBULLET
                     PlayerProjectileEmitterBehaviour.BulletsAccumulator = 1;
                 else
                     PlayerProjectileEmitterBehaviour.BulletsAccumulator *= 2;
-            }
 
-            PlayerProjectileEmitterBehaviour.CalculateDamageMultiplier();
+                PlayerProjectileEmitterBehaviour.CalculateDamageMultiplier();
+            }
         }
 
         protected IEnumerator setFlicker()

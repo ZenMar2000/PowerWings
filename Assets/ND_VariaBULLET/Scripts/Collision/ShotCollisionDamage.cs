@@ -84,9 +84,13 @@ namespace ND_VariaBULLET
                 }
                 else
                 {
-                    setDamage(collision.gameObject.GetComponent<IDamager>().DMG);
-                    CollisionFilter.setExplosion(BulletExplosion, ParentExplosion, this.transform, collision.transform.position, 0, this);
-                    Destroy(collision.gameObject);
+                    if (collision.gameObject.GetComponent<IDamager>() != null)
+                    {
+                        setDamage(collision.gameObject.GetComponent<IDamager>().DMG);
+                        CollisionFilter.setExplosion(BulletExplosion, ParentExplosion, this.transform, collision.transform.position, 0, this);
+                        Destroy(collision.gameObject);
+
+                    }
                 }
             }
         }
@@ -138,7 +142,7 @@ namespace ND_VariaBULLET
                     {
                         reductionPercent = 0.75f;
                     }
-                    else 
+                    else
                     {
                         reductionPercent = 0.5f;
                     }

@@ -266,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[6].SpawnPositionOffset.x
-      value: 7.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8766041326112975749, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: m_Name

@@ -246,7 +246,7 @@ MonoBehaviour:
   makeNodeOnly: 0
   LocalPitch: 0
   customIndicator: {fileID: 0}
-  Shot: {fileID: 1000010161334016, guid: 6ceec300808987147a520c929f10a129, type: 3}
+  Shot: {fileID: 1000010161334016, guid: 9ec6bffa17ec50549aa4449eddeb3ba2, type: 3}
   ShotSpeed: 10
   LocalOffset: 0
   controller: {fileID: 0}
@@ -255,7 +255,7 @@ MonoBehaviour:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
   PlayerProjectileEmitterBehaviour: {fileID: 0}
-  SpriteOverride: {fileID: 21300000, guid: e42ea7eab39fd5f4f9369caa43c74899, type: 3}
+  SpriteOverride: {fileID: 21300000, guid: f406400fc58108d4aaa293e7bb38ebbd, type: 3}
   ParentToEmitter: 0
   IgnoreGlobalRateScale: 0
   ShotRate: 9

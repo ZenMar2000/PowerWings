@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[1].SpawnDelay
@@ -139,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].EnemyShipSpawner
       value: 
-      objectReference: {fileID: 186939983160460033, guid: ab320c783c4e57140958e7c7d3fa60cf, type: 3}
+      objectReference: {fileID: 186939983160460033, guid: d52927e51ec7291419f1eae358f33cd0, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].EnterOffsetValue
       value: 15
@@ -147,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].SplinePathPrefab
       value: 
-      objectReference: {fileID: 3069117873773657591, guid: 8914c5089e57cda40aaac1da605654f4, type: 3}
+      objectReference: {fileID: 6686214240768516190, guid: 2bbc52cc584e36a4bb803cb4bd9e0c14, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].EnterMovementSpeed
       value: 1
@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].EnterMovementSpeed
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].SpawnPositionOffset.x
@@ -189,8 +189,12 @@ PrefabInstance:
       value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[4].MovementSpeedOverride
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].SpawnPositionOffset.x
-      value: -15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].StartWithRandomSplinePosition

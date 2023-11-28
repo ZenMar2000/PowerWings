@@ -21,7 +21,7 @@ public class EnemyGroupSpawnManager : MonoBehaviour
 
     private void Start()
     {
-        groupRepeatPrevention = NormalSpawns.Count() / 3;
+        groupRepeatPrevention = NormalSpawns.Count() / 2;
     }
 
     private void Update()

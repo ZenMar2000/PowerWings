@@ -470,11 +470,11 @@ PrefabInstance:
     - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
       propertyPath: NormalSpawns.Array.data[15]
       value: 
-      objectReference: {fileID: 2376155682121068077, guid: 514a9d5fbf9826c4a92e9c654b26c06c, type: 3}
+      objectReference: {fileID: 1240946786808535718, guid: d46993abf981cb947a30b7266184e51e, type: 3}
     - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
       propertyPath: NormalSpawns.Array.data[16]
       value: 
-      objectReference: {fileID: 1240946786808535718, guid: d46993abf981cb947a30b7266184e51e, type: 3}
+      objectReference: {fileID: 2376155682121068077, guid: 514a9d5fbf9826c4a92e9c654b26c06c, type: 3}
     - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
       propertyPath: NormalSpawns.Array.data[17]
       value: 

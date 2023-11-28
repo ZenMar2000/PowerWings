@@ -42,7 +42,8 @@ public class ChargeLevelBehaviour : MonoBehaviour
         if (!playerProjectileEmitterBehaviour.IsShooting)
         {
             shootingValue = 0;
-            tempCalculations = (long)(Mathf.Ceil((playerProjectileEmitterBehaviour.BulletsAccumulator * segmentDivisionValue)));
+            long calculationNumber = playerProjectileEmitterBehaviour.BulletsAccumulator < 0 ? long.MaxValue : playerProjectileEmitterBehaviour.BulletsAccumulator;
+            tempCalculations = (long)Mathf.Ceil(calculationNumber * segmentDivisionValue);
             SetAnimatorValue(ref animator, AnimatorStrings.HealthSegment, tempCalculations > displayIndexMaxValue ? displayIndexMaxValue : (int)tempCalculations);
         }
         else

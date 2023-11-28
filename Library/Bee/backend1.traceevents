@@ -1,105 +1,144 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1701165686783362, "dur":1953, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701165686785330, "dur":234, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701165686785628, "dur":221, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701165686785997, "dur":50, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/resources.assets" }}
-,{ "pid":12345, "tid":0, "ts":1701165686786252, "dur":62, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":0, "ts":1701165686786728, "dur":84, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1701165686786884, "dur":76, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1701165686790953, "dur":66, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":0, "ts":1701165686785868, "dur":5274, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701165686791143, "dur":743174, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701165687534318, "dur":101, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701165687534511, "dur":2033, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1701165686786213, "dur":4937, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1701165686791153, "dur":6166, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1701165686797386, "dur":1640, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701165686797385, "dur":460172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701165687258200, "dur":122548, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701165687533460, "dur":78, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701165687533459, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1701165687533556, "dur":724, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/boot.config" }}
-,{ "pid":12345, "tid":2, "ts":1701165686786309, "dur":4861, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1701165686791173, "dur":522, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1701165686792104, "dur":139274, "ph":"X", "name": "File",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1701165686791696, "dur":139684, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1701165686931380, "dur":602924, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701165686786394, "dur":4782, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701165686791179, "dur":467, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701165686791646, "dur":455, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701165686792101, "dur":5222, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701165686797379, "dur":92, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.9f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686797679, "dur":190, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686797871, "dur":60, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.IK.Runtime.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686797932, "dur":271, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Burst.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686798204, "dur":458, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686798663, "dur":113, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Animation.Runtime.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686798777, "dur":62, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Tilemap.Extras.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686798840, "dur":307, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686799198, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Common.Runtime.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686799269, "dur":226, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686799496, "dur":131, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686799628, "dur":706, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":3, "ts":1701165686797332, "dur":3128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker" }}
-,{ "pid":12345, "tid":3, "ts":1701165686800461, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701165686800922, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":3, "ts":1701165686800922, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":3, "ts":1701165686801071, "dur":2305, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":3, "ts":1701165686803415, "dur":1816, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/resources.resource" }}
-,{ "pid":12345, "tid":3, "ts":1701165686807171, "dur":112, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1701165686805285, "dur":2011, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":3, "ts":1701165686807333, "dur":124031, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":3, "ts":1701165686931384, "dur":2261, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":3, "ts":1701165686933675, "dur":600625, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701165686786273, "dur":4883, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701165686791163, "dur":466, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701165686791629, "dur":462, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701165686792134, "dur":5187, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701165686797342, "dur":125, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701165686797585, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":4, "ts":1701165686797960, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701165686798058, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1701165686798549, "dur":83, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701165686798549, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701165686798661, "dur":131, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Splines.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701165686798660, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.Splines.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701165686798819, "dur":507, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701165686798818, "dur":509, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701165686799424, "dur":828, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701165686799423, "dur":829, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":4, "ts":1701165686800964, "dur":128984, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":4, "ts":1701165687257255, "dur":277063, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701165686786299, "dur":4866, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701165686791168, "dur":479, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701165686791647, "dur":477, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701165686792124, "dur":5205, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701165686797344, "dur":163, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.9f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":5, "ts":1701165686797332, "dur":176, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":5, "ts":1701165686798008, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1701165686798566, "dur":295, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701165686798565, "dur":296, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701165686798888, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.PixelPerfect.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701165686798887, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.2D.PixelPerfect.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701165686798965, "dur":165, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.2D.PixelPerfect.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701165686799132, "dur":110, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.SpriteShape.Runtime.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701165686799131, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701165686799269, "dur":290, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Collections.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701165686799268, "dur":292, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.Collections.dll" }}
-,{ "pid":12345, "tid":5, "ts":1701165686801165, "dur":5098, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/sharedassets0.resource" }}
-,{ "pid":12345, "tid":5, "ts":1701165686806355, "dur":2172, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/resources.assets" }}
-,{ "pid":12345, "tid":5, "ts":1701165686808580, "dur":1385, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":5, "ts":1701165686809992, "dur":724307, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1701165686786427, "dur":5680, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1701165686792107, "dur":5280, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1701165686797399, "dur":1696, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.9f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml" }}
-,{ "pid":12345, "tid":6, "ts":1701165686797388, "dur":1709, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":6, "ts":1701165686799117, "dur":429, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":6, "ts":1701165686799549, "dur":131, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":6, "ts":1701165686799548, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":6, "ts":1701165686799714, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1701165686801423, "dur":5035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":6, "ts":1701165686806513, "dur":1141, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/level0" }}
-,{ "pid":12345, "tid":6, "ts":1701165686807695, "dur":6059, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":6, "ts":1701165686813784, "dur":720514, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1701165687540176, "dur":551, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1701204068574304, "dur":1675, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701204068575995, "dur":205, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701204068576266, "dur":227, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701204068576621, "dur":94, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/level0" }}
+,{ "pid":12345, "tid":0, "ts":1701204068576787, "dur":85, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":0, "ts":1701204068577460, "dur":113, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1701204068577597, "dur":61, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1701204068578998, "dur":84, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1701204068581140, "dur":63, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":0, "ts":1701204068576511, "dur":5188, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701204068581701, "dur":136393, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701204068718242, "dur":2108, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1701204068576808, "dur":4924, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701204068581734, "dur":5815, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701204068587654, "dur":170, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1701204068587831, "dur":480, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":1, "ts":1701204068588608, "dur":496, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701204068589105, "dur":249, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701204068589355, "dur":71, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701204068589426, "dur":357, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701204068589792, "dur":1433, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701204068587653, "dur":3680, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1701204068591945, "dur":121947, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1701204068717059, "dur":79, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1701204068717058, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1701204068717153, "dur":819, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1701204068577044, "dur":5630, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701204068582675, "dur":487, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701204068583162, "dur":4412, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701204068587575, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":2, "ts":1701204068587663, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":2, "ts":1701204068587745, "dur":587, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":2, "ts":1701204068588510, "dur":535, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701204068589047, "dur":115, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701204068589046, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701204068589196, "dur":1220, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701204068589195, "dur":1221, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701204068590416, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701204068590526, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701204068590633, "dur":242, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701204068597949, "dur":331, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701204068592851, "dur":5441, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":2, "ts":1701204068606146, "dur":121, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701204068598344, "dur":7930, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/level0" }}
+,{ "pid":12345, "tid":2, "ts":1701204068606307, "dur":111702, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068576886, "dur":4892, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068581781, "dur":492, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068582273, "dur":446, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068582720, "dur":4892, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068587613, "dur":140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":3, "ts":1701204068588015, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068588084, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1701204068588225, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068588446, "dur":92, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068588670, "dur":390, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068588669, "dur":392, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068589061, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068589161, "dur":69, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.ForUI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068589160, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.InputSystem.ForUI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068589272, "dur":173, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068589271, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068589479, "dur":143, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068589478, "dur":145, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068589726, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068590448, "dur":208, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701204068590745, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701204068591917, "dur":22768, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":3, "ts":1701204068614712, "dur":103287, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701204068576844, "dur":4895, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701204068582091, "dur":635, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.9f1\\Editor\\Data\\Tools\\BuildPipeline\\PlayerBuildProgramLibrary.Data.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068581746, "dur":1083, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701204068582829, "dur":4722, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701204068587617, "dur":115, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701204068587814, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1701204068588296, "dur":224, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068588638, "dur":75, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068588637, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068588742, "dur":519, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068588742, "dur":520, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068589289, "dur":217, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068589288, "dur":219, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068589534, "dur":63, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068589533, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068589630, "dur":414, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068589629, "dur":415, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701204068590119, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701204068590187, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701204068590351, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701204068591790, "dur":1818, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":4, "ts":1701204068593685, "dur":5959, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1701204068606119, "dur":109, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701204068599827, "dur":6414, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":4, "ts":1701204068606300, "dur":111715, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701204068576913, "dur":4873, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701204068581789, "dur":815, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701204068582604, "dur":415, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701204068583019, "dur":4534, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701204068587868, "dur":239, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701204068588108, "dur":68, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701204068588177, "dur":277, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Burst.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701204068588455, "dur":1832, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701204068590305, "dur":1222, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701204068587560, "dur":4131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker" }}
+,{ "pid":12345, "tid":5, "ts":1701204068591692, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701204068592312, "dur":55, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701204068597939, "dur":274, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701204068592379, "dur":6190, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/resources.resource" }}
+,{ "pid":12345, "tid":5, "ts":1701204068605584, "dur":146, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701204068598621, "dur":7129, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1701204068605802, "dur":112207, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068576975, "dur":4820, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068581797, "dur":459, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068582256, "dur":446, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068582749, "dur":4807, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068587571, "dur":113, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.9f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":6, "ts":1701204068587560, "dur":125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":6, "ts":1701204068587686, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068587786, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068587842, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1701204068588141, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068588260, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068588470, "dur":227, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068588702, "dur":241, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Splines.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701204068588701, "dur":243, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.Splines.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701204068588978, "dur":96, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701204068588977, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701204068589120, "dur":512, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\Enrico\\source\\repos\\PowerWingsRld\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Collections.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701204068589119, "dur":514, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles PowerWings/PowerWings_Data/Managed/Unity.Collections.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701204068589671, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068589847, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068590026, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068590161, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068590217, "dur":136, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068590688, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068591259, "dur":59, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068591381, "dur":4313, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":6, "ts":1701204068601169, "dur":152, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068595794, "dur":5569, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/resources.assets" }}
+,{ "pid":12345, "tid":6, "ts":1701204068607014, "dur":73, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701204068601475, "dur":5626, "ph":"X", "name": "CopyFiles",  "args": { "detail":"PowerWings/PowerWings_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":6, "ts":1701204068607153, "dur":110895, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701204068723427, "dur":688, "ph":"X", "name": "ProfilerWriteOutput" }
 ,

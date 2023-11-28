@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6463399057198106853, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[1].SpawnDelay
@@ -63,6 +63,10 @@ PrefabInstance:
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[2].SpawnDelay
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].SpawnDelay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].HasEnterMove
@@ -74,6 +78,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[2].HasEnterMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].HasEnterMove
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
@@ -113,6 +121,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7946176320864044327, guid: ed80841bfc97d4c44a83f675bd554c0c, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].EnemyShipSpawner
+      value: 
+      objectReference: {fileID: 186939983160460033, guid: aeedad8bbc680e1418b3c962c8fa34ed, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].EnterOffsetValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].SplinePathPrefab
+      value: 
+      objectReference: {fileID: 3306804367971907370, guid: 80b4d0ac5a98b9748b8e55511ebffccb, type: 3}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].EnterMovementSpeed
       value: 0.5
       objectReference: {fileID: 0}
@@ -122,6 +142,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[2].EnterMovementSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].EnterMovementSpeed
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}

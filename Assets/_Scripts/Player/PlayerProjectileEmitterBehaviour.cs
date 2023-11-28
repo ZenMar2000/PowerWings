@@ -282,12 +282,9 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
             CalculateDamageMultiplier();
             CalculateShootingRate();
         }
-
         SubdivideBullets();
-
         CalculateBulletsSubtractionValue();
         HandlesProjectileWavesRelease();
-
     }
 
     private void SetCurrentMaxProjectileCharge()
@@ -304,7 +301,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
         {
             DamageMultiplier += DamageMultiplier * 0.02f;
         }
-        else
+        else if(BulletsAccumulator >= 0)
         {
             DamageMultiplier = 1;
         }
