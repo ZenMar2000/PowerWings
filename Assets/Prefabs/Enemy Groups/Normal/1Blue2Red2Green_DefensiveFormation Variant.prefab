@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8651818571261576903
+--- !u!1001 &7843888380307028452
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -50,31 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[1].SpawnDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[2].SpawnDelay
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[3].SpawnDelay
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[4].SpawnDelay
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[5].SpawnDelay
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[6].SpawnDelay
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].HasEnterMove
@@ -82,143 +58,159 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[1].HasEnterMove
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[2].HasEnterMove
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[3].HasEnterMove
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].HasEnterMove
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[5].HasEnterMove
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[6].HasEnterMove
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].EnemyShipSpawner
       value: 
-      objectReference: {fileID: 186939983160460033, guid: ab320c783c4e57140958e7c7d3fa60cf, type: 3}
+      objectReference: {fileID: 186939983160460033, guid: e8d34ad575cb2834fba77d765bf7a52b, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].EnterOffsetValue
-      value: 23
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].SplinePathPrefab
       value: 
-      objectReference: {fileID: 7080398611414114234, guid: b494f9819cd99d04392ed1f954c53c22, type: 3}
+      objectReference: {fileID: 5313330950533936076, guid: 6c1687735edb2514e9d9ba8f16f3b95a, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[1].EnemyShipSpawner
       value: 
       objectReference: {fileID: 186939983160460033, guid: ab320c783c4e57140958e7c7d3fa60cf, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[1].EnterOffsetValue
-      value: 23
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[1].SplinePathPrefab
       value: 
-      objectReference: {fileID: 7080398611414114234, guid: b494f9819cd99d04392ed1f954c53c22, type: 3}
+      objectReference: {fileID: 789379045221004561, guid: 6065027232eadeb48b0462779be20693, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[2].EnemyShipSpawner
       value: 
-      objectReference: {fileID: 186939983160460033, guid: ab320c783c4e57140958e7c7d3fa60cf, type: 3}
+      objectReference: {fileID: 186939983160460033, guid: d3c365b4fea84744a8c0f0d78079bf98, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[2].EnterOffsetValue
-      value: 23
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[2].SplinePathPrefab
       value: 
-      objectReference: {fileID: 7080398611414114234, guid: b494f9819cd99d04392ed1f954c53c22, type: 3}
+      objectReference: {fileID: 789379045221004561, guid: 6065027232eadeb48b0462779be20693, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[3].EnemyShipSpawner
       value: 
       objectReference: {fileID: 186939983160460033, guid: ab320c783c4e57140958e7c7d3fa60cf, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[3].EnterOffsetValue
-      value: 23
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[3].SplinePathPrefab
       value: 
-      objectReference: {fileID: 1767766748836996570, guid: eb039212b3e4e404597d2d3db70a3a49, type: 3}
+      objectReference: {fileID: 789379045221004561, guid: 6065027232eadeb48b0462779be20693, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].EnemyShipSpawner
       value: 
-      objectReference: {fileID: 186939983160460033, guid: ab320c783c4e57140958e7c7d3fa60cf, type: 3}
+      objectReference: {fileID: 186939983160460033, guid: d3c365b4fea84744a8c0f0d78079bf98, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].EnterOffsetValue
-      value: 23
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].SplinePathPrefab
       value: 
-      objectReference: {fileID: 1767766748836996570, guid: eb039212b3e4e404597d2d3db70a3a49, type: 3}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[5].EnemyShipSpawner
-      value: 
-      objectReference: {fileID: 186939983160460033, guid: ab320c783c4e57140958e7c7d3fa60cf, type: 3}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[5].EnterOffsetValue
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[5].SplinePathPrefab
-      value: 
-      objectReference: {fileID: 1767766748836996570, guid: eb039212b3e4e404597d2d3db70a3a49, type: 3}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[6].EnemyShipSpawner
-      value: 
-      objectReference: {fileID: 186939983160460033, guid: ab320c783c4e57140958e7c7d3fa60cf, type: 3}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[6].EnterOffsetValue
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[6].SplinePathPrefab
-      value: 
-      objectReference: {fileID: 1767766748836996570, guid: eb039212b3e4e404597d2d3db70a3a49, type: 3}
+      objectReference: {fileID: 789379045221004561, guid: 6065027232eadeb48b0462779be20693, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].EnterMovementSpeed
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[1].EnterMovementSpeed
-      value: 0.6
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[1].SplineFollowTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[2].EnterMovementSpeed
-      value: 0.6
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[2].SplineFollowTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[3].EnterMovementSpeed
-      value: 0.6
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].SplineFollowTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[4].EnterMovementSpeed
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[5].EnterMovementSpeed
-      value: 0.6
+      propertyPath: SpawnContainers.Array.data[4].SplineFollowTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
-      propertyPath: SpawnContainers.Array.data[6].EnterMovementSpeed
-      value: 0.6
+      propertyPath: SpawnContainers.Array.data[0].MovementSpeedOverride
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[0].SpawnPositionOffset.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[1].SpawnPositionOffset.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[2].SpawnPositionOffset.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].SpawnPositionOffset.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[4].SpawnPositionOffset.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[2].SplineAnimationStartOffset
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[3].SplineAnimationStartOffset
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: SpawnContainers.Array.data[4].SplineAnimationStartOffset
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8766041326112975749, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: m_Name
-      value: 6RedShips_BigSweep Variant
+      value: 1Blue2Red2Green_DefensiveFormation Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766041326112975749, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

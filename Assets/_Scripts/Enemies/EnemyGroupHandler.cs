@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using static SharedLogics;
 
@@ -12,13 +10,15 @@ public class EnemyGroupHandler : MonoBehaviour
 
     private float spawnTimer = 0;
     private Vector3 currentSpawnPosition = Vector3.zero;
-
+    private EnemyGroupHandler spawnedRef = null;
+    private bool allEnemiesInstantiated => InstantiatedEnemies == OriginalEnemiesCount;
+    private bool followTargetAssigned = false;
     #region Properties
     [SerializeField] private int _enemiesAlive;
     public int EnemiesAlive { get { return _enemiesAlive; } set { _enemiesAlive = value; } }
 
 
-    private int _originalEnemiesCount;
+    private int _originalEnemiesCount = 1;
     public int OriginalEnemiesCount { get { return _originalEnemiesCount; } private set { _originalEnemiesCount = value; } }
 
     private int _instantiatedEnemies = 0;
@@ -43,10 +43,15 @@ public class EnemyGroupHandler : MonoBehaviour
 
         if (EnemiesAlive <= 0 && InstantiatedEnemies >= OriginalEnemiesCount)
         {
-            if(GroupManager != null)
+            if (GroupManager != null)
                 GroupManager.spawnedGroups.Remove(this);
 
             Destroy(gameObject);
+        }
+
+        if (allEnemiesInstantiated && !followTargetAssigned)
+        {
+            SetFollowedTargets();
         }
     }
 
@@ -73,9 +78,25 @@ public class EnemyGroupHandler : MonoBehaviour
                     shipBehaviour.SplinePathPrefab = SpawnContainers[i].SplinePathPrefab;
 
                     shipBehaviour.SplineAnimationStartOffset = SpawnContainers[i].SplineAnimationStartOffset;
-                    shipBehaviour.StartWithRandomSplinePosition= SpawnContainers[i].StartWithRandomSplinePosition;
+                    shipBehaviour.StartWithRandomSplinePosition = SpawnContainers[i].StartWithRandomSplinePosition;
 
                     shipBehaviour.overrideMovementSpeed = SpawnContainers[i].MovementSpeedOverride;
+
+
+                    //if (SpawnContainers[i].SplineFollowTarget)
+                    //{
+                    //    if (spawnedRef == null)
+                    //    {
+                    //        spawnedRef = GroupManager.spawnedGroups.Find(EnemyGroupHandler => EnemyGroupHandler == this);
+                    //    }
+
+                    //    if (SpawnContainers[i].FollowTargetIndex < spawnedRef.transform.childCount)
+                    //    {
+                    //        Transform targetSpawnerTransform = spawnedRef.transform.GetChild(SpawnContainers[i].FollowTargetIndex);
+                    //        shipBehaviour.SetTargetToFollow(targetSpawnerTransform.childCount == 2 ? targetSpawnerTransform.GetChild(1) : targetSpawnerTransform.GetChild(0));
+                    //    }
+                    //}
+
 
                     EnemySpawnContainer newContainer = SpawnContainers[i];
                     newContainer.IsSpawned = true;
@@ -83,6 +104,36 @@ public class EnemyGroupHandler : MonoBehaviour
 
                     EnemiesAlive++;
                     InstantiatedEnemies++;
+
+                }
+            }
+        }
+    }
+
+    private void SetFollowedTargets()
+    {
+        followTargetAssigned = true;
+        Transform targetSpawnerTransform;
+        Transform currentShipSpawnerTransform;
+
+        for (int i = 0; i < SpawnContainers.Count; i++)
+        {
+            if (SpawnContainers[i].SplineFollowTarget)
+            {
+                if (spawnedRef == null)
+                {
+                    spawnedRef = GroupManager.spawnedGroups.Find(EnemyGroupHandler => EnemyGroupHandler == this);
+                }
+
+                targetSpawnerTransform = spawnedRef.transform.GetChild(SpawnContainers[i].FollowTargetIndex);
+                currentShipSpawnerTransform = spawnedRef.transform.GetChild(i);
+                if (targetSpawnerTransform.childCount == 0)
+                {
+                    followTargetAssigned = false;
+                }
+                else if (SpawnContainers[i].FollowTargetIndex < spawnedRef.transform.childCount)
+                {
+                    currentShipSpawnerTransform.GetComponent<EnemySingleSpawnBehaviour>().SetTargetToFollow(targetSpawnerTransform.childCount == 2 ? targetSpawnerTransform.GetChild(1) : targetSpawnerTransform.GetChild(0));
                 }
             }
         }

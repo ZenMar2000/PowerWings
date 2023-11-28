@@ -1,8 +1,8 @@
 ﻿#region Script Synopsis
-    //A "Singleton pattern" MonoBehavior which is lazily instantiated whenever a shot is fired.
-    //Alternatively, instantiation is forced when directly called from ForceGlobalShotManager when attached to a persistent scene gameobject.
-    //Main role is in managing global settings such as followTarget FPS, explosions and global shot speed and engine throttling.
-    //Learn more about the GlobalShotManager at: https://neondagger.com/variabullet2d-system-guide/#globalshotmanager
+//A "Singleton pattern" MonoBehavior which is lazily instantiated whenever a shot is fired.
+//Alternatively, instantiation is forced when directly called from ForceGlobalShotManager when attached to a persistent scene gameobject.
+//Main role is in managing global settings such as followTarget FPS, explosions and global shot speed and engine throttling.
+//Learn more about the GlobalShotManager at: https://neondagger.com/variabullet2d-system-guide/#globalshotmanager
 #endregion
 
 using UnityEngine;

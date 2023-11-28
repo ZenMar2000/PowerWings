@@ -24,7 +24,6 @@ public class EnemyGroupSpawnManager : MonoBehaviour
         groupRepeatPrevention = NormalSpawns.Count() / 3;
     }
 
-    // Update is called once per frame
     private void Update()
     {
         CheckGroupStatus();
@@ -68,11 +67,11 @@ public class EnemyGroupSpawnManager : MonoBehaviour
         spawnedGroups.Add(Instantiate(NormalSpawns[spawnGroupAtIndex], transform));
         spawnedGroups.Last().GroupManager = this;
 
-        CheckIfFollowTarget();
+        CheckIfFollowTarget(spawnedGroups.Last());
 
     }
     
-    private void CheckIfFollowTarget()
+    private void CheckIfFollowTarget(EnemyGroupHandler group)
     {
 
     }
@@ -147,7 +146,7 @@ public class EnemyGroupSpawnManager : MonoBehaviour
             randomIndex = Random.Range(0, NormalSpawns.Count);
             counter++;
         }
-        while (recentlySpawnedGroups.Contains(randomIndex) || counter <= maxloops);
+        while (recentlySpawnedGroups.Contains(randomIndex) && counter <= maxloops);
 
         return randomIndex;
     }

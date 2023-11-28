@@ -49,6 +49,7 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     private Vector3 startingPosition;
 
     private Transform followedTarget;
+    private bool shouldFollowTarget => followedTarget != null;
     private void Start()
     {
         startingPosition = transform.position;
@@ -90,7 +91,7 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (followedTarget != null)
+        if (shouldFollowTarget == true)
             FollowTarget();
         else
             EnterMove();
@@ -117,9 +118,12 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
 
     private void FollowTarget()
     {
-        if(followedTarget != null)
+        if(followedTarget != null )
         {
-            spline.transform.position = followedTarget.transform.position;
+            if(spline != null)
+                spline.transform.position = followedTarget.transform.position;
+            else
+                ship.transform.position = followedTarget.transform.position;
         }
     }
     private void OnDestroy()
@@ -131,5 +135,6 @@ public class EnemySingleSpawnBehaviour : MonoBehaviour
     public void SetTargetToFollow(Transform target)
     {
         followedTarget = target;
+        //shouldFollowTarget = true;
     }
 }

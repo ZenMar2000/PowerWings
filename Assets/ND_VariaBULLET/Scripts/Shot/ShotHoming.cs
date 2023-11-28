@@ -1,6 +1,6 @@
 ﻿#region Script Synopsis
-    //A non-physics type shot that homes in on a single direct followTarget or the closest member of a group of targets, at a constant speed.
-    //Action and description of fields can be found at https://neondagger.com/variabullet2d-in-depth-shot-guide/#default-shot-prefabs
+//A non-physics type shot that homes in on a single direct followTarget or the closest member of a group of targets, at a constant speed.
+//Action and description of fields can be found at https://neondagger.com/variabullet2d-in-depth-shot-guide/#default-shot-prefabs
 #endregion
 
 using UnityEngine;

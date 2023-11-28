@@ -1,5 +1,5 @@
 ﻿#region Script Synopsis
-    //Rotates a top-level object, pointing at a followTarget object
+//Rotates a top-level object, pointing at a followTarget object
 #endregion
 
 using System;
@@ -23,7 +23,7 @@ namespace ND_VariaBULLET
 		[Tooltip("Sets an FPS interval at which point the shot re-checks for the closest target (when TargetFromTag is set) to home in on. [Higher number = more frequent re-check].")]
 		public int RecalculationFPS = 1; //used to recalc closest followTarget every 6-to-60 frames.
 
-		private Transform targetLock;
+        private Transform targetLock;
 		private HomingCalc calc;
 
 		private void Start()
@@ -35,7 +35,7 @@ namespace ND_VariaBULLET
 				targetLock = TargetDirect;
 			else
 			{
-                calc.recalcClosestObject(this.transform, ref targetLock, 0, TargetFromTag); //Simply used to set followTarget on first frame
+                calc.recalcClosestObject(this.transform, ref targetLock, 0, TargetFromTag); //Simply used to set shouldFollowTarget on first frame
 				calc.recalcTimer.Reset();
             }
 		}
