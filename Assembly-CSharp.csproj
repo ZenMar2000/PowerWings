@@ -101,6 +101,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotEmitPattern.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireBase.cs" />
     <Compile Include="Assets\_Scripts\Misc\HelpScreenBehaviour.cs" />
+    <Compile Include="Assets\_Scripts\Misc\VolumeSliderBehaviour.cs" />
     <Compile Include="Assets\_Scripts\Managers\GameInfo.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotCollFlux.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\DifficultySelect.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\CantroRunAnim.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Collision\DamagerBody.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\SpreadPattern.cs" />
+    <Compile Include="Assets\_Scripts\Misc\MusicFadeIn.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\FireExpanding.cs" />
     <Compile Include="Assets\_Scripts\Misc\BackgroundMovementBehaviour.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Pattern\BasicPresetState.cs" />

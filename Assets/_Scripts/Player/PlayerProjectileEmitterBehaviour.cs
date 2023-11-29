@@ -138,7 +138,7 @@ public class PlayerProjectileEmitterBehaviour : MonoBehaviour
     private void Start()
     {
         spreadController = GetComponentInChildren<SpreadPattern>();
-
+        GetComponent<AudioSource>().volume = GameInfo.EffectsVolume;
         InputManager.PlayerAttack.started += OnAttack;
     }
 

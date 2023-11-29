@@ -1,9 +1,12 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public static class GameInfo //: MonoBehaviour
+public static class GameInfo
 {
     public static float MusicVolume = 1f;
+
+    public static float EffectsVolume = 1f;
+
+    //public static GameObject MusicHandler;
 
     public static readonly long WarningValue = 4503599627370496;
 
@@ -18,6 +21,11 @@ public static class GameInfo //: MonoBehaviour
     public static bool BossSpawnRequested = false;
 
     #region Properties
+
+    //private static bool aaa => MusicHandler != null;
+    //public static bool AAA { get { return aaa; }}
+
+
     private static int _threatAccumulator = 0;
     public static int ThreatAccumulator
     {
@@ -58,9 +66,10 @@ public static class GameInfo //: MonoBehaviour
         private set { _playerScore = value; }
     }
     #endregion
-
-    public static void Start(GameObject playerShipPrefab, GameManager gameManager)
+   
+    public static void Start(GameObject playerShipPrefab, GameManager gameManager, GameObject musicHandler)
     {
+
         Player = Object.Instantiate(playerShipPrefab, new Vector3(0, -10, 0), Quaternion.identity, gameManager.transform);
         PlayerEmitterBehaviour = Player.GetComponentInChildren<PlayerProjectileEmitterBehaviour>();
     }
@@ -99,7 +108,7 @@ public static class GameInfo //: MonoBehaviour
 
     public static void AddScore(float scoreToAdd, bool isBullet = false)
     {
-        if(isBullet)
+        if (isBullet)
         {
             PlayerScore += scoreToAdd;
         }
@@ -109,4 +118,9 @@ public static class GameInfo //: MonoBehaviour
         }
 
     }
+
+    //public static void GameLeft_StopGameMusic()
+    //{
+    //    Object.Destroy(MusicHandler);
+    //}
 }

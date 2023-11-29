@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static SharedLogics;
 
 public class InGameMenuBehaviour : MonoBehaviour
 {
@@ -10,8 +9,9 @@ public class InGameMenuBehaviour : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void OnMainMenuButtonClick() 
+    public void OnMainMenuButtonClick()
     {
+        TurnOffMusic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
