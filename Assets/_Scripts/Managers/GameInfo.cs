@@ -3,11 +3,13 @@ using UnityEngine;
 
 public static class GameInfo //: MonoBehaviour
 {
+    public static float MusicVolume = 1f;
+
     public static readonly long WarningValue = 4503599627370496;
 
     public static bool IsPlayerAlive = true;
 
-    public static bool HelpScreenVisible = true;
+    public static bool HelpScreenVisible = false;
 
     public static float ThreatLevelUpThreshold = 100;
 

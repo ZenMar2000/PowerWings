@@ -12,7 +12,9 @@ public class BackgroundMovementBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, ScrollSpeed * -1);
-        player = GameInfo.Player.GetComponentInChildren<Rigidbody2D>();
+
+        if(GameInfo.Player != null)
+            player = GameInfo.Player.GetComponentInChildren<Rigidbody2D>();
     }
 
     private void Update()
@@ -35,7 +37,7 @@ public class BackgroundMovementBehaviour : MonoBehaviour
 
             }
         }
-        else
+        else if (rb.velocity.x != 0)
         {
             rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(0, rb.velocity.y), lerpValue);
         }

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float Threshold;
     [SerializeField] private float Score;
 
+    [SerializeField] private GameObject inGameMenu;
     [SerializeField] private GameObject HelpScreen;
     // Start is called before the first frame update
     private void Awake()
@@ -24,5 +25,10 @@ public class GameManager : MonoBehaviour
         ThreatAccumulator = GameInfo.ThreatAccumulator;
         Threshold = GameInfo.ThreatLevelUpThreshold;
         Score = GameInfo.PlayerScore;
+
+        if(GameInfo.Player == null && !inGameMenu.gameObject.activeSelf)
+        {
+            inGameMenu.gameObject.SetActive(true);
+        }
     }
 }
