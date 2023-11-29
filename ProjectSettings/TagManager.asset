@@ -30,8 +30,8 @@ TagManager:
   - ND_UserBullet7
   - ND_UserBullet8
   - Terrain
-  - 
-  - 
+  - ND_EnemyBullet_NonShieldable
+  - PlayerShield
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: ND_EnemyBullet
     uniqueID: 950124507
+    locked: 0
+  - name: ND_EnemyBullet_NonShieldable
+    uniqueID: 914804339
     locked: 0
   - name: ND_SelfColliding
     uniqueID: 1111588345

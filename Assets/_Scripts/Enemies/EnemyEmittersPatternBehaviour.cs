@@ -59,8 +59,16 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
                 spreadPattern.SpreadRadius = oscillator.Progress + RangeOffset;
                 break;
 
+            case OscillatingEmitterParameter.X_SPREAD:
+                spreadPattern.SpreadXAxis = oscillator.Progress + RangeOffset;
+                break;
+
+            case OscillatingEmitterParameter.Y_SPREAD:
+                spreadPattern.SpreadYAxis = oscillator.Progress + RangeOffset;
+                break;
+
             case OscillatingEmitterParameter.ROTATION:
-                if(!continuousRotation)
+                if (!continuousRotation)
                     spreadPattern.ParentRotation = oscillator.Progress + RangeOffset + (turnTowardPlayer == false ? 0 : GetPlayerAngle());
                 break;
         }
@@ -92,7 +100,7 @@ public class EnemyEmittersPatternBehaviour : MonoBehaviour
     {
         if (continuousRotation)
         {
-            if (spreadPattern.ParentRotation >= 360 || spreadPattern.ParentRotation  <= -360)
+            if (spreadPattern.ParentRotation >= 360 || spreadPattern.ParentRotation <= -360)
                 spreadPattern.ParentRotation = rotationAmount;
             else
                 spreadPattern.ParentRotation += rotationAmount;

@@ -5,6 +5,7 @@ public class PlayerFullShieldBehaviour : MonoBehaviour
 
     private SpriteRenderer fullShieldSpriteRenderer;
     private CircleCollider2D fullShieldCollider;
+    private CircleCollider2D playerCollider;
 
     private float invulnerabilityTimer = 2;
     private float invulnerablilityLength = 0.25f;
@@ -12,22 +13,29 @@ public class PlayerFullShieldBehaviour : MonoBehaviour
     private bool _fullShieldEnabled = false;
     public bool FullShieldEnabled
     {
-        get 
+        get
         {
-            return _fullShieldEnabled; 
+            return _fullShieldEnabled;
         }
-        private set 
+        private set
         {
             _fullShieldEnabled = value;
             fullShieldSpriteRenderer.enabled = value;
             fullShieldCollider.enabled = value;
+
+            playerCollider.enabled = !value;
         }
     }
 
-    void Awake()
+    private void Awake()
     {
         fullShieldSpriteRenderer = GetComponent<SpriteRenderer>();
         fullShieldCollider = GetComponent<CircleCollider2D>();
+    }
+
+    private void Start()
+    {
+        playerCollider = GameInfo.Player.transform.GetChild(0).GetChild(0).GetComponent<CircleCollider2D>();
     }
 
     void Update()

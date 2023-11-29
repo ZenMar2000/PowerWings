@@ -39,6 +39,8 @@ public static class SharedLogics
         SPREAD_DEGREES,
         SPREAD_RADIUS,
         ROTATION,
+        X_SPREAD, 
+        Y_SPREAD,
     }
 
     public enum RotationDirection

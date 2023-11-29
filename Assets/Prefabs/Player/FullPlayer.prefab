@@ -130,6 +130,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: 3816260777055721846, guid: df10df86d96353a4abb141a75e3b551d, type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462284978721964422, guid: df10df86d96353a4abb141a75e3b551d, type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7983500835448736170, guid: df10df86d96353a4abb141a75e3b551d, type: 3}
       propertyPath: textMeshPro
       value: 

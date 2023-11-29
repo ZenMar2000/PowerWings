@@ -125,6 +125,7 @@ MonoBehaviour:
   CollisionList:
   - ND_EnemyBullet
   - Enemy
+  - ND_EnemyBullet_NonShieldable
   LaserExplosion: 
   BulletExplosion: ExplosionEnemyLongSmall
   ParentExplosion: 1

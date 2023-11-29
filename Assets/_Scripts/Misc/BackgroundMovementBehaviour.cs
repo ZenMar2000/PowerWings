@@ -22,7 +22,7 @@ public class BackgroundMovementBehaviour : MonoBehaviour
             transform.position = new Vector2(0, 0);
         }
 
-        if (player != null || player.velocity.x != 0)
+        if (player != null && player.velocity.x != 0)
         {
 
             if (player.velocity.x > 0)

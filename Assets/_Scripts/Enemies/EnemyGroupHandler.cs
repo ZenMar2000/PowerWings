@@ -133,7 +133,7 @@ public class EnemyGroupHandler : MonoBehaviour
                 }
                 else if (SpawnContainers[i].FollowTargetIndex < spawnedRef.transform.childCount)
                 {
-                    currentShipSpawnerTransform.GetComponent<EnemySingleSpawnBehaviour>().SetTargetToFollow(targetSpawnerTransform.childCount == 2 ? targetSpawnerTransform.GetChild(1) : targetSpawnerTransform.GetChild(0));
+                    currentShipSpawnerTransform.GetComponent<EnemySingleSpawnBehaviour>().SetTargetToFollow(targetSpawnerTransform.childCount == 2 ? targetSpawnerTransform.GetChild(1) : targetSpawnerTransform.GetChild(0), SpawnContainers[i].SpawnPositionOffset);
                 }
             }
         }

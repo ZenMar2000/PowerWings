@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff48006e5bf1c04497e43a2dde7b400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsPlayerShot: 0
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   ShotSpeed: 0
   IgnoreGlobalSpeedScale: 0
   ParentToEmitter: 0
@@ -157,7 +159,7 @@ MonoBehaviour:
   FrameSkip: 0
   RandomStartFrame: 0
   EnableScaling: 0
-  ScaleSpeed: 12
+  ScaleSpeed: 15
   XFrom: 0.9
   XTo: 1.1
   YFrom: 0.9
@@ -180,42 +182,24 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1.1009287
-      outSlope: 1.1009287
-      tangentMode: 34
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.62659657
-      value: 0.6898381
-      inSlope: 1.0798683
-      outSlope: 1.0798683
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.9009847
-      value: 0.9803624
-      inSlope: 0.6285683
-      outSlope: 0.6285683
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0.1983288
-      outSlope: 0.1983288
-      tangentMode: 34
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  WaveAccent: 6
-  Cycles: 2
-  frequency: 2
+  WaveAccent: 4
+  Cycles: 50
+  frequency: 4

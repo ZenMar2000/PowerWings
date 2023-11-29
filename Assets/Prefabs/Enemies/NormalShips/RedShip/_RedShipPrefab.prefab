@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfca78dbae080c344bf1f9741a4a8cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threatGainOnDefeat: 7
+  threatGainOnDefeat: 5
   isBoss: 0
 --- !u!114 &4562243358839823607
 MonoBehaviour:
@@ -575,7 +575,7 @@ MonoBehaviour:
   ParentExplosion: 1
   IsPlayer: 0
   DeathExplosion: ExplosionBomb
-  HP: 75
+  HP: 40
   FinalExplodeFactor: 2
   DamageFlicker: 0
   FlickerDuration: 6
@@ -720,6 +720,8 @@ MonoBehaviour:
   RangeOffset: 0
   oscillatingParameter: 0
   turnTowardPlayer: 1
+  continuousRotation: 0
+  rotationAmount: 0
 --- !u!1 &6202080401673099722
 GameObject:
   m_ObjectHideFlags: 0
