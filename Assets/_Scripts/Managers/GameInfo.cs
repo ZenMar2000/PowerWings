@@ -116,11 +116,5 @@ public static class GameInfo
         {
             PlayerScore += scoreToAdd * ThreatLevel;
         }
-
     }
-
-    //public static void GameLeft_StopGameMusic()
-    //{
-    //    Object.Destroy(MusicHandler);
-    //}
 }

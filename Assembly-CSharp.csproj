@@ -114,6 +114,7 @@
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\GlobalShotManager.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Utility\Timer.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Scripts\Shot\ShotBaseAnimatable.cs" />
+    <Compile Include="Assets\_Scripts\Misc\HighScoreBlink.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\BoundToScreen.cs" />
     <Compile Include="Assets\ND_VariaBULLET\Demo\Scripts\BlastShip.cs" />
     <Compile Include="Assets\_Scripts\Enemies\EnemyEmittersPatternBehaviour.cs" />

@@ -1,8 +1,13 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public static class SharedLogics
 {
+    public static readonly string HighScoreString = "highScore";
+    public static readonly string MusicVolumeString = "MusicVolLevel";
+    public static readonly string EffectsVolumeString = "FxVolLevel";
+
     public static void SetAnimatorValue(ref Animator animator, string stringName, float value)
     {
         animator.SetFloat(stringName, value);

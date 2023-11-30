@@ -11,6 +11,7 @@ public static class InputManager
     public static InputAction PlayerChangeSpreadAngle;
     public static InputAction PreciseMovement;
     public static InputAction HideHelp;
+    public static InputAction InGameMenu;
     static InputManager()
     {
         PlayerInput = new PowerInputActions();
@@ -35,6 +36,9 @@ public static class InputManager
 
         HideHelp = PlayerInput.Player.HideHelp;
         HideHelp.Enable();
+
+        InGameMenu = PlayerInput.Player.InGameMenu;
+        InGameMenu.Enable();
 
     }
 }

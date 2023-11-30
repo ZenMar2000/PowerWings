@@ -80,6 +80,15 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InGameMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""c271d154-3661-4188-a2c7-7e0bbd61b300"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -258,6 +267,17 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""PreciseMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f406e2d-6941-4342-9392-86cb10cde0db"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InGameMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -333,6 +353,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
         m_Player_HideHelp = m_Player.FindAction("HideHelp", throwIfNotFound: true);
         m_Player_ChangeSpreadAngle = m_Player.FindAction("ChangeSpreadAngle", throwIfNotFound: true);
         m_Player_PreciseMovement = m_Player.FindAction("PreciseMovement", throwIfNotFound: true);
+        m_Player_InGameMenu = m_Player.FindAction("InGameMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -400,6 +421,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_HideHelp;
     private readonly InputAction m_Player_ChangeSpreadAngle;
     private readonly InputAction m_Player_PreciseMovement;
+    private readonly InputAction m_Player_InGameMenu;
     public struct PlayerActions
     {
         private @PowerInputActions m_Wrapper;
@@ -410,6 +432,7 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
         public InputAction @HideHelp => m_Wrapper.m_Player_HideHelp;
         public InputAction @ChangeSpreadAngle => m_Wrapper.m_Player_ChangeSpreadAngle;
         public InputAction @PreciseMovement => m_Wrapper.m_Player_PreciseMovement;
+        public InputAction @InGameMenu => m_Wrapper.m_Player_InGameMenu;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -437,6 +460,9 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
             @PreciseMovement.started += instance.OnPreciseMovement;
             @PreciseMovement.performed += instance.OnPreciseMovement;
             @PreciseMovement.canceled += instance.OnPreciseMovement;
+            @InGameMenu.started += instance.OnInGameMenu;
+            @InGameMenu.performed += instance.OnInGameMenu;
+            @InGameMenu.canceled += instance.OnInGameMenu;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -459,6 +485,9 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
             @PreciseMovement.started -= instance.OnPreciseMovement;
             @PreciseMovement.performed -= instance.OnPreciseMovement;
             @PreciseMovement.canceled -= instance.OnPreciseMovement;
+            @InGameMenu.started -= instance.OnInGameMenu;
+            @InGameMenu.performed -= instance.OnInGameMenu;
+            @InGameMenu.canceled -= instance.OnInGameMenu;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -529,5 +558,6 @@ public partial class @PowerInputActions: IInputActionCollection2, IDisposable
         void OnHideHelp(InputAction.CallbackContext context);
         void OnChangeSpreadAngle(InputAction.CallbackContext context);
         void OnPreciseMovement(InputAction.CallbackContext context);
+        void OnInGameMenu(InputAction.CallbackContext context);
     }
 }

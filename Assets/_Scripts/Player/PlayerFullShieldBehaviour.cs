@@ -38,12 +38,12 @@ public class PlayerFullShieldBehaviour : MonoBehaviour
         playerCollider = GameInfo.Player.transform.GetChild(0).GetChild(0).GetComponent<CircleCollider2D>();
     }
 
-    void Update()
+    private void Update()
     {
         HandleFullShieldLogic();
     }
 
-    public void HandleFullShieldLogic()
+    private void HandleFullShieldLogic()
     {
         if (invulnerabilityTimer <= invulnerablilityLength)
         {
@@ -62,6 +62,7 @@ public class PlayerFullShieldBehaviour : MonoBehaviour
     public void StartInvulnerability()
     {
         invulnerabilityTimer = 0;
+        HandleFullShieldLogic();
     }
 
 }

@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 186939983160460033, guid: 773216ad49b32724a82211b80e023d53, type: 3}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].EnterOffsetValue
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7918743634898231003, guid: a19fb565618f0424e98d75fcc00b13b4, type: 3}
       propertyPath: SpawnContainers.Array.data[0].SplinePathPrefab
