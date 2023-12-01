@@ -2851,10 +2851,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Controls:\n- Movement | WASD\n- Shield | J\n- Attack | K\n- Precise Movement
-    | Space\n- Increase/reduce spread | LCTRL / LSHIFT\n- F1 | Display help in game\n\nRules:\nAbsorb
-    enemy projectiles with the shield for doubling your stored bullets. Releasing
-    an attack consume all off them. \n\nTHEY ARE ALSO YOUR HEALTH!\n\nGetting hit
-    will reduce your stored bullets.\nIf it happens while at 0, it's game over!"
+    | Space\n- Increase/reduce spread | LCTRL / LSHIFT\n\nRules:\nAbsorb enemy projectiles
+    with the shield for doubling your stored bullets. Releasing an attack consume
+    all off them. \n\nTHEY ARE ALSO YOUR HEALTH!\n\nGetting hit will reduce your
+    stored bullets.\nIf it happens while at 0, it's game over!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
