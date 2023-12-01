@@ -15,9 +15,12 @@ J - Shield<br>
 K - Attack and release all bullets
 <br><br><br>
 ~~ USED ASSETS ~~
-- Player and Enemy SpaceShips + Background: https://opengameart.org/content/top-down-shooter-sprites
+- Player and Enemy space ships: https://opengameart.org/content/top-down-shooter-sprites
 - Shield: https://opengameart.org/content/shield-effect
 - Bars and GUI: https://bdragon1727.itch.io/basic-pixel-health-bar-and-scroll-bar (Base from here. Picked, edited and added animation frames)
+- Background: https://dinvstudio.itch.io/dynamic-space-background-lite-free
+- Soundtrack: https://drtwelele.itch.io/sci-fi-underscore-vol-2
+- Text font: https://befonts.com/blanka-font.html
 - Toolkits:
-  - VariaBullets2D: https://assetstore.unity.com/packages/tools/game-toolkits/variabullet2d-projectile-bullet-hell-system-152528 (tweaked, added new logics and changed others)
-  - Splines Unity built in package 
+    - VariaBullets2D: https://assetstore.unity.com/packages/tools/game-toolkits/variabullet2d-projectile-bullet-hell-system-152528 (tweaked, added  and changed logic)
+    - Splines Unity built in package 
