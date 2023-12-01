@@ -16,12 +16,16 @@ public class EnemyGroupSpawnManager : MonoBehaviour
 
     private int groupRepeatPrevention;
     private List<int> recentlySpawnedGroups = new List<int>();
+    
+    private int bossGroupRepeatPrevention;
+    private List<int> recentlySpawnedBossGroups = new List<int>();
 
     private bool enemyReinforcementCalled = false;
 
     private void Start()
     {
-        groupRepeatPrevention = NormalSpawns.Count() / 2;
+        groupRepeatPrevention = (int)(NormalSpawns.Count() * 0.5f);
+        bossGroupRepeatPrevention = (int)(BossSpawns.Count() * 0.5f);
     }
 
     private void Update()
@@ -66,14 +70,6 @@ public class EnemyGroupSpawnManager : MonoBehaviour
 
         spawnedGroups.Add(Instantiate(NormalSpawns[spawnGroupAtIndex], transform));
         spawnedGroups.Last().GroupManager = this;
-
-        CheckIfFollowTarget(spawnedGroups.Last());
-
-    }
-    
-    private void CheckIfFollowTarget(EnemyGroupHandler group)
-    {
-
     }
 
     private void CheckGroupStatus()
@@ -107,7 +103,14 @@ public class EnemyGroupSpawnManager : MonoBehaviour
         {//If boss is required to spawn from GameInfo and it's not spawned yet, spawn it.
             DestroyAllEnemiesAlive();
             bossSpawned = true;
-            spawnedGroups.Add(Instantiate(BossSpawns[(GameInfo.ThreatLevel - 1) % (BossSpawns.Count)], transform));
+            int spawnBossAtIndex = RandomnessCheck(true);
+            if (recentlySpawnedBossGroups.Count > bossGroupRepeatPrevention)
+            {
+                recentlySpawnedBossGroups.RemoveAt(0);
+            }
+            recentlySpawnedBossGroups.Add(spawnBossAtIndex);
+
+            spawnedGroups.Add(Instantiate(BossSpawns[spawnBossAtIndex], transform));
             spawnedGroups.Last().GroupManager = this;
 
             if (GameInfo.ThreatLevel == 1)
@@ -136,20 +139,37 @@ public class EnemyGroupSpawnManager : MonoBehaviour
     {
         return -maxTimerBeforeRespawn * 2 + (maxTimerBeforeRespawn * GameInfo.ThreatLevel * 0.1f);
     }
-    private int RandomnessCheck()
+    private int RandomnessCheck(bool isBoss = false)
     {
+
+        List<EnemyGroupHandler> listToCheck;
+        List<int> recentlySpawnedIndexes;
+
+        if (!isBoss)
+        {
+            listToCheck = NormalSpawns;
+            recentlySpawnedIndexes = recentlySpawnedGroups;
+        }
+        else
+        {
+            listToCheck = BossSpawns;
+            recentlySpawnedIndexes = recentlySpawnedBossGroups;
+        }
+
+
         int counter = 0;
-        int maxloops = NormalSpawns.Count * 3;
+        int maxloops = listToCheck.Count * 3;
         int randomIndex;
         do
         {
-            randomIndex = Random.Range(0, NormalSpawns.Count);
+            randomIndex = Random.Range(0, listToCheck.Count);
             counter++;
         }
-        while (recentlySpawnedGroups.Contains(randomIndex) && counter <= maxloops);
+        while (recentlySpawnedIndexes.Contains(randomIndex) && counter <= maxloops);
 
         return randomIndex;
     }
+
 
     public void DestroyAllEnemiesAlive()
     {

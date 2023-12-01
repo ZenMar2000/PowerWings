@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d43f2a224da4d478c8f8e0a9c09987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsPlayerShot: 0
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   ShotSpeed: 0
   IgnoreGlobalSpeedScale: 0
   ParentToEmitter: 0
@@ -174,7 +176,7 @@ MonoBehaviour:
   randomStartColor: 0
   Opacity: 1
   targetDirect: {fileID: 0}
-  targetFromTag: Enemy
+  targetFromTag: Player
   RotationType: 0
   TrackRotationSpeed: 7
   homingEngageTime: 10

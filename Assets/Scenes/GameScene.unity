@@ -405,6 +405,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
       propertyPath: Spawns.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -412,6 +416,14 @@ PrefabInstance:
       propertyPath: Spawns.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
+      propertyPath: BossSpawns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745525371874961797, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
+      propertyPath: BossSpawns.Array.data[1]
+      value: 
+      objectReference: {fileID: 4274935203257407785, guid: 998216514f2d59943b6c38ed38c6ddbd, type: 3}
     - target: {fileID: 7081995488523687935, guid: 35b0ec8188e304d40b7b0333006c1754, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

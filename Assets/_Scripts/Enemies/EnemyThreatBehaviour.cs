@@ -21,7 +21,7 @@ public class EnemyThreatBehaviour : MonoBehaviour
         shotCollisionDamage = GetComponentInChildren<ShotCollisionDamage>();
         if (isBoss && shotCollisionDamage != null)
         {
-            shotCollisionDamage.HP *= 1 + (GameInfo.ThreatLevel * 0.1f);
+            shotCollisionDamage.HP = (float)(shotCollisionDamage.HP * (1.25 * GameInfo.ThreatLevel - 1));
         }
     }
 

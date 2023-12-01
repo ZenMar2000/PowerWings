@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -108,6 +108,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0
@@ -191,7 +192,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -227,6 +228,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0
@@ -302,7 +304,7 @@ MonoBehaviour:
   TriggerDelay: 1
   EmitterAmount: 10
   DefaultEmitter: 0
-  sortLayer: 0
+  sortLayer: 1
   PointScale: 0.2
   pointDisplay: 1
   ExitPointOffset: -20
@@ -455,7 +457,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -491,6 +493,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0
@@ -638,7 +641,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -674,6 +677,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0
@@ -757,7 +761,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -793,6 +797,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0
@@ -876,7 +881,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -912,6 +917,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0
@@ -1027,7 +1033,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -1063,6 +1069,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0
@@ -1146,7 +1153,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -1182,6 +1189,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0
@@ -1323,6 +1331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa767266ae4b904e90b482a0beb47ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsPlayerShot: 0
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   ShotSpeed: 0
   IgnoreGlobalSpeedScale: 0
   ParentToEmitter: 0
@@ -1355,7 +1365,7 @@ MonoBehaviour:
   RandomStartRotation: 1
   rotationSpeed: 0
   rotationSpeedRange: 0
-  RotationDirection: 0
+  RotationDirection: 3
   DissipateDelay: 0
   DissipateSpeed: 0
   ColorShift: []
@@ -1596,7 +1606,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -1632,6 +1642,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0
@@ -1715,7 +1726,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -520023571
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: 0028a729cfda88245aba79c93755b4e5, type: 3}
   m_Color: {r: 0.51, g: 1, b: 1, a: 0.51}
@@ -1751,6 +1762,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpriteColor: {r: 1, g: 1, b: 1, a: 1}
+  PlayerProjectileEmitterBehaviour: {fileID: 0}
   SpriteOverride: {fileID: 0}
   ParentToEmitter: 1
   IgnoreGlobalRateScale: 0

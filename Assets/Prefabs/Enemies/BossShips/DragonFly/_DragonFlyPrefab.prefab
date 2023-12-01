@@ -2758,7 +2758,7 @@ MonoBehaviour:
   ParentExplosion: 1
   IsPlayer: 0
   DeathExplosion: ExplosionBomb
-  HP: 1000
+  HP: 1250
   FinalExplodeFactor: 2.5
   DamageFlicker: 0
   FlickerDuration: 6
